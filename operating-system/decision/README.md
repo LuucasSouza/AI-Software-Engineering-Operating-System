@@ -24,3 +24,10 @@ Transformar opções ambíguas em decisões explícitas, rastreáveis, revisáve
 ## Interfaces
 
 Consome Discovery, Product e Architecture artifacts. Produz decision records, decision matrices, ADRs, risk review requests, optimization review requests e constraints para Execution Engine.
+
+## Integração Sprint 4
+
+- Execution Engine usa decisões e ADRs em work packages e readiness gates.
+- Documentation Engine mantém ADR index e decision log atualizados.
+- Handoff Engine transporta binding decisions entre agentes e fases.
+- Reflection Engine revisa qualidade e efeitos das decisões.

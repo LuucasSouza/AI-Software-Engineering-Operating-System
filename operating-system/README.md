@@ -33,7 +33,8 @@ Core Maintainers coordenam consistência entre engines e protocolos.
 - Sprint 1 criou `core/` e `discovery/`.
 - Sprint 2 criou Product Engine e Architecture Engine.
 - Sprint 3 criou Decision Engine, Risk Engine e Optimization Engine.
-- Próxima etapa: criar Execution Engine, Documentation Engine, Handoff Engine e Reflection Engine na Sprint 4.
+- Sprint 4 criou Execution Engine, Documentation Engine, Handoff Engine e Reflection Engine.
+- Próxima etapa: consolidar frameworks completos na Sprint 5.
 
 ## Módulos ativos
 
@@ -51,6 +52,13 @@ Core Maintainers coordenam consistência entre engines e protocolos.
 - `risk/`: engine de risco, taxonomy, risk object model, lifecycle e quality gates.
 - `optimization/`: engine de otimização para custo, complexidade, escalabilidade e custo de AI.
 
+## Sprint 4
+
+- `execution/`: engine de execução, work packages, ERL, planning e release candidate.
+- `documentation/`: engine de documentação, lifecycle, information architecture e quality gates.
+- `handoff/`: engine de handoff, contracts, packages, receipts e validation gates.
+- `reflection/`: engine de reflexão, retrospectives, findings e improvement backlog.
+
 ## Próxima etapa
 
-- Sprint 4 deve criar Execution Engine, Documentation Engine, Handoff Engine e Reflection Engine.
+- Sprint 5 deve consolidar frameworks completos e cross-engine integration model.

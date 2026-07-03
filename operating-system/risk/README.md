@@ -20,3 +20,10 @@ Identificar, classificar, priorizar, mitigar, aceitar e monitorar riscos conecta
 - `risk-taxonomy.md`
 - `risk-object-model.md`
 - `risk-quality-gates.md`
+
+## Integração Sprint 4
+
+- Execution Engine consome risk register e mitigations em planning e work packages.
+- Documentation Engine mantém riscos documentados e rastreáveis.
+- Handoff Engine inclui riscos relevantes em handoff packages.
+- Reflection Engine revisa riscos recorrentes e falhas de mitigação.

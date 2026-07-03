@@ -205,7 +205,7 @@ Ao terminar, valide os critérios de aceite e gere o relatório final da Sprint 
 
 ## Status do projeto
 
-Status atual: **Sprint 3 concluída**
+Status atual: **Sprint 4 concluída**
 
 Sprint 1 criou a primeira camada funcional do AI-SEOS:
 
@@ -233,7 +233,16 @@ Sprint 3 adicionou Decision Engine, Risk Engine e Optimization Engine:
 - ADRs 0019 a 0026;
 - relatório de validação em `docs/sprints/sprint-3-validation-report.md`.
 
-Próxima etapa: **Sprint 4 — Execution, Documentation, Handoff and Reflection**.
+Sprint 4 fechou o primeiro ciclo operacional completo:
+
+- Execution Engine, readiness gates, planning protocols e work packages;
+- Documentation Engine, information architecture, front matter standard e documentation review;
+- Handoff Engine, handoff contracts, agent handoff e phase handoff;
+- Reflection Engine, system review playbooks, sprint retrospective e improvement backlog;
+- ADRs 0027 a 0036;
+- relatório de validação em `docs/sprints/sprint-4-validation-report.md`.
+
+Próxima etapa: **Sprint 5 — Frameworks completos**.
 
 ---
 

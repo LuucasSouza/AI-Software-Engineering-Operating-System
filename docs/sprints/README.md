@@ -21,3 +21,6 @@ Registrar handoffs, relatórios de validação e status das sprints do AI-SEOS.
 - `sprint-2-validation-report.md`
 - `sprint-3-handoff.md`
 - `sprint-3-validation-report.md`
+- `sprint-4-handoff.md`
+- `sprint-4-validation-report.md`
+- `sprint-4-retrospective.md`

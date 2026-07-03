@@ -32,6 +32,7 @@ Framework Maintainers mantêm modularidade, aplicabilidade e alinhamento com eng
 - Sprint 1 criou `discovery-framework/`.
 - Sprint 2 criou frameworks de produto e arquitetura.
 - Sprint 3 criou frameworks de decisão, risco e otimização.
+- Sprint 4 criou frameworks de execução, documentação, handoff e reflexão.
 
 ## Frameworks disponíveis
 
@@ -47,3 +48,10 @@ Framework Maintainers mantêm modularidade, aplicabilidade e alinhamento com eng
 - `decision-framework/`: decision framework, weighted decision matrix e confidence model.
 - `risk-framework/`: risk assessment, risk register, scoring e modelos especializados.
 - `optimization-framework/`: otimização de custo, complexidade, escalabilidade e custo de AI.
+
+## Sprint 4
+
+- `execution-framework/`: planning model e estratégias de entrega.
+- `documentation-framework/`: padrões documentais e information architecture.
+- `handoff-framework/`: handoff contract model.
+- `reflection-framework/`: dimensões e gates de reflexão.

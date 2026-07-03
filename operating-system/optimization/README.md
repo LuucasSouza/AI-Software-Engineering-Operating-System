@@ -19,3 +19,10 @@ Melhorar decisões, arquitetura, escopo e planos antes que se tornem compromisso
 - `optimization-lifecycle.md`
 - `optimization-object-model.md`
 - `optimization-quality-gates.md`
+
+## Integração Sprint 4
+
+- Execution Engine transforma recomendações de otimização em constraints e sequencing.
+- Documentation Engine registra simplificações, custos e trade-offs.
+- Handoff Engine transporta constraints de otimização para agentes.
+- Reflection Engine avalia se otimizações reduziram custo, complexidade ou risco.

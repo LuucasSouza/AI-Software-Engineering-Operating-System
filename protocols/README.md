@@ -32,6 +32,7 @@ Protocol Maintainers garantem consistência com `DEVELOPMENT_PROTOCOL.md`.
 - Sprint 1 criou `project-discovery/`.
 - Sprint 2 adicionou protocolos para Product e Architecture.
 - Sprint 3 adicionou protocolos para Decision, Risk e Optimization.
+- Sprint 4 adicionou protocolos para Execution, Documentation, Handoff e Reflection.
 
 ## Protocolos disponíveis
 
@@ -47,3 +48,10 @@ Protocol Maintainers garantem consistência com `DEVELOPMENT_PROTOCOL.md`.
 - `decision-review/`: ADR decision protocol e revisão estruturada de decisões.
 - `risk-assessment/`: assessment, aceitação e revisão de riscos.
 - `optimization-review/`: revisão de custo, complexidade, escalabilidade e custo de AI.
+
+## Sprint 4
+
+- `execution-planning/`: execution planning, delivery control e release candidate.
+- `documentation-maintenance/`: revisão e manutenção documental.
+- `handoff/`: universal handoff, agent handoff e phase handoff.
+- `reflection-review/`: reflection review protocol.

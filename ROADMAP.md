@@ -180,7 +180,7 @@ Criar mecanismos de decisão, risco e otimização.
 
 # Sprint 4 — Execution, Documentation, Handoff and Reflection
 
-Status: **Next**
+Status: **Complete**
 
 ## Objetivo
 
@@ -195,10 +195,17 @@ Criar mecanismos para execução e continuidade.
 - Sprint planning templates.
 - Implementation handoff templates.
 - Review protocols.
+- Execution planning protocol, delivery control protocol e release candidate protocol.
+- Documentation standards, information architecture e front matter standard.
+- Handoff contracts, agent handoff e phase handoff.
+- Reflection Engine, system review playbooks e Sprint 4 retrospective.
+- ADRs 0027 a 0036.
 
 ---
 
 # Sprint 5 — Frameworks completos
+
+Status: **Next**
 
 ## Objetivo
 

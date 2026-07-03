@@ -32,6 +32,7 @@ Playbook Maintainers mantêm aplicabilidade prática e alinhamento com templates
 - Sprint 1 criou `project-discovery/`.
 - Sprint 2 criou playbooks para Product e Architecture.
 - Sprint 3 criou playbook integrado de Decision, Risk and Optimization.
+- Sprint 4 criou playbooks de system review.
 
 ## Playbooks disponíveis
 
@@ -40,3 +41,7 @@ Playbook Maintainers mantêm aplicabilidade prática e alinhamento com templates
 ## Sprint 3
 
 - `decision-risk-optimization/`: playbook integrado para decision review, risk review, optimization review e execution readiness.
+
+## Sprint 4
+
+- `system-review/`: sprint retrospective, architecture reflection e documentation drift review.

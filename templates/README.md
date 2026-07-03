@@ -32,6 +32,7 @@ Template Maintainers mantêm consistência, clareza e versionamento dos modelos.
 - Sprint 1 criou `discovery/` e `context/`.
 - Sprint 2 criou templates de produto e arquitetura.
 - Sprint 3 criou templates de decisão, risco, ADR e otimização.
+- Sprint 4 criou templates de execução, backlog, documentação, handoff e reflexão.
 
 ## Templates disponíveis
 
@@ -50,3 +51,11 @@ Template Maintainers mantêm consistência, clareza e versionamento dos modelos.
 - `risk/`: risk register, assessment, acceptance, review e checklists especializados.
 - `optimization/`: optimization review, cost model, complexity assessment e scalability assessment.
 - `adr/`: ADR template, ADR lite e decision log entry.
+
+## Sprint 4
+
+- `execution/`: execution plan, milestone, sprint plan, work package, readiness report e release candidate checklist.
+- `backlog/`: technical backlog.
+- `documentation/`: documentation review checklist e documentation index.
+- `handoff/`: handoff package, agent handoff, sprint handoff e validation checklist.
+- `reflection/`: reflection report, improvement backlog e sprint retrospective.

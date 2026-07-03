@@ -55,7 +55,17 @@ Architecture Maintainers garantem numeração, consistência e referências entr
 - `0024-adopt-risk-classification-model.md`
 - `0025-adopt-optimization-engine.md`
 - `0026-adopt-cost-complexity-scalability-optimization.md`
+- `0027-adopt-execution-engine.md`
+- `0028-adopt-execution-readiness-levels.md`
+- `0029-adopt-work-package-model.md`
+- `0030-adopt-documentation-engine.md`
+- `0031-adopt-documentation-lifecycle.md`
+- `0032-adopt-information-architecture-standard.md`
+- `0033-adopt-handoff-engine.md`
+- `0034-adopt-structured-handoff-packages.md`
+- `0035-adopt-reflection-engine.md`
+- `0036-adopt-continuous-learning-loop.md`
 
 ## Próximos passos
 
-- Criar template canônico de ADR em `templates/adr/`.
+- Consolidar revisão de ADRs e maturity model na Sprint 5.
