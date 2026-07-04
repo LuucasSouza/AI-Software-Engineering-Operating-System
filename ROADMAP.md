@@ -434,13 +434,13 @@ Implementar o primeiro MVP executável da CLI `resolve-ai`, mantendo escopo pequ
 
 # Phase 5 — Resolve Aí Guided Diagnostics MVP
 
-Status: **Next**
+Status: **Complete**
 
 ## Objetivo
 
 Implementar `resolve-ai diagnosticar` para gerar diagnóstico guiado sem alterar código de produto.
 
-## Entregáveis previstos
+## Entregáveis
 
 - Comando `resolve-ai diagnosticar`.
 - Geração dos documentos `docs/resolve-ai/00` a `09`.
@@ -448,6 +448,25 @@ Implementar `resolve-ai diagnosticar` para gerar diagnóstico guiado sem alterar
 - Aplicação do fluxo “Projeto em Andamento — Diagnóstico e Continuação”.
 - Respeito ao Modo Liga/Desliga.
 - Quality gates contra exposição de secrets e dados sensíveis.
+- ADRs 0106 a 0115.
+
+---
+
+# Phase 6 — Resolve Aí Guided Planning and Implementation Prep
+
+Status: **Next**
+
+## Objetivo
+
+Implementar `resolve-ai planejar`, lendo `docs/resolve-ai/` e preparando plano incremental sem alterar código automaticamente.
+
+## Entregáveis previstos
+
+- Comando `resolve-ai planejar`.
+- Plano incremental baseado no diagnóstico.
+- Backlog estruturado.
+- Prompts para agentes de IA.
+- Quality gates antes de execução.
 
 ---
 

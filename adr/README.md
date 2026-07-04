@@ -134,7 +134,17 @@ Architecture Maintainers garantem numeração, consistência e referências entr
 - `0103-defer-mcp-and-hooks-to-future-phase.md`
 - `0104-adopt-idempotent-cli-commands.md`
 - `0105-adopt-cli-mvp-before-runtime-automation.md`
+- `0106-adopt-diagnosticar-as-first-useful-runtime-command.md`
+- `0107-adopt-read-only-diagnostic-execution-model.md`
+- `0108-adopt-docs-resolve-ai-diagnostic-output-standard.md`
+- `0109-preserve-docs-ai-seos-as-legacy-without-automatic-migration.md`
+- `0110-adopt-heuristic-project-detection.md`
+- `0111-adopt-safe-sensitive-file-detection-by-name-only.md`
+- `0112-adopt-non-overwrite-default-for-diagnostic-documents.md`
+- `0113-adopt-portuguese-first-diagnostic-ux.md`
+- `0114-adopt-local-state-updates-after-diagnostics.md`
+- `0115-defer-deep-ai-analysis-to-future-phases.md`
 
 ## Próximos passos
 
-- Iniciar Phase 5 — Resolve Aí Guided Diagnostics MVP.
+- Iniciar Phase 6 — Resolve Aí Guided Planning and Implementation Prep.

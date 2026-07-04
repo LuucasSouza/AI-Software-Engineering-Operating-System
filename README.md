@@ -143,11 +143,12 @@ resolve-ai
 O CLI MVP já existe em `packages/resolve-ai-cli/` e pode ser executado localmente com Node.
 
 ```bash
-node packages/resolve-ai-cli/dist/index.js ajuda
 node packages/resolve-ai-cli/dist/index.js começar
+node packages/resolve-ai-cli/dist/index.js diagnosticar
 node packages/resolve-ai-cli/dist/index.js status
 node packages/resolve-ai-cli/dist/index.js ligar
 node packages/resolve-ai-cli/dist/index.js desligar
+node packages/resolve-ai-cli/dist/index.js ajuda
 ```
 
 ---
@@ -255,7 +256,7 @@ Ao terminar, valide os critérios de aceite e gere o relatório final da Sprint 
 
 ## Status do projeto
 
-Status atual: **Phase 4 concluída**
+Status atual: **Phase 5 concluída**
 
 Sprint 1 criou a primeira camada funcional do AI-SEOS:
 
@@ -386,7 +387,19 @@ Phase 4 implementou o primeiro MVP real da CLI `resolve-ai`:
 - ADRs 0097 a 0105;
 - relatório de validação em `docs/sprints/phase-4-validation-report.md`.
 
-Próxima etapa: **Phase 5 — Resolve Aí Guided Diagnostics MVP**.
+Phase 5 implementou o primeiro comando útil do runtime:
+
+- comando `resolve-ai diagnosticar`;
+- aliases `diagnostico` e `diagnóstico`;
+- detecção local de tipo de projeto, stack provável, modo recomendado e riscos por nome;
+- geração de `docs/resolve-ai/00` a `09` sem sobrescrever por padrão;
+- atualização do `state.json` com último diagnóstico;
+- `status` agora mostra resumo do diagnóstico quando existir;
+- testes automatizados cobrindo projetos vazio, Node, Vite/React, legado, sensíveis e idempotência;
+- ADRs 0106 a 0115;
+- relatório de validação em `docs/sprints/phase-5-validation-report.md`.
+
+Próxima etapa: **Phase 6 — Resolve Aí Guided Planning and Implementation Prep**.
 
 ---
 

@@ -21,6 +21,16 @@ O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionament
 
 ## Added
 
+- Phase 5 executada.
+- Implementado comando `resolve-ai diagnosticar`.
+- Implementados aliases `diagnostico` e `diagnóstico`.
+- Criada inspeção local heurística de projeto, stack, modo recomendado e riscos por nome.
+- Criada geração de documentos `docs/resolve-ai/00` a `09` sem sobrescrever por padrão.
+- Atualizado `.resolve-ai/state.json` com resumo do último diagnóstico.
+- Atualizado `resolve-ai status` para mostrar último diagnóstico quando existir.
+- Criados testes automatizados para diagnóstico local seguro.
+- Criadas ADRs 0106 a 0115.
+- Criados Phase 5 handoff, validation report e retrospective.
 - Phase 4 executada.
 - Criado pacote `packages/resolve-ai-cli/`.
 - Implementados comandos `ajuda`, `começar`, `comecar`, `ligar`, `desligar` e `status`.

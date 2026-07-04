@@ -17,6 +17,14 @@ Rode:
   const paths = resolveAiPaths(root);
   const state = readState(root);
   const docsExists = fs.existsSync(paths.docsDir);
+  const diagnosticSummary = state.ultimoDiagnosticoEm
+    ? `
+Último diagnóstico: ${state.ultimoDiagnosticoEm}
+Tipo de projeto: ${state.tipoProjeto ?? "não informado"}
+Modo recomendado: ${state.modoRecomendado ?? "não informado"}
+Próxima ação: ${state.proximaAcao ?? "revisar docs/resolve-ai/09-handoff.md"}
+`
+    : "";
 
   if (state.active) {
     print(`
@@ -25,6 +33,7 @@ Modo atual: Projeto em Andamento — Diagnóstico e Continuação
 Docs: ${docsExists ? "docs/resolve-ai/" : "não encontrado"}
 Estado: .resolve-ai/state.json
 Última atualização: ${state.lastUpdatedAt}
+${diagnosticSummary}
 `);
     return;
   }
@@ -35,6 +44,7 @@ Resolve Aí está preparado, mas desligado.
 Docs: ${docsExists ? "docs/resolve-ai/" : "não encontrado"}
 Estado: .resolve-ai/state.json
 Última atualização: ${state.lastUpdatedAt}
+${diagnosticSummary}
 
 Para ligar:
   resolve-ai ligar

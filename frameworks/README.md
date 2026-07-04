@@ -95,3 +95,7 @@ Framework Maintainers mantêm modularidade, aplicabilidade e alinhamento com eng
 ## Phase 4
 
 - `packages/resolve-ai-cli/`: primeira implementação executável do Runtime Framework, limitada a estado local, Modo Liga/Desliga e documentação humana mínima.
+
+## Phase 5
+
+- A CLI passa a aplicar diagnóstico guiado heurístico, conectando Runtime Framework, Project Entry, Existing Project Diagnostics e documentação humana em `docs/resolve-ai/`.

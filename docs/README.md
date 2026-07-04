@@ -93,3 +93,10 @@ Documentation Maintainers mantêm consistência, clareza, versionamento e relaç
 - `sprints/phase-4-handoff.md`: handoff da Phase 4.
 - `sprints/phase-4-validation-report.md`: validação da Phase 4.
 - `sprints/phase-4-retrospective.md`: retrospectiva da Phase 4.
+
+## Documentação adicionada na Phase 5
+
+- `packages/resolve-ai-cli/README.md`: documentação atualizada com `resolve-ai diagnosticar`.
+- `sprints/phase-5-handoff.md`: handoff da Phase 5.
+- `sprints/phase-5-validation-report.md`: validação da Phase 5.
+- `sprints/phase-5-retrospective.md`: retrospectiva da Phase 5.

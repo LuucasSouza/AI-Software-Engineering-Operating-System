@@ -1,6 +1,7 @@
 import { ajudaCommand } from "./commands/ajuda.js";
 import { comecarCommand } from "./commands/comecar.js";
 import { desligarCommand } from "./commands/desligar.js";
+import { diagnosticarCommand } from "./commands/diagnosticar.js";
 import { ligarCommand } from "./commands/ligar.js";
 import { statusCommand } from "./commands/status.js";
 import { error } from "./core/output.js";
@@ -21,6 +22,11 @@ export function run(argv = process.argv.slice(2), root = process.cwd()) {
         return 0;
       case "ligar":
         ligarCommand(root);
+        return 0;
+      case "diagnosticar":
+      case "diagnostico":
+      case "diagnóstico":
+        diagnosticarCommand(root);
         return 0;
       case "desligar":
         desligarCommand(root);

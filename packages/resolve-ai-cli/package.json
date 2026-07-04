@@ -1,7 +1,7 @@
 {
   "name": "resolve-ai-cli",
   "version": "0.1.0-alpha.0",
-  "description": "CLI MVP do Resolve Ai para preparar projetos com estado local e documentacao humana.",
+  "description": "CLI MVP do Resolve Ai para preparar e diagnosticar projetos com estado local e documentacao humana.",
   "type": "module",
   "bin": {
     "resolve-ai": "dist/index.js"

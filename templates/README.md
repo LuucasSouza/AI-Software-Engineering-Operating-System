@@ -121,3 +121,7 @@ Template Maintainers mantêm consistência, clareza e versionamento dos modelos.
 ## Phase 4
 
 - O CLI MVP materializa templates mínimos diretamente em `docs/resolve-ai/README.md`, `00-project-intake.md` e `09-handoff.md` quando `resolve-ai começar` é executado.
+
+## Phase 5
+
+- `resolve-ai diagnosticar` materializa templates diagnósticos `00` a `09` em `docs/resolve-ai/`, preservando arquivos existentes por padrão.

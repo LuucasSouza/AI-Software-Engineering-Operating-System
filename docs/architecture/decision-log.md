@@ -87,3 +87,13 @@ source: "bootstrap-source/pt27_ARCHITECTURE_DECISION_PROTOCOL.md"
 | ADR-0103 | Defer MCP and Hooks to Future Phase | Accepted | 2026-07-04 | High | Phase 5 |
 | ADR-0104 | Adopt Idempotent CLI Commands | Accepted | 2026-07-04 | High | Phase 5 |
 | ADR-0105 | Adopt CLI MVP Before Runtime Automation | Accepted | 2026-07-04 | Medium | Phase 5 |
+| ADR-0106 | Adopt diagnosticar as First Useful Runtime Command | Accepted | 2026-07-04 | Medium | Phase 6 |
+| ADR-0107 | Adopt Read-Only Diagnostic Execution Model | Accepted | 2026-07-04 | High | Phase 6 |
+| ADR-0108 | Adopt docs/resolve-ai Diagnostic Output Standard | Accepted | 2026-07-04 | Medium | Phase 6 |
+| ADR-0109 | Preserve docs/ai-seos as Legacy Without Automatic Migration | Accepted | 2026-07-04 | High | Phase 6 |
+| ADR-0110 | Adopt Heuristic Project Detection | Accepted | 2026-07-04 | Medium | Phase 6 |
+| ADR-0111 | Adopt Safe Sensitive-File Detection by Name Only | Accepted | 2026-07-04 | High | Phase 6 |
+| ADR-0112 | Adopt Non-Overwrite Default for Diagnostic Documents | Accepted | 2026-07-04 | High | Phase 6 |
+| ADR-0113 | Adopt Portuguese-First Diagnostic UX | Accepted | 2026-07-04 | High | Phase 6 |
+| ADR-0114 | Adopt Local State Updates After Diagnostics | Accepted | 2026-07-04 | Medium | Phase 6 |
+| ADR-0115 | Defer Deep AI Analysis to Future Phases | Accepted | 2026-07-04 | High | Phase 6 |

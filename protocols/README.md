@@ -96,3 +96,7 @@ Protocol Maintainers garantem consistência com `DEVELOPMENT_PROTOCOL.md`.
 ## Phase 4
 
 - O CLI MVP implementa parte executável dos protocolos de runtime activation e project entry com comandos locais não destrutivos.
+
+## Phase 5
+
+- `resolve-ai diagnosticar` operacionaliza o fluxo “Projeto em Andamento — Diagnóstico e Continuação” com leitura local segura e geração de documentos `00` a `09`.

@@ -8,6 +8,7 @@ Me dá o problema ou a ideia, e eu te ajudo a resolver.
 Comandos disponíveis:
   resolve-ai começar      Prepara o Resolve Aí neste projeto
   resolve-ai comecar      Mesmo comando, sem acento
+  resolve-ai diagnosticar Gera diagnóstico local seguro
   resolve-ai ligar        Liga o Resolve Aí neste projeto
   resolve-ai desligar     Desliga para economizar contexto e tokens
   resolve-ai status       Mostra como o Resolve Aí está neste projeto
