@@ -117,3 +117,7 @@ Template Maintainers mantêm consistência, clareza e versionamento dos modelos.
 - `runtime/`: templates de `config.yml` e `state.json` para a runtime futura.
 - `agent-instructions/`: templates para AGENTS.md, CLAUDE.md e Copilot instructions.
 - `prompts/runtime/`: prompt de diagnóstico runtime para projetos em andamento.
+
+## Phase 4
+
+- O CLI MVP materializa templates mínimos diretamente em `docs/resolve-ai/README.md`, `00-project-intake.md` e `09-handoff.md` quando `resolve-ai começar` é executado.

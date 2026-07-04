@@ -140,7 +140,15 @@ O futuro runtime deve usar o comando:
 resolve-ai
 ```
 
-O CLI ainda não foi implementado; a Phase 3 especificou a arquitetura runtime e a Phase 4 deve implementar o primeiro MVP executável.
+O CLI MVP já existe em `packages/resolve-ai-cli/` e pode ser executado localmente com Node.
+
+```bash
+node packages/resolve-ai-cli/dist/index.js ajuda
+node packages/resolve-ai-cli/dist/index.js começar
+node packages/resolve-ai-cli/dist/index.js status
+node packages/resolve-ai-cli/dist/index.js ligar
+node packages/resolve-ai-cli/dist/index.js desligar
+```
 
 ---
 
@@ -247,7 +255,7 @@ Ao terminar, valide os critérios de aceite e gere o relatório final da Sprint 
 
 ## Status do projeto
 
-Status atual: **Phase 3 concluída**
+Status atual: **Phase 4 concluída**
 
 Sprint 1 criou a primeira camada funcional do AI-SEOS:
 
@@ -366,7 +374,19 @@ Phase 3 consolidou a arquitetura runtime do Resolve Aí:
 - ADRs 0087 a 0096;
 - relatório de validação em `docs/sprints/phase-3-validation-report.md`.
 
-Próxima etapa: **Phase 4 — Resolve Aí CLI MVP Implementation**.
+Phase 4 implementou o primeiro MVP real da CLI `resolve-ai`:
+
+- pacote `packages/resolve-ai-cli/`;
+- comandos `ajuda`, `começar`, `comecar`, `ligar`, `desligar` e `status`;
+- estado local em `.resolve-ai/config.json` e `.resolve-ai/state.json`;
+- documentação humana em `docs/resolve-ai/README.md`, `00-project-intake.md` e `09-handoff.md`;
+- Modo Liga/Desliga persistente;
+- comandos idempotentes e não destrutivos;
+- testes mínimos com 11 cenários aprovados;
+- ADRs 0097 a 0105;
+- relatório de validação em `docs/sprints/phase-4-validation-report.md`.
+
+Próxima etapa: **Phase 5 — Resolve Aí Guided Diagnostics MVP**.
 
 ---
 

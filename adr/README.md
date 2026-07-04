@@ -125,7 +125,16 @@ Architecture Maintainers garantem numeração, consistência e referências entr
 - `0094-adopt-agent-instruction-file-generation.md`
 - `0095-adopt-token-saving-context-strategy.md`
 - `0096-adopt-safe-runtime-defaults.md`
+- `0097-adopt-node-typescript-for-resolve-ai-cli-mvp.md`
+- `0098-adopt-portuguese-first-cli-commands.md`
+- `0099-adopt-modo-liga-desliga-as-runtime-control.md`
+- `0100-adopt-project-local-resolve-ai-state.md`
+- `0101-adopt-docs-resolve-ai-as-human-project-context.md`
+- `0102-limit-phase-4-cli-to-non-destructive-commands.md`
+- `0103-defer-mcp-and-hooks-to-future-phase.md`
+- `0104-adopt-idempotent-cli-commands.md`
+- `0105-adopt-cli-mvp-before-runtime-automation.md`
 
 ## Próximos passos
 
-- Iniciar Phase 4 — Resolve Aí CLI MVP Implementation.
+- Iniciar Phase 5 — Resolve Aí Guided Diagnostics MVP.

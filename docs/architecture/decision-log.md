@@ -78,3 +78,12 @@ source: "bootstrap-source/pt27_ARCHITECTURE_DECISION_PROTOCOL.md"
 | ADR-0094 | Adopt Agent Instruction File Generation | Accepted | 2026-07-04 | High | Phase 4 |
 | ADR-0095 | Adopt Token-Saving Context Strategy | Accepted | 2026-07-04 | High | Phase 4 |
 | ADR-0096 | Adopt Safe Runtime Defaults | Accepted | 2026-07-04 | High | Phase 4 |
+| ADR-0097 | Adopt Node TypeScript for Resolve Aí CLI MVP | Accepted | 2026-07-04 | Medium | Phase 5 |
+| ADR-0098 | Adopt Portuguese-First CLI Commands | Accepted | 2026-07-04 | High | Phase 5 |
+| ADR-0099 | Adopt Modo Liga/Desliga as Runtime Control | Accepted | 2026-07-04 | High | Phase 5 |
+| ADR-0100 | Adopt Project Local Resolve Aí State | Accepted | 2026-07-04 | Medium | Phase 5 |
+| ADR-0101 | Adopt docs/resolve-ai as Human Project Context | Accepted | 2026-07-04 | Medium | Phase 5 |
+| ADR-0102 | Limit Phase 4 CLI to Non-Destructive Commands | Accepted | 2026-07-04 | High | Phase 5 |
+| ADR-0103 | Defer MCP and Hooks to Future Phase | Accepted | 2026-07-04 | High | Phase 5 |
+| ADR-0104 | Adopt Idempotent CLI Commands | Accepted | 2026-07-04 | High | Phase 5 |
+| ADR-0105 | Adopt CLI MVP Before Runtime Automation | Accepted | 2026-07-04 | Medium | Phase 5 |

@@ -21,6 +21,16 @@ O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionament
 
 ## Added
 
+- Phase 4 executada.
+- Criado pacote `packages/resolve-ai-cli/`.
+- Implementados comandos `ajuda`, `começar`, `comecar`, `ligar`, `desligar` e `status`.
+- Implementado Modo Liga/Desliga com estado persistente em `.resolve-ai/state.json`.
+- Implementada criação local de `.resolve-ai/config.json` e `.resolve-ai/state.json`.
+- Implementada criação não destrutiva de `docs/resolve-ai/README.md`, `00-project-intake.md` e `09-handoff.md`.
+- Criados testes mínimos com Node `node:test`.
+- Criada documentação do pacote CLI.
+- Criadas ADRs 0097 a 0105.
+- Criados Phase 4 handoff, validation report e retrospective.
 - Phase 3 executada.
 - Criada Runtime Vision do Resolve Aí.
 - Criada arquitetura da futura CLI `resolve-ai`, sem implementação nesta fase.

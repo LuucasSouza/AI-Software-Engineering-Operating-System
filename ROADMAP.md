@@ -413,13 +413,13 @@ Transformar Resolve Aí de framework documental em uma ferramenta ativável dent
 
 # Phase 4 — Resolve Aí CLI MVP Implementation
 
-Status: **Next**
+Status: **Complete**
 
 ## Objetivo
 
 Implementar o primeiro MVP executável da CLI `resolve-ai`, mantendo escopo pequeno, local e seguro.
 
-## Entregáveis previstos
+## Entregáveis
 
 - Package skeleton da CLI.
 - Comandos `ajuda`, `começar`, `ligar`, `desligar` e `status`.
@@ -427,6 +427,27 @@ Implementar o primeiro MVP executável da CLI `resolve-ai`, mantendo escopo pequ
 - Criação inicial de `docs/resolve-ai/`.
 - Geração de arquivos de instrução para agentes.
 - Guards para impedir mudanças destrutivas por padrão.
+- Testes mínimos.
+- ADRs 0097 a 0105.
+
+---
+
+# Phase 5 — Resolve Aí Guided Diagnostics MVP
+
+Status: **Next**
+
+## Objetivo
+
+Implementar `resolve-ai diagnosticar` para gerar diagnóstico guiado sem alterar código de produto.
+
+## Entregáveis previstos
+
+- Comando `resolve-ai diagnosticar`.
+- Geração dos documentos `docs/resolve-ai/00` a `09`.
+- Detecção de projeto novo, em andamento e legado.
+- Aplicação do fluxo “Projeto em Andamento — Diagnóstico e Continuação”.
+- Respeito ao Modo Liga/Desliga.
+- Quality gates contra exposição de secrets e dados sensíveis.
 
 ---
 

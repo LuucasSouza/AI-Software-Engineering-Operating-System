@@ -91,3 +91,7 @@ Framework Maintainers mantêm modularidade, aplicabilidade e alinhamento com eng
 ## Phase 3
 
 - `runtime-framework/`: camada conceitual que conecta CLI futura, Modo Liga/Desliga, Project Adapter, fluxos de entrada, agentes e segurança/token saving.
+
+## Phase 4
+
+- `packages/resolve-ai-cli/`: primeira implementação executável do Runtime Framework, limitada a estado local, Modo Liga/Desliga e documentação humana mínima.

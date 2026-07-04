@@ -1,0 +1,23 @@
+{
+  "name": "resolve-ai-cli",
+  "version": "0.1.0-alpha.0",
+  "description": "CLI MVP do Resolve Ai para preparar projetos com estado local e documentacao humana.",
+  "type": "module",
+  "bin": {
+    "resolve-ai": "dist/index.js"
+  },
+  "scripts": {
+    "dev": "node dist/index.js",
+    "test": "node --test tests/*.test.ts"
+  },
+  "keywords": [
+    "resolve-ai",
+    "cli",
+    "software-engineering",
+    "ai"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  }
+}

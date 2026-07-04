@@ -1,0 +1,7 @@
+# Resolve Aí local runtime state
+.resolve-ai/state.json
+.resolve-ai/cache/
+.resolve-ai/session/
+
+# Node local dependencies
+node_modules/

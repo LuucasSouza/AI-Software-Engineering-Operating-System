@@ -92,3 +92,7 @@ Protocol Maintainers garantem consistência com `DEVELOPMENT_PROTOCOL.md`.
 - `runtime-activation/`: protocolo do Modo Liga/Desliga.
 - `project-entry/`: protocolo de entrada para projeto novo ou existente.
 - `existing-project-diagnostics/`: fluxo “Projeto em Andamento — Diagnóstico e Continuação”.
+
+## Phase 4
+
+- O CLI MVP implementa parte executável dos protocolos de runtime activation e project entry com comandos locais não destrutivos.
