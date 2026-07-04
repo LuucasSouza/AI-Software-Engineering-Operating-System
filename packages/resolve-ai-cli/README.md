@@ -200,3 +200,15 @@ npm run build --prefix packages/resolve-ai-cli
 npm test --prefix packages/resolve-ai-cli
 npm run smoke --prefix packages/resolve-ai-cli
 ```
+
+## Validação Alpha
+
+Na Phase 11, o fluxo local foi validado em três projetos simulados: diretório vazio, Node fake e Vite/React fake.
+
+Fluxo validado:
+
+```text
+ajuda -> começar -> ligar -> diagnosticar -> planejar -> preparar -> resolver -> validar -> status
+```
+
+Resultado: todos os comandos passaram nos cenários simulados, sem publicação npm e sem tag Git. O score externo ficou em 72/100, recomendado apenas para private alpha até corrigir P1s e validar com usuários reais.

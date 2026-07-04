@@ -21,6 +21,15 @@ O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionament
 
 ## Added
 
+- Phase 11 executada.
+- Criada documentação de alpha validation em `docs/alpha-validation/`.
+- Criado protocolo de validação alpha, matriz por perfil e plano de testes reais/simulados.
+- Criados templates de feedback, triagem, issue e relatório de validação.
+- Criado scorecard externo `v0.1.0-alpha` com score honesto 72/100, Private alpha only.
+- Criada validação local simulada em diretório vazio, Node fake e Vite/React fake.
+- Criados registros de blockers e backlog de melhoria alpha.
+- Criadas ADRs 0166 a 0175.
+- Criados Phase 11 handoff, validation report e retrospective.
 - Phase 10 executada.
 - Criado build local da CLI por `npm run build --prefix packages/resolve-ai-cli`.
 - Criado smoke test por `npm run smoke --prefix packages/resolve-ai-cli`.

@@ -555,7 +555,7 @@ Endurecer a usabilidade local da CLI, documentação de instalação, smoke test
 
 # Phase 11 — External Alpha Validation
 
-Status: **Next**
+Status: **Complete**
 
 ## Objetivo
 
@@ -563,10 +563,32 @@ Validar o Resolve Aí em projetos reais com usuários externos antes de publica�
 
 ## Entregáveis previstos
 
-- Testes externos com três perfis.
-- Relatórios de feedback.
-- Ajustes de UX e documentação.
-- Decisão sobre publicação npm.
+- Protocolo de validação alpha.
+- Matriz por perfil.
+- Plano de testes reais/simulados.
+- Templates de feedback, triagem, issues e validation report.
+- Validação local em diretório vazio, Node fake e Vite/React fake.
+- Scorecard externo com resultado 72/100, Private alpha only.
+- ADRs 0166 a 0175.
+- Recomendação de não publicar npm ainda.
+
+---
+
+# Phase 12 — Public Alpha Release Prep
+
+Status: **Next**
+
+## Objetivo
+
+Preparar a decisão de public alpha após corrigir P1s da Phase 11 e validar com usuários reais.
+
+## Entregáveis previstos
+
+- Correção ou explicação da detecção/exibição de stack.
+- Rodada controlada com usuários reais dos três perfis.
+- Release notes finais de `v0.1.0-alpha`.
+- Decisão de package name e metadata npm.
+- Checklist de tag e publicação, sem publicação automática.
 
 ---
 

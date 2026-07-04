@@ -16,6 +16,11 @@ Release documentation covers readiness, known limitations, release notes, reposi
 
 - `v0.1.0-alpha-cli-readiness.md`
 
+## Phase 11
+
+- `v0.1.0-alpha-external-validation-scorecard.md`
+- `v0.1.0-alpha-blockers.md`
+
 ## Current Recommendation
 
-AI-SEOS is a strong public alpha candidate with score 47/50. Proceed with `v0.1.0-alpha` only after maintainer review.
+Resolve Ai is a private alpha candidate with score 72/100 after local simulated validation. Do not publish to npm until P1 findings are addressed and real-user validation is complete.

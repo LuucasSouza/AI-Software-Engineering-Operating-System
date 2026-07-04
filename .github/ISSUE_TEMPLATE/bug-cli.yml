@@ -1,0 +1,33 @@
+name: CLI bug
+description: Report a Resolve Ai CLI bug.
+title: "[CLI bug]: "
+labels: ["bug", "cli"]
+body:
+  - type: input
+    id: command
+    attributes:
+      label: Command
+      placeholder: resolve-ai diagnosticar
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version or commit
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+    validations:
+      required: true
+  - type: textarea
+    id: safe_logs
+    attributes:
+      label: Safe logs
+      description: Remove secrets, tokens, personal data and private file contents.

@@ -137,3 +137,15 @@ Documentation Maintainers mantêm consistência, clareza, versionamento e relaç
 - `sprints/phase-10-handoff.md`: handoff da Phase 10.
 - `sprints/phase-10-validation-report.md`: validação da Phase 10.
 - `sprints/phase-10-retrospective.md`: retrospectiva da Phase 10.
+
+## Documentação adicionada na Phase 11
+
+- `alpha-validation/`: protocolo, matriz, plano de teste, cenários e relatórios alpha.
+- `release/v0.1.0-alpha-external-validation-scorecard.md`: scorecard externo com 72/100.
+- `release/v0.1.0-alpha-blockers.md`: blockers P0/P1 para alpha.
+- `community/alpha-feedback-log.md`: log de feedback alpha.
+- `community/alpha-feedback-triage.md`: triagem P0/P1/P2/P3.
+- `community/alpha-improvement-backlog.md`: backlog de melhoria alpha.
+- `sprints/phase-11-handoff.md`: handoff da Phase 11.
+- `sprints/phase-11-validation-report.md`: validação da Phase 11.
+- `sprints/phase-11-retrospective.md`: retrospectiva da Phase 11.

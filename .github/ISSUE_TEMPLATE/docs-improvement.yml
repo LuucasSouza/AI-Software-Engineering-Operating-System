@@ -1,0 +1,19 @@
+name: Documentation improvement
+description: Suggest an improvement to Resolve Ai documentation.
+title: "[Docs]: "
+labels: ["documentation"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Document or path
+  - type: textarea
+    id: issue
+    attributes:
+      label: What should improve?
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Who is affected?

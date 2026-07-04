@@ -1,0 +1,61 @@
+name: Alpha feedback
+description: Feedback from a Resolve Ai alpha validation session.
+title: "[Alpha feedback]: "
+labels: ["alpha", "feedback"]
+body:
+  - type: dropdown
+    id: profile
+    attributes:
+      label: User profile
+      options:
+        - Non-Technical Builder
+        - Vibe Coder
+        - Professional Engineer
+        - Other
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: Windows 11, macOS, Linux
+  - type: input
+    id: node
+    attributes:
+      label: Node version
+      placeholder: node --version
+  - type: input
+    id: install
+    attributes:
+      label: Installation method
+      placeholder: npm link, direct node dist/index.js, other
+  - type: textarea
+    id: commands
+    attributes:
+      label: Commands executed
+      description: Do not paste secrets or private data.
+  - type: textarea
+    id: result
+    attributes:
+      label: What happened?
+  - type: dropdown
+    id: sensitive
+    attributes:
+      label: Was sensitive data involved?
+      options:
+        - "No"
+        - "Maybe"
+        - "Yes, but not included here"
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - P0 release blocker
+        - P1 must fix before public npm
+        - P2 improve soon
+        - P3 later
+    validations:
+      required: true

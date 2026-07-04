@@ -1,0 +1,27 @@
+name: Safety concern
+description: Report a safety, privacy or data handling concern.
+title: "[Safety]: "
+labels: ["safety"]
+body:
+  - type: textarea
+    id: concern
+    attributes:
+      label: Concern
+      description: Do not include secrets, tokens, personal data or private file contents.
+    validations:
+      required: true
+  - type: input
+    id: command
+    attributes:
+      label: Related command
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - P0 release blocker
+        - P1 must fix before public npm
+        - P2 improve soon
+        - P3 later
+    validations:
+      required: true

@@ -194,7 +194,17 @@ Architecture Maintainers garantem numeração, consistência e referências entr
 - `0163-adopt-docs-resolve-ai-as-human-project-memory.md`
 - `0164-defer-npm-publication-until-external-validation.md`
 - `0165-adopt-alpha-release-readiness-checklist.md`
+- `0166-adopt-external-alpha-validation-before-npm-publication.md`
+- `0167-adopt-three-profile-validation-model.md`
+- `0168-adopt-real-project-validation-matrix.md`
+- `0169-adopt-portuguese-ux-validation-as-release-gate.md`
+- `0170-adopt-alpha-feedback-triage.md`
+- `0171-adopt-no-sensitive-content-capture-rule.md`
+- `0172-adopt-alpha-readiness-scorecard.md`
+- `0173-adopt-github-alpha-issue-templates.md`
+- `0174-adopt-private-controlled-alpha-before-public-distribution.md`
+- `0175-adopt-release-recommendation-record.md`
 
 ## Próximos passos
 
-- Iniciar Phase 11 — External Alpha Validation.
+- Iniciar Phase 12 — Public Alpha Release Prep.

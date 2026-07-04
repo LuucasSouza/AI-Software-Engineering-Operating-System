@@ -270,7 +270,7 @@ Ao terminar, valide os critérios de aceite e gere o relatório final da Sprint 
 
 ## Status do projeto
 
-Status atual: **Phase 10 concluída**
+Status atual: **Phase 11 concluída**
 
 Sprint 1 criou a primeira camada funcional do AI-SEOS:
 
@@ -475,7 +475,18 @@ Phase 10 endureceu a usabilidade local da CLI:
 - ADRs 0156 a 0165;
 - relatório de validação em `docs/sprints/phase-10-validation-report.md`.
 
-Próxima etapa: **Phase 11 — External Alpha Validation**.
+Phase 11 executou validação alpha externa/local controlada:
+
+- documentação de alpha validation em `docs/alpha-validation/`;
+- protocolo, matriz por perfil, plano de teste e templates de feedback;
+- issue templates de alpha feedback, bug CLI, UX, documentação e segurança;
+- validação local simulada em diretório vazio, Node fake e Vite/React fake;
+- score de readiness externo: 72/100, Private alpha only;
+- P0 blockers: nenhum observado;
+- ADRs 0166 a 0175;
+- relatório de validação em `docs/sprints/phase-11-validation-report.md`.
+
+Próxima etapa: **Phase 12 — Public Alpha Release Prep**.
 
 ---
 
