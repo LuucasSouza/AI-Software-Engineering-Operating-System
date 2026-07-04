@@ -71,6 +71,17 @@ test("resolver com preparo existente cria docs 20 a 24 e atualiza state", () => 
   assertResolverDocs(root);
 });
 
+test("resolver informa que validar ja existe", () => {
+  const root = tempProject("resolve-ai-resolver-copy-");
+  activatePreparedProject(root);
+
+  const output = run(["resolver"], root);
+
+  assert.match(output, /Depois que o agente executar a tarefa, rode: resolve-ai validar/);
+  assert.doesNotMatch(output, /quando esse comando existir/);
+  assert.doesNotMatch(output, /fase futura/i);
+});
+
 test("resolver com risco critico destaca risco alto", () => {
   const root = tempProject("resolve-ai-resolver-risk-");
   run(["começar"], root);

@@ -147,3 +147,13 @@ source: "bootstrap-source/pt27_ARCHITECTURE_DECISION_PROTOCOL.md"
 | ADR-0163 | Adopt docs/resolve-ai as Human Project Memory | Accepted | 2026-07-04 | High | Phase 11 |
 | ADR-0164 | Defer npm Publication Until External Validation | Accepted | 2026-07-04 | High | Phase 11 |
 | ADR-0165 | Adopt Alpha Release Readiness Checklist | Accepted | 2026-07-04 | Medium | Phase 11 |
+| ADR-0176 | Require Blocker Correction Before Public Alpha | Accepted | 2026-07-04 | High | Phase 13 |
+| ADR-0177 | Improve Stack Detection Before npm Release | Accepted | 2026-07-04 | Medium | Phase 13 |
+| ADR-0178 | Calibrate Risk Severity by Project Type | Accepted | 2026-07-04 | Medium | Phase 13 |
+| ADR-0179 | Require Real User Validation Evidence | Accepted | 2026-07-04 | High | Phase 13 |
+| ADR-0180 | Keep npm Publication Manual | Accepted | 2026-07-04 | High | Phase 13 |
+| ADR-0181 | Keep Git Tagging Manual | Accepted | 2026-07-04 | High | Phase 13 |
+| ADR-0182 | Use Public Alpha Release Candidate Documents | Accepted | 2026-07-04 | Medium | Phase 13 |
+| ADR-0183 | Keep Portuguese-First Public UX | Accepted | 2026-07-04 | High | Phase 13 |
+| ADR-0184 | Maintain No-Telemetry Alpha Policy | Accepted | 2026-07-04 | High | Phase 13 |
+| ADR-0185 | Separate Release Prep From Release Execution | Accepted | 2026-07-04 | High | Phase 13 |

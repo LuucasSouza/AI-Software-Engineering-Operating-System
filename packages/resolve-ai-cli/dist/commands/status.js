@@ -22,6 +22,7 @@ Rode:
 Último diagnóstico: ${state.ultimoDiagnosticoEm}
 Tipo de projeto: ${state.tipoProjeto ?? "não informado"}
 Modo recomendado: ${state.modoRecomendado ?? "não informado"}
+Stack provável: ${state.stackDetectada?.length ? state.stackDetectada.join(", ") : "não identificada"}
 Próxima ação: ${state.proximaAcao ?? "revisar docs/resolve-ai/09-handoff.md"}
 `
     : "";

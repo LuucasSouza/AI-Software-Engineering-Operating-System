@@ -25,8 +25,8 @@ export function readExecutionContext(root: string): string {
 }
 
 function hasCriticalRisk(state: ResolveAiState | null, context: string): boolean {
-  const text = `${state?.riscosDetectados?.join(" ") ?? ""} ${context}`.toLowerCase();
-  return ["senha", "segredo", "sensível", "sensivel", "secret", "token", "dados pessoais", "lgpd", "backup", ".env", "credencial"].some((word) => text.includes(word));
+  const text = `${state?.riscosDetectados?.join(" ") ?? ""}`.toLowerCase();
+  return ["senha", "segredo", "sensível", "sensivel", "secret", "token", "dados pessoais", "lgpd", "backup", ".env", "credencial", "dump"].some((word) => text.includes(word));
 }
 
 export function selectPreparedTask(root: string, state: ResolveAiState | null): PreparedTask {

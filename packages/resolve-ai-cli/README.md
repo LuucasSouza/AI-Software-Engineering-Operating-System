@@ -110,6 +110,8 @@ docs/resolve-ai/09-handoff.md
 
 Também atualiza `.resolve-ai/state.json` com tipo de projeto, modo recomendado, stack detectada, riscos por nome e próxima ação.
 
+Stack provável pode incluir Node.js, TypeScript, Vite, React, Firebase, Supabase, Python e monorepo simples. A detecção é heurística e usa apenas sinais locais seguros.
+
 ## O Que o Comando `planejar` Cria
 
 O comando transforma diagnóstico e documentos existentes em plano incremental, sem alterar código do produto.
@@ -212,3 +214,5 @@ ajuda -> começar -> ligar -> diagnosticar -> planejar -> preparar -> resolver -
 ```
 
 Resultado: todos os comandos passaram nos cenários simulados, sem publicação npm e sem tag Git. O score externo ficou em 72/100, recomendado apenas para private alpha até corrigir P1s e validar com usuários reais.
+
+Na Phase 12, P1/P2 técnicos foram corrigidos e o score subiu para 80/100, com recomendação LIMITED GO para alpha controlada. Public npm continua pendente de validação real.

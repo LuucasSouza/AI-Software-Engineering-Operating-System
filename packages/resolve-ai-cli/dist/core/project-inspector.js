@@ -22,33 +22,138 @@ function packageJson(root) {
   const raw = readSafeTextFile(path.join(root, "package.json"));
   if (!raw) return null;
   try {
-    return JSON.parse(raw);
+    return JSON.parse(raw.replace(/^\uFEFF/, "").trim());
   } catch {
     return null;
   }
 }
 
-function detectStack(root, pkg) {
-  const stack = new Set();
+function listFilesByExtension(root, extensions, maxDepth = 3) {
+  const found = [];
+
+  function walk(current, depth) {
+    if (depth > maxDepth || found.length >= 20) return;
+    for (const entry of fs.readdirSync(current, { withFileTypes: true })) {
+      if (isIgnoredDir(entry.name)) continue;
+      const fullPath = path.join(current, entry.name);
+      const relative = path.relative(root, fullPath).replace(/\\/g, "/");
+      if (entry.isDirectory()) {
+        walk(fullPath, depth + 1);
+        continue;
+      }
+      if (extensions.some((ext) => entry.name.endsWith(ext))) {
+        found.push(relative);
+      }
+    }
+  }
+
+  walk(root, 0);
+  return found;
+}
+
+function confidence(evidence, high = 2) {
+  if (evidence.length >= high) return "alta";
+  if (evidence.length === 1) return "media";
+  return "baixa";
+}
+
+function addStack(items, name, evidence, high = 2) {
+  const safeEvidence = [...new Set(evidence)].filter(Boolean);
+  if (safeEvidence.length === 0) return;
+  items.push({ name, confidence: confidence(safeEvidence, high), evidence: safeEvidence });
+}
+
+function detectStackDetails(root, pkg) {
+  const stack = [];
   const deps = { ...(pkg?.dependencies ?? {}), ...(pkg?.devDependencies ?? {}) };
   const names = Object.keys(deps);
+  const scripts = Object.values(pkg?.scripts ?? {}).map(String);
+  const codeFiles = listFilesByExtension(root, [".ts", ".tsx", ".js", ".jsx", ".py"]);
+  const hasDep = (name) => names.includes(name);
+  const hasAnyDep = (depsToFind) => depsToFind.some(hasDep);
+  const scriptIncludes = (term) => scripts.some((script) => script.includes(term));
 
-  if (pkg) stack.add("Node.js");
-  if (exists(root, "tsconfig.json") || names.includes("typescript")) stack.add("TypeScript");
-  if (names.includes("react")) stack.add("React");
-  if (exists(root, "vite.config.ts") || exists(root, "vite.config.js") || names.includes("vite")) stack.add("Vite");
-  if (exists(root, "next.config.js") || exists(root, "next.config.mjs") || names.includes("next")) stack.add("Next.js");
-  if (names.includes("vue")) stack.add("Vue");
-  if (names.includes("svelte")) stack.add("Svelte");
-  if (names.includes("tailwindcss")) stack.add("Tailwind");
-  if (names.includes("@supabase/supabase-js") || exists(root, "supabase")) stack.add("Supabase");
-  if (names.includes("firebase") || exists(root, "firebase.json")) stack.add("Firebase");
-  if (exists(root, "prisma")) stack.add("Prisma");
-  if (exists(root, "vercel.json")) stack.add("Vercel");
-  if (exists(root, "netlify.toml")) stack.add("Netlify");
-  if (exists(root, "Dockerfile") || exists(root, "docker-compose.yml")) stack.add("Docker");
+  addStack(stack, "Node.js", [
+    pkg ? "package.json encontrado" : "",
+    exists(root, "package-lock.json") ? "package-lock.json encontrado" : "",
+    exists(root, "pnpm-lock.yaml") ? "pnpm-lock.yaml encontrado" : "",
+    exists(root, "yarn.lock") ? "yarn.lock encontrado" : "",
+    scripts.length > 0 ? "scripts npm encontrados" : ""
+  ]);
 
-  return [...stack];
+  addStack(stack, "TypeScript", [
+    exists(root, "tsconfig.json") ? "tsconfig.json encontrado" : "",
+    hasDep("typescript") ? "dependência typescript em package.json" : "",
+    codeFiles.some((file) => file.endsWith(".ts") || file.endsWith(".tsx")) ? "arquivos .ts/.tsx encontrados" : ""
+  ]);
+
+  addStack(stack, "Vite", [
+    hasDep("vite") ? "dependência vite em package.json" : "",
+    exists(root, "vite.config.ts") ? "vite.config.ts encontrado" : "",
+    exists(root, "vite.config.js") ? "vite.config.js encontrado" : "",
+    exists(root, "vite.config.mts") ? "vite.config.mts encontrado" : "",
+    scriptIncludes("vite") ? "script npm com vite encontrado" : ""
+  ]);
+
+  addStack(stack, "React", [
+    hasDep("react") ? "dependência react em package.json" : "",
+    hasDep("react-dom") ? "dependência react-dom em package.json" : "",
+    exists(root, "src/App.tsx") ? "src/App.tsx encontrado" : "",
+    exists(root, "src/App.jsx") ? "src/App.jsx encontrado" : "",
+    exists(root, "src/main.tsx") ? "src/main.tsx encontrado" : "",
+    codeFiles.some((file) => file.endsWith(".jsx") || file.endsWith(".tsx")) ? "arquivos .jsx/.tsx encontrados" : ""
+  ]);
+
+  addStack(stack, "Next.js", [
+    hasDep("next") ? "dependência next em package.json" : "",
+    exists(root, "next.config.js") ? "next.config.js encontrado" : "",
+    exists(root, "next.config.mjs") ? "next.config.mjs encontrado" : "",
+    exists(root, "next.config.ts") ? "next.config.ts encontrado" : "",
+    exists(root, "app") ? "diretório app encontrado" : "",
+    exists(root, "pages") ? "diretório pages encontrado" : ""
+  ]);
+
+  addStack(stack, "Firebase", [
+    exists(root, "firebase.json") ? "firebase.json encontrado" : "",
+    exists(root, ".firebaserc") ? ".firebaserc encontrado" : "",
+    hasAnyDep(["firebase", "firebase-admin"]) ? "dependência firebase em package.json" : "",
+    exists(root, "functions") ? "diretório functions encontrado" : ""
+  ]);
+
+  addStack(stack, "Supabase", [
+    exists(root, "supabase") ? "diretório supabase encontrado" : "",
+    hasDep("@supabase/supabase-js") ? "dependência @supabase/supabase-js em package.json" : "",
+    exists(root, "supabase/config.toml") ? "supabase/config.toml encontrado" : ""
+  ]);
+
+  addStack(stack, "Python", [
+    exists(root, "pyproject.toml") ? "pyproject.toml encontrado" : "",
+    exists(root, "requirements.txt") ? "requirements.txt encontrado" : "",
+    exists(root, "Pipfile") ? "Pipfile encontrado" : "",
+    exists(root, "poetry.lock") ? "poetry.lock encontrado" : "",
+    codeFiles.some((file) => file.endsWith(".py")) ? "arquivos .py encontrados" : ""
+  ]);
+
+  addStack(stack, "Monorepo", [
+    exists(root, "packages") ? "diretório packages encontrado" : "",
+    exists(root, "apps") ? "diretório apps encontrado" : "",
+    exists(root, "pnpm-workspace.yaml") ? "pnpm-workspace.yaml encontrado" : "",
+    exists(root, "turbo.json") ? "turbo.json encontrado" : "",
+    exists(root, "nx.json") ? "nx.json encontrado" : ""
+  ]);
+
+  addStack(stack, "Vue", [hasDep("vue") ? "dependência vue em package.json" : ""], 1);
+  addStack(stack, "Svelte", [hasDep("svelte") ? "dependência svelte em package.json" : ""], 1);
+  addStack(stack, "Tailwind", [hasDep("tailwindcss") ? "dependência tailwindcss em package.json" : ""], 1);
+  addStack(stack, "Prisma", [exists(root, "prisma") ? "diretório prisma encontrado" : ""], 1);
+  addStack(stack, "Vercel", [exists(root, "vercel.json") ? "vercel.json encontrado" : ""], 1);
+  addStack(stack, "Netlify", [exists(root, "netlify.toml") ? "netlify.toml encontrado" : ""], 1);
+  addStack(stack, "Docker", [
+    exists(root, "Dockerfile") ? "Dockerfile encontrado" : "",
+    exists(root, "docker-compose.yml") ? "docker-compose.yml encontrado" : ""
+  ], 1);
+
+  return stack;
 }
 
 function detectSensitiveNames(root, maxDepth = 3) {
@@ -74,7 +179,8 @@ function detectSensitiveNames(root, maxDepth = 3) {
 
 export function inspectProject(root= process.cwd()) {
   const pkg = packageJson(root);
-  const stack = detectStack(root, pkg);
+  const stackDetails = detectStackDetails(root, pkg);
+  const stack = stackDetails.map((item) => item.name);
   const rootEntries = listRoot(root);
   const projectEntries = rootEntries.filter((name) => {
     if (name === "docs" && fs.existsSync(path.join(root, "docs", "resolve-ai"))) return false;
@@ -146,6 +252,7 @@ export function inspectProject(root= process.cwd()) {
     recommendedFlow,
     recommendedMode,
     stack,
+    stackDetails,
     signals,
     risks,
     strengths,

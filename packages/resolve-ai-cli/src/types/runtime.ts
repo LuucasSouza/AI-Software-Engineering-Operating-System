@@ -25,6 +25,7 @@ export interface ResolveAiState {
   fluxoRecomendado?: string;
   tipoProjeto?: string;
   stackDetectada?: string[];
+  stackDetalhada?: DetectedStackItem[];
   riscosDetectados?: string[];
   maturidade?: number;
   proximaAcao?: string;
@@ -49,11 +50,18 @@ export interface InitResult {
 export type DiagnosticProjectType = "novo" | "em-andamento" | "legado" | "indeterminado";
 export type DiagnosticConfidence = "baixa" | "media" | "alta";
 
+export interface DetectedStackItem {
+  name: string;
+  confidence: DiagnosticConfidence;
+  evidence: string[];
+}
+
 export interface ProjectDetection {
   projectType: DiagnosticProjectType;
   recommendedFlow: string;
   recommendedMode: string;
   stack: string[];
+  stackDetails: DetectedStackItem[];
   signals: string[];
   risks: string[];
   strengths: string[];

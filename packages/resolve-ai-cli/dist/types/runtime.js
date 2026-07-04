@@ -20,6 +20,7 @@
   fluxoRecomendado?: string;
   tipoProjeto?: string;
   stackDetectada?: string[];
+  stackDetalhada?: DetectedStackItem[];
   riscosDetectados?: string[];
   maturidade?: number;
   proximaAcao?: string;
@@ -40,9 +41,14 @@
 }
 
 
+  confidence: DiagnosticConfidence;
+  evidence: string[];
+}
+
   recommendedFlow: string;
   recommendedMode: string;
   stack: string[];
+  stackDetails: DetectedStackItem[];
   signals: string[];
   risks: string[];
   strengths: string[];

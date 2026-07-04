@@ -204,7 +204,17 @@ Architecture Maintainers garantem numeração, consistência e referências entr
 - `0173-adopt-github-alpha-issue-templates.md`
 - `0174-adopt-private-controlled-alpha-before-public-distribution.md`
 - `0175-adopt-release-recommendation-record.md`
+- `0176-require-blocker-correction-before-public-alpha.md`
+- `0177-improve-stack-detection-before-npm-release.md`
+- `0178-calibrate-risk-severity-by-project-type.md`
+- `0179-require-real-user-validation-evidence.md`
+- `0180-keep-npm-publication-manual.md`
+- `0181-keep-git-tagging-manual.md`
+- `0182-use-public-alpha-release-candidate-documents.md`
+- `0183-keep-portuguese-first-public-ux.md`
+- `0184-maintain-no-telemetry-alpha-policy.md`
+- `0185-separate-release-prep-from-release-execution.md`
 
 ## Próximos passos
 
-- Iniciar Phase 12 — Public Alpha Release Prep.
+- Iniciar Phase 13 — Public Alpha Release Execution ou Alpha Blocker Resolution conforme decisao do mantenedor.

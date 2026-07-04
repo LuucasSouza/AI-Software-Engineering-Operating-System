@@ -57,10 +57,25 @@ test("preparar com diagnostico e planejamento seleciona tarefa", () => {
   run(["planejar"], root);
 
   const output = run(["preparar"], root);
+  const state = JSON.parse(fs.readFileSync(path.join(root, ".resolve-ai", "state.json"), "utf8"));
 
   assert.match(output, /Tarefa preparada:/);
   assert.match(output, /Autoexecução: não/);
+  assert.notEqual(state.ultimoPreparo.riskLevel, "red");
   assertPrepDocs(root);
+});
+
+test("projeto novo sem testes nao vira risco critico por motivo isolado", () => {
+  const root = tempProject("resolve-ai-prep-new-no-tests-");
+  run(["diagnosticar"], root);
+  run(["planejar"], root);
+  run(["preparar"], root);
+  const state = JSON.parse(fs.readFileSync(path.join(root, ".resolve-ai", "state.json"), "utf8"));
+  const task = fs.readFileSync(path.join(root, "docs", "resolve-ai", "15-tarefa-preparada.md"), "utf8");
+
+  assert.equal(state.tipoProjeto, "novo");
+  assert.notEqual(state.ultimoPreparo.riskLevel, "red");
+  assert.doesNotMatch(task, /Hardening inicial do repositório/);
 });
 
 test("preparar com risco critico prioriza hardening", () => {

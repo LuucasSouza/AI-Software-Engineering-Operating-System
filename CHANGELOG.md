@@ -21,6 +21,12 @@ O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionament
 
 ## Added
 
+- Phase 12 executada.
+- Criados documentos de validação real em `docs/alpha-validation/real-users/`.
+- Criados release candidate docs para `v0.1.0-alpha`.
+- Criados quickstarts alpha em `docs/getting-started/`.
+- Criadas ADRs 0176 a 0185.
+- Criados Phase 12 handoff, validation report e retrospective.
 - Phase 11 executada.
 - Criada documentação de alpha validation em `docs/alpha-validation/`.
 - Criado protocolo de validação alpha, matriz por perfil e plano de testes reais/simulados.
@@ -252,7 +258,10 @@ O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionament
 
 ## Changed
 
-- N/A
+- Melhorada detecção/exibição de stack provável da CLI para Node.js, TypeScript, Vite, React, Firebase, Supabase, Python e monorepo simples.
+- `resolve-ai status` agora mostra stack provável após diagnóstico.
+- Docs 00-09 agora registram stack provável com evidências seguras.
+- Calibrado risco para projeto novo sem testes/CI não virar crítico por esse motivo isolado.
 
 ## Deprecated
 
@@ -264,7 +273,7 @@ O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionament
 
 ## Fixed
 
-- N/A
+- Corrigida copy de `resolve-ai resolver` para mencionar `resolve-ai validar` como comando existente.
 
 ## Security
 

@@ -24,9 +24,8 @@ function readDocIfSmall(filePath) {
 
 function hasCriticalRisk(input, docsText) {
   const text = `${input.risks.join(" ")} ${docsText}`.toLowerCase();
-  const alwaysCritical = ["senha", "segredo", "sensível", "sensivel", "secret", "token", "dados pessoais", "lgpd", "backup", "produção", "producao", "deploy"];
-  const existingProjectCritical = ["sem ci", "testes não detectados", "testes nao detectados"];
-  return alwaysCritical.some((word) => text.includes(word)) || (input.projectType !== "novo" && existingProjectCritical.some((word) => text.includes(word)));
+  const sensitiveSignals = ["senha", "segredo", "sensível", "sensivel", "secret", "token", "dados pessoais", "lgpd", "backup", ".env", "credencial", "dump"];
+  return sensitiveSignals.some((word) => text.includes(word));
 }
 
 export function buildPlanningInput(root, state) {

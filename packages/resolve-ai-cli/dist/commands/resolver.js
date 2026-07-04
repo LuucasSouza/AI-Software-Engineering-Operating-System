@@ -77,6 +77,6 @@ Documentos preservados: ${docs.preserved.length}
 Próximo passo:
 1. Leia docs/resolve-ai/21-aprovacao-humana.md
 2. Cole o prompt final no seu agente de IA
-3. Depois rode resolve-ai validar quando esse comando existir
+3. Depois que o agente executar a tarefa, rode: resolve-ai validar
 `);
 }

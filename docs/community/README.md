@@ -14,6 +14,11 @@ Community docs explain how to contribute protocols, templates, frameworks, playb
 - `alpha-feedback-triage.md`
 - `alpha-improvement-backlog.md`
 
+## Phase 12
+
+- Validação real permanece pendente e deve usar `docs/alpha-validation/real-users/`.
+- Feedback alpha deve continuar sem dados sensíveis.
+
 ## Feedback
 
 Feedback should be classified by type, severity, affected profile and owner before becoming an improvement item or ADR.

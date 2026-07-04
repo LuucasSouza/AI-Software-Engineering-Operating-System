@@ -576,7 +576,7 @@ Validar o Resolve Aí em projetos reais com usuários externos antes de publica�
 
 # Phase 12 — Public Alpha Release Prep
 
-Status: **Next**
+Status: **Complete**
 
 ## Objetivo
 
@@ -584,11 +584,31 @@ Preparar a decisão de public alpha após corrigir P1s da Phase 11 e validar com
 
 ## Entregáveis previstos
 
-- Correção ou explicação da detecção/exibição de stack.
-- Rodada controlada com usuários reais dos três perfis.
-- Release notes finais de `v0.1.0-alpha`.
-- Decisão de package name e metadata npm.
-- Checklist de tag e publicação, sem publicação automática.
+- Correção da detecção/exibição de stack para Node.js, TypeScript, Vite e React.
+- Heurísticas simples para Firebase, Supabase, Python e monorepo.
+- Calibração de risco para projeto novo.
+- Release candidate docs, release notes draft, checklist npm e Go/No-Go.
+- Templates de validação real para três perfis.
+- Score 80/100, LIMITED GO.
+- Sem publicação npm, sem tag Git e sem GitHub release.
+
+---
+
+# Phase 13 — Public Alpha Release Execution
+
+Status: **Next**
+
+## Objetivo
+
+Executar ou adiar o release public alpha com base na decisão do mantenedor, validação real mínima e revisão final do pacote.
+
+## Entregáveis previstos
+
+- Registro de validação real mínima ou decisão explícita de manter alpha controlada.
+- Revisão final do `npm pack --dry-run`.
+- Decisão final de nome de pacote.
+- Release notes aprovadas.
+- Publicação/tag apenas se GO for aprovado manualmente.
 
 ---
 

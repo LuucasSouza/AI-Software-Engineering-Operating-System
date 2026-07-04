@@ -270,7 +270,7 @@ Ao terminar, valide os critérios de aceite e gere o relatório final da Sprint 
 
 ## Status do projeto
 
-Status atual: **Phase 11 concluída**
+Status atual: **Phase 12 concluída**
 
 Sprint 1 criou a primeira camada funcional do AI-SEOS:
 
@@ -486,7 +486,19 @@ Phase 11 executou validação alpha externa/local controlada:
 - ADRs 0166 a 0175;
 - relatório de validação em `docs/sprints/phase-11-validation-report.md`.
 
-Próxima etapa: **Phase 12 — Public Alpha Release Prep**.
+Phase 12 preparou o release candidate alpha e corrigiu blockers P1/P2:
+
+- stack provável melhorada para Node.js, TypeScript, Vite, React, Firebase, Supabase, Python e monorepo simples;
+- docs 00-09 e `status` passam a exibir stack provável quando detectada;
+- copy de `resolver` corrigida para orientar `resolve-ai validar` como comando existente;
+- risco calibrado para não tratar projeto novo sem testes/CI como crítico por isso isolado;
+- docs de validação real por perfil em `docs/alpha-validation/real-users/`;
+- release candidate, release notes draft, checklist npm, risk review, security/privacy review e Go/No-Go;
+- readiness score atualizado: 80/100, LIMITED GO para alpha controlada;
+- ADRs 0176 a 0185;
+- relatório de validação em `docs/sprints/phase-12-validation-report.md`.
+
+Próxima etapa: **Phase 13 — Public Alpha Release Execution**, somente se o mantenedor aceitar LIMITED GO e registrar validação real mínima.
 
 ---
 

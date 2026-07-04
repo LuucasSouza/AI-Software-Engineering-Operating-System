@@ -26,6 +26,7 @@ export function diagnosticarCommand(root: string = process.cwd()): void {
     fluxoRecomendado: detection.recommendedFlow,
     tipoProjeto: detection.projectType,
     stackDetectada: detection.stack,
+    stackDetalhada: detection.stackDetails,
     riscosDetectados: detection.risks,
     maturidade: detection.maturity,
     proximaAcao: actions[0],
@@ -42,8 +43,8 @@ Modo recomendado: ${detection.recommendedMode}
 Confiança: ${detection.confidence}
 Maturidade: ${detection.maturity}/5
 
-Stack detectada:
-${detection.stack.length ? detection.stack.map((item) => `- ${item}`).join("\n") : "- Não identificada"}
+Stack provável encontrada:
+${detection.stackDetails.length ? detection.stackDetails.map((item) => `- ${item.name}: confiança ${item.confidence}`).join("\n") : "- Não identificada"}
 
 Pontos de atenção:
 ${detection.attentionPoints.length ? detection.attentionPoints.map((item) => `- ${item}`).join("\n") : "- Nenhum ponto crítico detectado por heurística"}

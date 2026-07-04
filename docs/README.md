@@ -149,3 +149,19 @@ Documentation Maintainers mantêm consistência, clareza, versionamento e relaç
 - `sprints/phase-11-handoff.md`: handoff da Phase 11.
 - `sprints/phase-11-validation-report.md`: validação da Phase 11.
 - `sprints/phase-11-retrospective.md`: retrospectiva da Phase 11.
+
+## Documentação adicionada na Phase 12
+
+- `alpha-validation/real-users/`: templates de validação real por perfil.
+- `release/v0.1.0-alpha-release-candidate.md`: release candidate alpha.
+- `release/v0.1.0-alpha-release-notes-draft.md`: notas draft.
+- `release/v0.1.0-alpha-npm-publication-checklist.md`: checklist npm.
+- `release/v0.1.0-alpha-go-no-go-decision.md`: decisão LIMITED GO.
+- `release/v0.1.0-alpha-risk-review.md`: revisão de riscos.
+- `release/v0.1.0-alpha-security-privacy-review.md`: revisão de segurança e privacidade.
+- `release/v0.1.0-alpha-npm-and-tagging-decision-gate.md`: gate npm/tag.
+- `getting-started/quickstart-alpha.md`: quickstart público alpha.
+- `getting-started/first-project-with-resolve-ai.md`: primeiro projeto com Resolve Ai.
+- `sprints/phase-12-handoff.md`: handoff da Phase 12.
+- `sprints/phase-12-validation-report.md`: validação da Phase 12.
+- `sprints/phase-12-retrospective.md`: retrospectiva da Phase 12.
