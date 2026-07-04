@@ -205,7 +205,7 @@ Criar mecanismos para execução e continuidade.
 
 # Sprint 5 — Frameworks completos
 
-Status: **Next**
+Status: **Complete**
 
 ## Objetivo
 
@@ -222,10 +222,21 @@ Consolidar frameworks reutilizáveis.
 - AI Readiness Framework.
 - Scalability Framework.
 - Technical Debt Framework.
+- Framework catalog, taxonomy, map and registry.
+- AI-SEOS Meta-Framework and Discovery-to-Delivery Framework.
+- Cross-Engine Integration Model and traceability matrix.
+- AI-SEOS Maturity Model M0-M5.
+- Project Readiness Framework and scorecards.
+- Agent Collaboration Framework.
+- Framework Governance and Quality Assurance.
+- Reference Implementation Playbook and greenfield SaaS skeleton.
+- ADRs 0037 a 0045.
 
 ---
 
 # Sprint 6 — Templates completos
+
+Status: **Next**
 
 ## Objetivo
 

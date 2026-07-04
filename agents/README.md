@@ -30,8 +30,14 @@ Agent Maintainers mantêm consistência entre agentes, protocolos, templates e q
 ## Próximos passos
 
 - Sprint 1 criou `ai-cto/`.
-- Sprint 2 deve definir interações com Product Agent e Architecture Agent.
+- Sprint 5 definiu o Agent Collaboration Framework.
+- Sprint 6 deve expandir templates operacionais de agentes.
 
 ## Agentes disponíveis
 
 - `ai-cto/`: AI CTO & Solution Architect Agent.
+
+## Sprint 5
+
+- Agent collaboration passa a ser governada por `frameworks/agent-collaboration/`.
+- Agent operating contracts usam `templates/agent-collaboration/agent-operating-contract-template.md`.

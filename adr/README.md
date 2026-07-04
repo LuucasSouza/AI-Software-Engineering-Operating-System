@@ -65,7 +65,16 @@ Architecture Maintainers garantem numeração, consistência e referências entr
 - `0034-adopt-structured-handoff-packages.md`
 - `0035-adopt-reflection-engine.md`
 - `0036-adopt-continuous-learning-loop.md`
+- `0037-adopt-framework-consolidation-layer.md`
+- `0038-adopt-cross-engine-integration-model.md`
+- `0039-adopt-ai-seos-maturity-model.md`
+- `0040-adopt-discovery-to-delivery-meta-framework.md`
+- `0041-adopt-agent-collaboration-framework.md`
+- `0042-adopt-project-readiness-scorecards.md`
+- `0043-adopt-framework-governance-and-versioning.md`
+- `0044-adopt-framework-quality-assurance-model.md`
+- `0045-adopt-reference-implementation-playbook.md`
 
 ## Próximos passos
 
-- Consolidar revisão de ADRs e maturity model na Sprint 5.
+- Consolidar templates completos e example-filled versions na Sprint 6.

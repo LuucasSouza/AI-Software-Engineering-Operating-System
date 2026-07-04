@@ -33,6 +33,7 @@ Template Maintainers mantêm consistência, clareza e versionamento dos modelos.
 - Sprint 2 criou templates de produto e arquitetura.
 - Sprint 3 criou templates de decisão, risco, ADR e otimização.
 - Sprint 4 criou templates de execução, backlog, documentação, handoff e reflexão.
+- Sprint 5 criou templates cross-engine, meta-framework, maturity, readiness, frameworks, quality e agent collaboration.
 
 ## Templates disponíveis
 
@@ -59,3 +60,13 @@ Template Maintainers mantêm consistência, clareza e versionamento dos modelos.
 - `documentation/`: documentation review checklist e documentation index.
 - `handoff/`: handoff package, agent handoff, sprint handoff e validation checklist.
 - `reflection/`: reflection report, improvement backlog e sprint retrospective.
+
+## Sprint 5
+
+- `cross-engine/`: engine interface e integration map.
+- `meta-framework/`: operating path e intake brief.
+- `maturity/`: maturity assessment e improvement backlog.
+- `readiness/`: project, engine e summary scorecards.
+- `frameworks/`: proposal, spec, review e deprecation.
+- `quality/`: validation report e documentation quality checklist.
+- `agent-collaboration/`: operating contract, handoff map e review board.

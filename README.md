@@ -205,7 +205,7 @@ Ao terminar, valide os critérios de aceite e gere o relatório final da Sprint 
 
 ## Status do projeto
 
-Status atual: **Sprint 4 concluída**
+Status atual: **Sprint 5 concluída**
 
 Sprint 1 criou a primeira camada funcional do AI-SEOS:
 
@@ -242,7 +242,17 @@ Sprint 4 fechou o primeiro ciclo operacional completo:
 - ADRs 0027 a 0036;
 - relatório de validação em `docs/sprints/sprint-4-validation-report.md`.
 
-Próxima etapa: **Sprint 5 — Frameworks completos**.
+Sprint 5 consolidou a camada de frameworks:
+
+- framework catalog, taxonomy, map, registry e evolution policy;
+- AI-SEOS Meta-Framework, Discovery-to-Delivery Framework e operating paths;
+- Cross-Engine Integration Model e traceability matrix;
+- Maturity Model M0-M5 e project readiness scorecards;
+- Agent Collaboration Framework, framework governance, quality assurance e reference implementation skeleton;
+- ADRs 0037 a 0045;
+- relatório de validação em `docs/sprints/sprint-5-validation-report.md`.
+
+Próxima etapa: **Sprint 6 — Templates completos**.
 
 ---
 

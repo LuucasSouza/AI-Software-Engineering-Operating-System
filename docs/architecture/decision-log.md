@@ -37,3 +37,12 @@ source: "bootstrap-source/pt27_ARCHITECTURE_DECISION_PROTOCOL.md"
 | ADR-0034 | Adopt Structured Handoff Packages | Accepted | 2026-07-03 | High | Sprint 5 |
 | ADR-0035 | Adopt Reflection Engine | Accepted | 2026-07-03 | Medium | Sprint 5 |
 | ADR-0036 | Adopt Continuous Learning Loop | Accepted | 2026-07-03 | High | Sprint 5 |
+| ADR-0037 | Adopt Framework Consolidation Layer | Accepted | 2026-07-03 | Medium | Sprint 6 |
+| ADR-0038 | Adopt Cross-Engine Integration Model | Accepted | 2026-07-03 | Medium | Sprint 6 |
+| ADR-0039 | Adopt AI-SEOS Maturity Model | Accepted | 2026-07-03 | High | Sprint 6 |
+| ADR-0040 | Adopt Discovery-to-Delivery Meta-Framework | Accepted | 2026-07-03 | Medium | Sprint 6 |
+| ADR-0041 | Adopt Agent Collaboration Framework | Accepted | 2026-07-03 | Medium | Sprint 6 |
+| ADR-0042 | Adopt Project Readiness Scorecards | Accepted | 2026-07-03 | High | Sprint 6 |
+| ADR-0043 | Adopt Framework Governance and Versioning | Accepted | 2026-07-03 | Medium | Sprint 6 |
+| ADR-0044 | Adopt Framework Quality Assurance Model | Accepted | 2026-07-03 | Medium | Sprint 6 |
+| ADR-0045 | Adopt Reference Implementation Playbook | Accepted | 2026-07-03 | High | Sprint 6 |

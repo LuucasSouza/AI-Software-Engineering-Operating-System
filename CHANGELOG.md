@@ -21,6 +21,18 @@ O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionament
 
 ## Added
 
+- Sprint 5 executada.
+- Criados framework catalog, taxonomy, map, registry e evolution policy.
+- Criados AI-SEOS Meta-Framework, Discovery-to-Delivery Framework e operating paths.
+- Criados Cross-Engine Integration Model, traceability matrix e cross-engine handoff protocol.
+- Criados AI-SEOS Maturity Model M0-M5 e templates de maturity assessment.
+- Criados Project Readiness Framework, readiness levels, scorecards e blocking conditions.
+- Criado Agent Collaboration Framework com role map, handoff map e conflict resolution.
+- Criados Framework Governance, versioning, proposal/review/deprecation templates e registry.
+- Criado Framework Quality Assurance com quality dimensions, scoring, gates e validation templates.
+- Criado Reference Implementation Framework, playbook e skeleton `examples/reference-project/greenfield-saas/`.
+- Criadas ADRs 0037 a 0045.
+- Criados Sprint 5 handoff, validation report e retrospective.
 - Sprint 4 executada.
 - Criado Execution Engine.
 - Criados execution lifecycle, execution object model e execution readiness gates.

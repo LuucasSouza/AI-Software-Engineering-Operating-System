@@ -33,6 +33,7 @@ Framework Maintainers mantêm modularidade, aplicabilidade e alinhamento com eng
 - Sprint 2 criou frameworks de produto e arquitetura.
 - Sprint 3 criou frameworks de decisão, risco e otimização.
 - Sprint 4 criou frameworks de execução, documentação, handoff e reflexão.
+- Sprint 5 consolidou frameworks cross-engine, maturidade, readiness, agentes, governança, QA e reference implementation.
 
 ## Frameworks disponíveis
 
@@ -55,3 +56,14 @@ Framework Maintainers mantêm modularidade, aplicabilidade e alinhamento com eng
 - `documentation-framework/`: padrões documentais e information architecture.
 - `handoff-framework/`: handoff contract model.
 - `reflection-framework/`: dimensões e gates de reflexão.
+
+## Sprint 5
+
+- `ai-seos-meta-framework/`: meta-framework e discovery-to-delivery.
+- `cross-engine-integration/`: integration model e traceability matrix.
+- `maturity-model/`: M0-M5 e assessment guide.
+- `project-readiness/`: readiness levels, scorecards e blocking conditions.
+- `agent-collaboration/`: role map, handoff map e conflict resolution.
+- `governance-framework/`: framework governance and versioning.
+- `quality-assurance/`: framework quality model, scores e gates.
+- `reference-implementation/`: reference implementation framework.

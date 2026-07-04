@@ -33,6 +33,7 @@ Protocol Maintainers garantem consistência com `DEVELOPMENT_PROTOCOL.md`.
 - Sprint 2 adicionou protocolos para Product e Architecture.
 - Sprint 3 adicionou protocolos para Decision, Risk e Optimization.
 - Sprint 4 adicionou protocolos para Execution, Documentation, Handoff e Reflection.
+- Sprint 5 adicionou protocolos cross-engine e agent collaboration.
 
 ## Protocolos disponíveis
 
@@ -55,3 +56,8 @@ Protocol Maintainers garantem consistência com `DEVELOPMENT_PROTOCOL.md`.
 - `documentation-maintenance/`: revisão e manutenção documental.
 - `handoff/`: universal handoff, agent handoff e phase handoff.
 - `reflection-review/`: reflection review protocol.
+
+## Sprint 5
+
+- `cross-engine-integration/`: cross-engine handoff protocol.
+- `agent-collaboration/`: agent collaboration protocol.

@@ -31,9 +31,14 @@ Documentation Maintainers mantêm consistência, clareza, versionamento e relaç
 ## Próximos passos
 
 - Expandir guias de visão, filosofia, governança e arquitetura.
-- Consolidar padrões e maturity model na Sprint 5.
+- Consolidar template packs completos na Sprint 6.
 
 ## Documentação adicionada na Sprint 4
 
 - `documentation/`: documentation standards, information architecture e front matter standard.
 - `sprints/`: handoffs, validation reports e retrospectives.
+
+## Documentação adicionada na Sprint 5
+
+- `frameworks/`: catalog, taxonomy, map, registry e evolution policy.
+- `quality/`: framework validation standard.

@@ -29,4 +29,9 @@ Example Maintainers garantem qualidade, segurança e aderência aos protocolos.
 
 ## Próximos passos
 
-- Criar exemplo mínimo de discovery após a Sprint 1.
+- Expandir reference project greenfield SaaS com artefatos preenchidos na Sprint 6.
+
+## Sprint 5
+
+- `reference-project/`: estrutura para exemplos AI-SEOS end-to-end.
+- `reference-project/greenfield-saas/`: skeleton inicial de referência.
