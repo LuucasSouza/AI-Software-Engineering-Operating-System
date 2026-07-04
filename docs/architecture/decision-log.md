@@ -157,3 +157,13 @@ source: "bootstrap-source/pt27_ARCHITECTURE_DECISION_PROTOCOL.md"
 | ADR-0183 | Keep Portuguese-First Public UX | Accepted | 2026-07-04 | High | Phase 13 |
 | ADR-0184 | Maintain No-Telemetry Alpha Policy | Accepted | 2026-07-04 | High | Phase 13 |
 | ADR-0185 | Separate Release Prep From Release Execution | Accepted | 2026-07-04 | High | Phase 13 |
+| ADR-0186 | Record Real Alpha Validation as Release Gate | Accepted | 2026-07-04 | High | Phase 14 |
+| ADR-0187 | Do Not Invent Real User Validation | Accepted | 2026-07-04 | High | Phase 14 |
+| ADR-0188 | Adopt Consolidated Alpha Feedback Analysis | Accepted | 2026-07-04 | Medium | Phase 14 |
+| ADR-0189 | Adopt Alpha Blocker Correction Backlog | Accepted | 2026-07-04 | Medium | Phase 14 |
+| ADR-0190 | Use Package files Field Before npm Alpha | Accepted | 2026-07-04 | Medium | Phase 14 |
+| ADR-0191 | Keep Alpha Package Dry Run Local | Accepted | 2026-07-04 | High | Phase 14 |
+| ADR-0192 | Maintain Limited Go Without Real Users | Accepted | 2026-07-04 | High | Phase 14 |
+| ADR-0193 | Separate Controlled Alpha From Public npm | Accepted | 2026-07-04 | High | Phase 14 |
+| ADR-0194 | Require Maintainer Release Approval | Accepted | 2026-07-04 | High | Phase 14 |
+| ADR-0195 | Prepare Phase 14 for Real User Validation Execution | Accepted | 2026-07-04 | Medium | Phase 14 |

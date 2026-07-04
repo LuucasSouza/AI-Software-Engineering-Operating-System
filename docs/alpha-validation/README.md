@@ -39,6 +39,14 @@ Maintainers devem executar ou revisar cenarios, registrar achados, classificar s
 - `templates/feedback/alpha-feedback-template.md`
 - `templates/feedback/alpha-feedback-triage-template.md`
 
+## Phase 13
+
+- `real-users/non-technical-builder-validation-report.md`
+- `real-users/vibe-coder-validation-report.md`
+- `real-users/professional-engineer-validation-report.md`
+- `real-users/consolidated-real-validation-summary.md`
+- `phase-13-alpha-feedback-analysis.md`
+
 ## Proximos passos
 
 Executar validacoes com usuarios reais nos tres perfis e atualizar o scorecard de release.

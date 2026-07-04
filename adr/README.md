@@ -214,7 +214,17 @@ Architecture Maintainers garantem numeração, consistência e referências entr
 - `0183-keep-portuguese-first-public-ux.md`
 - `0184-maintain-no-telemetry-alpha-policy.md`
 - `0185-separate-release-prep-from-release-execution.md`
+- `0186-record-real-alpha-validation-as-release-gate.md`
+- `0187-do-not-invent-real-user-validation.md`
+- `0188-adopt-consolidated-alpha-feedback-analysis.md`
+- `0189-adopt-alpha-blocker-correction-backlog.md`
+- `0190-use-package-files-field-before-npm-alpha.md`
+- `0191-keep-alpha-package-dry-run-local.md`
+- `0192-maintain-limited-go-without-real-users.md`
+- `0193-separate-controlled-alpha-from-public-npm.md`
+- `0194-require-maintainer-release-approval.md`
+- `0195-prepare-phase-14-for-real-user-validation-execution.md`
 
 ## Próximos passos
 
-- Iniciar Phase 13 — Public Alpha Release Execution ou Alpha Blocker Resolution conforme decisao do mantenedor.
+- Iniciar Phase 14 — Real User Validation Execution.

@@ -165,3 +165,14 @@ Documentation Maintainers mantêm consistência, clareza, versionamento e relaç
 - `sprints/phase-12-handoff.md`: handoff da Phase 12.
 - `sprints/phase-12-validation-report.md`: validação da Phase 12.
 - `sprints/phase-12-retrospective.md`: retrospectiva da Phase 12.
+
+## Documentação adicionada na Phase 13
+
+- `alpha-validation/real-users/*-validation-report.md`: relatórios pendentes por perfil.
+- `alpha-validation/real-users/consolidated-real-validation-summary.md`: resumo consolidado.
+- `alpha-validation/phase-13-alpha-feedback-analysis.md`: análise de feedback alpha.
+- `release/v0.1.0-alpha-blocker-correction-backlog.md`: backlog de blockers.
+- `release/v0.1.0-alpha-phase-13-release-decision.md`: decisão LIMITED GO.
+- `sprints/phase-13-handoff.md`: handoff da Phase 13.
+- `sprints/phase-13-validation-report.md`: validação da Phase 13.
+- `sprints/phase-13-retrospective.md`: retrospectiva da Phase 13.

@@ -216,3 +216,5 @@ ajuda -> começar -> ligar -> diagnosticar -> planejar -> preparar -> resolver -
 Resultado: todos os comandos passaram nos cenários simulados, sem publicação npm e sem tag Git. O score externo ficou em 72/100, recomendado apenas para private alpha até corrigir P1s e validar com usuários reais.
 
 Na Phase 12, P1/P2 técnicos foram corrigidos e o score subiu para 80/100, com recomendação LIMITED GO para alpha controlada. Public npm continua pendente de validação real.
+
+Na Phase 13, o pacote foi revisado com `npm pack --dry-run` e o `package.json` passou a usar `files` para restringir uma publicação futura a `dist` e `README.md`. Nenhuma publicação npm foi feita.

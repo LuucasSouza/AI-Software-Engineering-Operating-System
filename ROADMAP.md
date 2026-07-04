@@ -594,21 +594,40 @@ Preparar a decisão de public alpha após corrigir P1s da Phase 11 e validar com
 
 ---
 
-# Phase 13 — Public Alpha Release Execution
+# Phase 13 — Real Alpha Validation and Release Decision Gate
+
+Status: **Complete**
+
+## Objetivo
+
+Conduzir ou preparar validação real, revisar blockers, revisar pacote npm e registrar decisão formal.
+
+## Entregáveis previstos
+
+- Relatórios pendentes por perfil.
+- Resumo consolidado de validação real.
+- Análise de feedback alpha.
+- Backlog de blockers/correções.
+- `npm pack --dry-run` revisado.
+- Campo `files` aplicado no pacote CLI.
+- Decisão LIMITED GO, sem publicação npm/tag/release.
+
+---
+
+# Phase 14 — Real User Validation Execution
 
 Status: **Next**
 
 ## Objetivo
 
-Executar ou adiar o release public alpha com base na decisão do mantenedor, validação real mínima e revisão final do pacote.
+Executar validação real com usuários dos três perfis antes de qualquer public alpha npm.
 
 ## Entregáveis previstos
 
-- Registro de validação real mínima ou decisão explícita de manter alpha controlada.
-- Revisão final do `npm pack --dry-run`.
-- Decisão final de nome de pacote.
-- Release notes aprovadas.
-- Publicação/tag apenas se GO for aprovado manualmente.
+- Ao menos uma validação real registrada.
+- Preferencialmente três perfis validados.
+- Feedback consolidado por severidade.
+- Decisão revisada GO / LIMITED GO / NO-GO.
 
 ---
 

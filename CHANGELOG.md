@@ -21,6 +21,14 @@ O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionament
 
 ## Added
 
+- Phase 13 executada.
+- Criados relatórios pendentes de validação real por perfil.
+- Criado resumo consolidado de validação real.
+- Criada análise de feedback alpha da Phase 13.
+- Criado backlog de blockers/correções da v0.1.0-alpha.
+- Criada decisão formal LIMITED GO da Phase 13.
+- Criadas ADRs 0186 a 0195.
+- Criados Phase 13 handoff, validation report e retrospective.
 - Phase 12 executada.
 - Criados documentos de validação real em `docs/alpha-validation/real-users/`.
 - Criados release candidate docs para `v0.1.0-alpha`.
@@ -262,6 +270,7 @@ O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionament
 - `resolve-ai status` agora mostra stack provável após diagnóstico.
 - Docs 00-09 agora registram stack provável com evidências seguras.
 - Calibrado risco para projeto novo sem testes/CI não virar crítico por esse motivo isolado.
+- Adicionado campo `files` ao pacote CLI para restringir conteúdo de publicação futura.
 
 ## Deprecated
 

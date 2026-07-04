@@ -270,7 +270,7 @@ Ao terminar, valide os critérios de aceite e gere o relatório final da Sprint 
 
 ## Status do projeto
 
-Status atual: **Phase 12 concluída**
+Status atual: **Phase 13 concluída**
 
 Sprint 1 criou a primeira camada funcional do AI-SEOS:
 
@@ -498,7 +498,19 @@ Phase 12 preparou o release candidate alpha e corrigiu blockers P1/P2:
 - ADRs 0176 a 0185;
 - relatório de validação em `docs/sprints/phase-12-validation-report.md`.
 
-Próxima etapa: **Phase 13 — Public Alpha Release Execution**, somente se o mantenedor aceitar LIMITED GO e registrar validação real mínima.
+Phase 13 executou o gate de validação real e decisão de release:
+
+- validação real dos três perfis registrada como pendente, sem inventar feedback;
+- resumo consolidado em `docs/alpha-validation/real-users/consolidated-real-validation-summary.md`;
+- análise de feedback alpha em `docs/alpha-validation/phase-13-alpha-feedback-analysis.md`;
+- backlog de blockers em `docs/release/v0.1.0-alpha-blocker-correction-backlog.md`;
+- `npm pack --dry-run` revisado dentro do pacote;
+- `package.json` do CLI agora usa `files` para restringir o tarball;
+- readiness score atualizado: 79/100, LIMITED GO;
+- ADRs 0186 a 0195;
+- relatório de validação em `docs/sprints/phase-13-validation-report.md`.
+
+Próxima etapa: **Phase 14 — Real User Validation Execution**.
 
 ---
 
