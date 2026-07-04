@@ -339,7 +339,7 @@ Validar o AI-SEOS em uso real e preparar `v0.1.0-alpha`.
 
 # v0.1.0-alpha Release Preparation
 
-Status: **Next**
+Status: **Complete**
 
 ## Objetivo
 
@@ -351,6 +351,61 @@ Executar revisão manual do mantenedor, corrigir bloqueios finais se existirem e
 - Confirmação de limitações conhecidas.
 - Tag `v0.1.0-alpha`.
 - Primeira rodada de validação externa com usuários reais.
+
+---
+
+# Phase 2.5 — Naming, Brand and Product Positioning
+
+Status: **Complete**
+
+## Objetivo
+
+Renomear e reposicionar publicamente o projeto de AI-SEOS para Resolve Aí antes da criação da camada runtime.
+
+## Entregáveis
+
+- Resolve Aí adotado como nome público.
+- AI-SEOS preservado como nome técnico/histórico.
+- Promessa pública definida: “Me dá o problema ou a ideia, e eu te ajudo a resolver.”
+- Brand identity e brand voice.
+- Rename and migration strategy.
+- Public positioning.
+- Runtime naming prep com futuro comando `resolve-ai`.
+- ADRs 0081 a 0086.
+
+## Nota
+
+Phase 2.5 foi inserida antes da Phase 3 para evitar criar comandos, fluxos de instalação e onboarding público com um nome que precisaria ser alterado logo em seguida.
+
+---
+
+# Phase 3 — Resolve Aí Runtime Productization
+
+Status: **Next**
+
+## Objetivo
+
+Transformar Resolve Aí de framework documental em uma ferramenta ativável dentro de projetos por CLI, adapters, instruções de agentes e futuras capacidades MCP/runtime.
+
+## Direção inicial
+
+- Futuro comando: `resolve-ai`.
+- Futuro caminho local preferido: `docs/resolve-ai/`.
+- Caminho legado aceito durante transição: `docs/ai-seos/`.
+- Não copiar Context Mode; usar inspiração de facilidade de uso para software engineering orchestration.
+
+## Partes previstas
+
+- `pt111_RESOLVE_AI_RUNTIME_VISION.md`
+- `pt112_RESOLVE_AI_CLI_ARCHITECTURE.md`
+- `pt113_RESOLVE_AI_MCP_SERVER_ARCHITECTURE.md`
+- `pt114_RESOLVE_AI_PROJECT_ADAPTER.md`
+- `pt115_AGENT_ROUTING_AND_INSTRUCTION_FILES.md`
+- `pt116_HOOKS_AND_SESSION_MEMORY.md`
+- `pt117_COMMANDS_AND_TOOL_CONTRACTS.md`
+- `pt118_INSTALLATION_AND_PLATFORM_ADAPTERS.md`
+- `pt119_RUNTIME_SECURITY_AND_PRIVACY.md`
+- `pt120_PHASE_3_HANDOFF.md`
 
 ---
 

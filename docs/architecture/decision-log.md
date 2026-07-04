@@ -62,3 +62,9 @@ source: "bootstrap-source/pt27_ARCHITECTURE_DECISION_PROTOCOL.md"
 | ADR-0078 | Adopt v0.1.0-alpha Release Process | Accepted | 2026-07-04 | High | Alpha |
 | ADR-0079 | Adopt Feedback and Improvement Loop | Accepted | 2026-07-04 | High | Alpha |
 | ADR-0080 | Adopt Phase 2 Validation and Productization Model | Accepted | 2026-07-04 | Medium | Alpha |
+| ADR-0081 | Adopt Resolve Aí as Public Project Name | Accepted | 2026-07-04 | Medium | Phase 3 |
+| ADR-0082 | Keep AI-SEOS as Historical Technical Name | Accepted | 2026-07-04 | High | Phase 3 |
+| ADR-0083 | Adopt resolve-ai as Future CLI Name | Accepted | 2026-07-04 | Medium | Phase 3 |
+| ADR-0084 | Insert Phase 2.5 Before Runtime Productization | Accepted | 2026-07-04 | High | Phase 3 |
+| ADR-0085 | Adopt Dual Audience Communication Model | Accepted | 2026-07-04 | Medium | Phase 3 |
+| ADR-0086 | Adopt Runtime Direction Inspired by Ease of Use | Accepted | 2026-07-04 | Medium | Phase 3 |

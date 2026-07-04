@@ -109,7 +109,13 @@ Architecture Maintainers garantem numeração, consistência e referências entr
 - `0078-adopt-v0-1-0-alpha-release-process.md`
 - `0079-adopt-feedback-and-improvement-loop.md`
 - `0080-adopt-phase-2-validation-and-productization-model.md`
+- `0081-adopt-resolve-ai-as-public-project-name.md`
+- `0082-keep-ai-seos-as-historical-technical-name.md`
+- `0083-adopt-resolve-ai-as-future-cli-name.md`
+- `0084-insert-phase-2-5-before-runtime-productization.md`
+- `0085-adopt-dual-audience-communication-model.md`
+- `0086-adopt-runtime-direction-inspired-by-ease-of-use.md`
 
 ## Próximos passos
 
-- Preparar tag `v0.1.0-alpha` e iniciar validação externa.
+- Iniciar Phase 3 — Resolve Aí Runtime Productization.

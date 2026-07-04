@@ -112,6 +112,8 @@ Para novas propostas, consulte `docs/community/proposal-process.md`.
 
 Para feedback após uso real do framework, consulte `docs/community/feedback-and-improvement-loop.md` e use os templates em `templates/feedback/`.
 
+Durante a migração de nome, contribuições devem usar Resolve Aí em conteúdo público novo e preservar AI-SEOS apenas quando o contexto for histórico, técnico ou legado.
+
 ---
 
 # 5. Padrão de commits

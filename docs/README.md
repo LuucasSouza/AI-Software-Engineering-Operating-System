@@ -71,3 +71,11 @@ Documentation Maintainers mantêm consistência, clareza, versionamento e relaç
 - `release/`: plano, checklist, release notes, known limitations e readiness report de `v0.1.0-alpha`.
 - `community/`: feedback loop, issue triage e improvement backlog.
 - `quality/`: repository audit and hardening.
+
+## Documentação adicionada na Phase 2.5
+
+- `brand/`: identidade pública Resolve Aí e guia de voz.
+- `naming/`: estratégia de rename e migração.
+- `product-positioning/`: posicionamento público.
+- `runtime/`: preparação do naming `resolve-ai` para Phase 3.
+- `getting-started/use-resolve-ai-in-existing-project.md`: guia para aplicar Resolve Aí em repositórios existentes.

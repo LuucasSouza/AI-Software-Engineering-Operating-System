@@ -38,6 +38,7 @@ Template Maintainers mantêm consistência, clareza e versionamento dos modelos.
 - Sprint 6 criou packs completos por perfil, lifecycle, engines, agent handoff, exemplos preenchidos e governança de templates.
 - Sprint 7 criou templates para protocolos e estudos de caso.
 - Phase 2 criou templates de validação, auditoria, publicação e feedback.
+- Phase 2.5 criou prompt canônico para aplicar Resolve Aí em projetos existentes.
 
 ## Templates disponíveis
 
@@ -106,3 +107,7 @@ Template Maintainers mantêm consistência, clareza e versionamento dos modelos.
 - `repository-audit/`: template de repository audit report.
 - `publication/`: docs site page template.
 - `feedback/`: user feedback e framework improvement proposal.
+
+## Phase 2.5
+
+- `prompts/`: existing project assessment prompt para uso do Resolve Aí em repositórios existentes.

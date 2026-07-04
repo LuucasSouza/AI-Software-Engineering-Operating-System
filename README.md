@@ -1,5 +1,5 @@
 ---
-title: "AI-SEOS — README"
+title: "Resolve Aí — README"
 version: "0.1.0"
 status: "Draft"
 owner: "AI-SEOS Core Maintainers"
@@ -9,13 +9,15 @@ canonical_filename: "README.md"
 recommended_repository_location: "/README.md"
 ---
 
-# AI Software Engineering Operating System (AI-SEOS)
+# Resolve Aí
 
-**AI-SEOS** é um framework open source para Engenharia de Software orientada por Inteligência Artificial.
+> Me dá o problema ou a ideia, e eu te ajudo a resolver.
 
-Ele define um sistema operacional de trabalho para equipes formadas por humanos e agentes de IA, cobrindo discovery, produto, arquitetura, decisão, risco, execução, documentação, handoff, revisão e evolução contínua de projetos de software.
+**Resolve Aí** é um framework open source para transformar problemas, ideias e projetos existentes em planos claros de software usando IA.
 
-O objetivo do AI-SEOS é transformar uma ideia inicial em um projeto tecnicamente estruturado, documentado, versionável, seguro, escalável e pronto para ser entregue aos agentes especializados de implementação.
+Ele ajuda pessoas não técnicas, vibe coders e engenheiros profissionais a sair da confusão antes de pedir para a IA escrever código.
+
+Resolve Aí foi criado originalmente com o nome técnico **AI-SEOS — AI Software Engineering Operating System**. Durante a transição, AI-SEOS continua sendo o nome histórico/técnico da arquitetura, enquanto Resolve Aí passa a ser o nome público do projeto.
 
 ---
 
@@ -36,7 +38,7 @@ A adoção de IA em engenharia de software acelerou a criação de código, mas 
 - evitar superengenharia;
 - garantir segurança e manutenibilidade.
 
-Muitas equipes usam IA como gerador de código ou de prompts. O AI-SEOS propõe outra abordagem:
+Muitas equipes usam IA como gerador de código ou de prompts. Resolve Aí propõe outra abordagem:
 
 ```text
 IA não deve apenas gerar código.
@@ -45,7 +47,7 @@ IA deve operar dentro de um sistema de engenharia.
 
 ---
 
-## O que o AI-SEOS entrega
+## O que o Resolve Aí entrega
 
 O framework entrega:
 
@@ -85,7 +87,7 @@ flowchart TD
 
 ## Para quem é
 
-AI-SEOS foi criado para:
+Resolve Aí foi criado para:
 
 - desenvolvedores que usam IA seriamente;
 - founders técnicos;
@@ -108,17 +110,45 @@ Comece pelo modo que mais parece com você:
 
 - **Non-Technical Builder**: você tem um problema real, mas não sabe descrever isso em termos de software. Comece em `docs/getting-started/for-non-technical-builders.md` e use `templates/packs/non-technical-builder-pack/`.
 - **Vibe Coder**: você usa Codex, Cursor, Claude Code ou ferramentas parecidas e quer evitar caos, retrabalho e prompts vagos. Comece em `docs/getting-started/for-vibe-coders.md` e use `templates/packs/vibe-coder-pack/`.
-- **Professional Engineer**: você quer aplicar AI-SEOS como workflow técnico com engines, ADRs, riscos, handoffs e readiness. Comece em `docs/getting-started/for-professional-engineers.md` e use `examples/case-library/professional-engineer/`.
+- **Professional Engineer**: você quer aplicar Resolve Aí como workflow técnico com engines, ADRs, riscos, handoffs e readiness. Comece em `docs/getting-started/for-professional-engineers.md` e use `examples/case-library/professional-engineer/`.
 
 Para decidir, leia `docs/getting-started/choose-your-path.md`.
 
 ---
 
-## O que diferencia o AI-SEOS
+## Projeto novo ou projeto existente
+
+### Use Resolve Aí com um projeto novo
+
+Use este caminho quando você ainda tem só uma ideia, problema ou processo manual. Resolve Aí ajuda a fazer intake, discovery, definição de MVP, arquitetura, riscos, plano de execução e handoff.
+
+### Use Resolve Aí com um projeto existente
+
+Use este caminho quando você já tem um repositório e quer diagnosticar, documentar e planejar antes de alterar código.
+
+Abra o projeto que você quer analisar no seu terminal com IA ou coding agent e peça para aplicar Resolve Aí como framework de diagnóstico e planejamento.
+
+Durante a transição, `docs/ai-seos/` pode aparecer como caminho legado. O caminho preferido para a próxima fase será:
+
+```text
+docs/resolve-ai/
+```
+
+O futuro runtime deve usar o comando:
+
+```bash
+resolve-ai
+```
+
+O CLI ainda não foi implementado; a Phase 2.5 apenas prepara o naming para a Phase 3.
+
+---
+
+## O que diferencia o Resolve Aí
 
 A maioria dos materiais públicos sobre IA para engenharia foca em prompts isolados.
 
-O AI-SEOS foca em sistema operacional.
+Resolve Aí foca em sistema operacional de engenharia.
 
 Ele define:
 
@@ -137,7 +167,7 @@ Ele define:
 ## Estrutura inicial do repositório
 
 ```text
-ai-seos/
+resolve-ai/
 ├── README.md
 ├── PROJECT_BOOTSTRAP.md
 ├── ARCHITECTURE_VISION.md
@@ -217,7 +247,7 @@ Ao terminar, valide os critérios de aceite e gere o relatório final da Sprint 
 
 ## Status do projeto
 
-Status atual: **Phase 2 concluída**
+Status atual: **Phase 2.5 concluída**
 
 Sprint 1 criou a primeira camada funcional do AI-SEOS:
 
@@ -311,7 +341,18 @@ Phase 2 moveu o AI-SEOS para public-alpha candidate validado:
 - release readiness score: 47/50, Strong public alpha candidate;
 - relatório de validação em `docs/sprints/phase-2-validation-report.md`.
 
-Próxima etapa: **preparar o tag `v0.1.0-alpha` após revisão manual do mantenedor e iniciar validação externa com usuários reais**.
+Phase 2.5 renomeou e reposicionou publicamente o projeto:
+
+- Resolve Aí é o nome público oficial;
+- AI-SEOS permanece como nome técnico/histórico durante a transição;
+- promessa pública definida: “Me dá o problema ou a ideia, e eu te ajudo a resolver.”;
+- estratégia de migração e classificação de referências criada;
+- futura CLI preparada como `resolve-ai`;
+- Phase 3 renomeada para Resolve Aí Runtime Productization;
+- ADRs 0081 a 0086;
+- relatório de validação em `docs/sprints/phase-2-5-validation-report.md`.
+
+Próxima etapa: **Phase 3 — Resolve Aí Runtime Productization**.
 
 ---
 
@@ -333,5 +374,5 @@ Contribuições devem seguir as regras de `CONTRIBUTING.md` e a governança defi
 Código sem contexto gera dívida.
 Arquitetura sem decisão gera ambiguidade.
 IA sem sistema gera caos.
-AI-SEOS existe para transformar IA em disciplina de engenharia.
+Resolve Aí existe para transformar IA em disciplina de engenharia.
 ```

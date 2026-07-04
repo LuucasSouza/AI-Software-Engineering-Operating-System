@@ -201,6 +201,8 @@ Mudanças em protocolos, templates, frameworks, casos, anti-patterns ou best pra
 
 Feedback público deve ser triado pelo processo definido em `docs/community/feedback-and-improvement-loop.md` e `protocols/feedback/feedback-triage-protocol.md`.
 
+Durante a transição de naming, referências públicas devem usar Resolve Aí. Referências históricas, técnicas ou legadas a AI-SEOS devem ser preservadas quando mantiverem rastreabilidade. Substituição global cega de AI-SEOS não é permitida.
+
 ---
 
 # 12. Papel da IA na governança

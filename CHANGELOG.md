@@ -21,6 +21,15 @@ O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionament
 
 ## Added
 
+- Phase 2.5 executada.
+- Resolve Aí adotado como nome público oficial do projeto.
+- AI-SEOS mantido como nome técnico/histórico durante a transição.
+- Promessa pública definida: “Me dá o problema ou a ideia, e eu te ajudo a resolver.”
+- Criadas documentações de brand identity, brand voice, rename strategy, public positioning e runtime naming prep.
+- Preparado o futuro comando `resolve-ai` para Phase 3.
+- Phase 3 renomeada para Resolve Aí Runtime Productization.
+- Criadas ADRs 0081 a 0086.
+- Criados Phase 2.5 handoff, validation report e retrospective.
 - Phase 2 executada.
 - Criado repository audit and hardening report.
 - Criado first end-to-end validation case com cadeia completa de artefatos.
