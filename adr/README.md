@@ -184,7 +184,17 @@ Architecture Maintainers garantem numeração, consistência e referências entr
 - `0153-adopt-validation-status-model.md`
 - `0154-extend-runtime-state-with-ultima-validacao.md`
 - `0155-defer-deep-semantic-validation.md`
+- `0156-adopt-cli-build-automation.md`
+- `0157-adopt-local-cli-linking-workflow.md`
+- `0158-adopt-smoke-tests-for-cli-usability.md`
+- `0159-keep-dist-versioned-during-alpha.md`
+- `0160-adopt-portuguese-first-cli-ux.md`
+- `0161-adopt-resolve-ai-remote-as-canonical-repository.md`
+- `0162-adopt-runtime-state-policy.md`
+- `0163-adopt-docs-resolve-ai-as-human-project-memory.md`
+- `0164-defer-npm-publication-until-external-validation.md`
+- `0165-adopt-alpha-release-readiness-checklist.md`
 
 ## Próximos passos
 
-- Iniciar Phase 10 — Resolve Aí Release Hardening and Local CLI Usability.
+- Iniciar Phase 11 — External Alpha Validation.

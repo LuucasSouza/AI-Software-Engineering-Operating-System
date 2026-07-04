@@ -30,6 +30,20 @@ Esta versão implementa apenas comandos locais e não destrutivos:
 
 ## Uso Local
 
+Build:
+
+```bash
+npm run build --prefix packages/resolve-ai-cli
+```
+
+Smoke test:
+
+```bash
+npm run smoke --prefix packages/resolve-ai-cli
+```
+
+Execução direta:
+
 ```bash
 node packages/resolve-ai-cli/dist/index.js ajuda
 node packages/resolve-ai-cli/dist/index.js começar
@@ -42,6 +56,24 @@ node packages/resolve-ai-cli/dist/index.js status
 node packages/resolve-ai-cli/dist/index.js ligar
 node packages/resolve-ai-cli/dist/index.js desligar
 ```
+
+Link local antes de publicação npm:
+
+```bash
+npm link --prefix packages/resolve-ai-cli
+resolve-ai ajuda
+```
+
+## Scripts
+
+```bash
+npm run build --prefix packages/resolve-ai-cli
+npm test --prefix packages/resolve-ai-cli
+npm run smoke --prefix packages/resolve-ai-cli
+npm run check --prefix packages/resolve-ai-cli
+```
+
+`dist/` permanece versionado durante alpha, mas deve ser regenerado por `npm run build`.
 
 ## O Que o Comando `começar` Cria
 
@@ -153,8 +185,18 @@ Arquivos sensíveis por nome/caminho bloqueiam a validação e não têm conteú
 - Publicação npm.
 - Alteração automática de código do projeto-alvo.
 
+## Estado Local e Documentação
+
+`.resolve-ai/` é estado local do runtime. `.resolve-ai/state.json`, cache, tmp e session devem ser ignorados por padrão.
+
+`docs/resolve-ai/` é documentação humana do projeto analisado e pode ser versionada quando o time quiser rastreabilidade.
+
+Nenhum comando deve gravar tokens, secrets, dumps ou dados pessoais.
+
 ## Testes
 
 ```bash
+npm run build --prefix packages/resolve-ai-cli
 npm test --prefix packages/resolve-ai-cli
+npm run smoke --prefix packages/resolve-ai-cli
 ```

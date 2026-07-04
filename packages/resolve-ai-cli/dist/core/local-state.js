@@ -14,7 +14,7 @@ function now() {
 function readJson(filePath) {
   try {
     return JSON.parse(fs.readFileSync(filePath, "utf8"));
-  } catch {
+  } catch (cause) {
     throw new Error(`Não consegui ler ${filePath}. Faça backup do arquivo e corrija o JSON antes de continuar.`);
   }
 }
@@ -23,12 +23,12 @@ function writeJson(filePath, value) {
   fs.writeFileSync(filePath, `${JSON.stringify(value, null, 2)}\n`, "utf8");
 }
 
-export function hasStarted(root = process.cwd()) {
+export function hasStarted(root= process.cwd()) {
   const paths = resolveAiPaths(root);
   return fs.existsSync(paths.runtimeDir) && fs.existsSync(paths.configPath) && fs.existsSync(paths.statePath);
 }
 
-export function createDefaultConfig(root = process.cwd()) {
+export function createDefaultConfig(root= process.cwd()) {
   return {
     schemaVersion: SCHEMA_VERSION,
     projectName: path.basename(root) || null,
@@ -40,7 +40,7 @@ export function createDefaultConfig(root = process.cwd()) {
   };
 }
 
-export function createDefaultState(command = "começar") {
+export function createDefaultState(command= "começar") {
   return {
     schemaVersion: SCHEMA_VERSION,
     active: false,
@@ -51,7 +51,7 @@ export function createDefaultState(command = "começar") {
   };
 }
 
-export function readState(root = process.cwd()) {
+export function readState(root= process.cwd()) {
   return readJson(resolveAiPaths(root).statePath);
 }
 
@@ -59,7 +59,7 @@ export function writeState(root, state) {
   writeJson(resolveAiPaths(root).statePath, state);
 }
 
-export function beginProject(root = process.cwd()) {
+export function beginProject(root= process.cwd()) {
   const paths = resolveAiPaths(root);
   const createdPaths = [];
   const existingPaths = [];
@@ -103,7 +103,7 @@ export function beginProject(root = process.cwd()) {
   };
 }
 
-export function activate(root = process.cwd()) {
+export function activate(root= process.cwd()) {
   if (!hasStarted(root)) {
     return { alreadyActive: false };
   }
@@ -125,7 +125,7 @@ export function activate(root = process.cwd()) {
   return { alreadyActive: false, state: updated };
 }
 
-export function deactivate(root = process.cwd()) {
+export function deactivate(root= process.cwd()) {
   if (!hasStarted(root)) {
     return { alreadyInactive: false };
   }

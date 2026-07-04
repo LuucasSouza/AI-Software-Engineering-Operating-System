@@ -3,13 +3,33 @@ import { print } from "../core/output.js";
 import { selectPreparedTask } from "../core/task-selection-engine.js";
 import { writeExecutionPackageDocs } from "../core/execution-package-docs.js";
 
-export function prepararCommand(root = process.cwd(), alias = "preparar") {
-  if (!hasStarted(root)) beginProject(root);
+export function prepararCommand(root= process.cwd(), alias= "preparar") {
+  if (!hasStarted(root)) {
+    beginProject(root);
+  }
+
   const state = readState(root);
   const task = selectPreparedTask(root, state);
   const docs = writeExecutionPackageDocs(root, task);
   const now = new Date().toISOString();
-  writeState(root, { ...state, lastCommand: "preparar", ultimoPreparo: { executadoEm: now, tarefa: task.title, categoria: task.category, prioridade: task.priority, confianca: task.confidence, riskLevel: task.riskLevel, approvalRequired: true, canAutoExecute: false, documentosGerados: docs.created }, lastUpdatedAt: now });
+
+  writeState(root, {
+    ...state,
+    lastCommand: "preparar",
+    ultimoPreparo: {
+      executadoEm: now,
+      tarefa: task.title,
+      categoria: task.category,
+      prioridade: task.priority,
+      confianca: task.confidence,
+      riskLevel: task.riskLevel,
+      approvalRequired: true,
+      canAutoExecute: false,
+      documentosGerados: docs.created
+    },
+    lastUpdatedAt: now
+  });
+
   print(`
 Resolve Aí — preparação de tarefa
 

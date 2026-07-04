@@ -1,7 +1,7 @@
 import { activate, hasStarted } from "../core/local-state.js";
 import { print } from "../core/output.js";
 
-export function ligarCommand(root = process.cwd()) {
+export function ligarCommand(root= process.cwd()) {
   if (!hasStarted(root)) {
     print(`
 Resolve Aí ainda não começou neste projeto.

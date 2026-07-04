@@ -116,3 +116,7 @@ Protocol Maintainers garantem consistência com `DEVELOPMENT_PROTOCOL.md`.
 ## Phase 9
 
 - `resolve-ai validar` revisa mudanças locais com Git metadata opcional, bloqueia sinais sensíveis e recomenda próximos passos antes de commit/deploy.
+
+## Phase 10
+
+- O fluxo operacional passa a exigir build, testes, smoke test e checklist de readiness antes de release alpha.

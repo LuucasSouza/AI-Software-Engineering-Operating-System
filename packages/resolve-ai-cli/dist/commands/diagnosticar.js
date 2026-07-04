@@ -6,8 +6,9 @@ import { writeDiagnosticDocs } from "../core/diagnostic-docs.js";
 import { inspectProject } from "../core/project-inspector.js";
 import { nextActions } from "../core/recommendation-engine.js";
 
-export function diagnosticarCommand(root = process.cwd()) {
+export function diagnosticarCommand(root= process.cwd()) {
   print("Resolve Aí — Diagnóstico do projeto\n\nVou diagnosticar este projeto sem alterar código, instalar dependências ou fazer commits.");
+
   const detection = inspectProject(root);
   beginProject(root);
   const docs = writeDiagnosticDocs(root, detection);
@@ -15,6 +16,7 @@ export function diagnosticarCommand(root = process.cwd()) {
   const legacyDocsFound = fs.existsSync(paths.legacyDocsDir);
   const actions = nextActions(detection);
   const state = readState(root);
+
   writeState(root, {
     ...state,
     lastCommand: "diagnosticar",
@@ -30,6 +32,7 @@ export function diagnosticarCommand(root = process.cwd()) {
     documentosGerados: docs.created,
     lastUpdatedAt: detection.generatedAt
   });
+
   print(`
 Diagnóstico concluído.
 

@@ -534,20 +534,39 @@ Validar uma tarefa executada fora da CLI, comparar resultado com pacote de execu
 
 # Phase 10 — Resolve Aí Release Hardening and Local CLI Usability
 
-Status: **Next**
+Status: **Complete**
 
 ## Objetivo
 
 Endurecer a usabilidade local da CLI, documentação de instalação, smoke tests, build automation e preparação para release operacional.
 
-## Entregáveis previstos
+## Entregáveis
 
 - Instruções locais refinadas.
+- Build automation.
 - Smoke test script.
 - Política de build e `dist/`.
-- Checklist de publicação futura.
-- Revisão do remote movido para `Resolve-Ai`.
-- Possível comando de resumo ou entrega pós-validação.
+- Checklist de release alpha.
+- Política de `.resolve-ai/` e `docs/resolve-ai/`.
+- Remote movido para `Resolve-Ai`.
+- ADRs 0156 a 0165.
+
+---
+
+# Phase 11 — External Alpha Validation
+
+Status: **Next**
+
+## Objetivo
+
+Validar o Resolve Aí em projetos reais com usuários externos antes de publicação npm.
+
+## Entregáveis previstos
+
+- Testes externos com três perfis.
+- Relatórios de feedback.
+- Ajustes de UX e documentação.
+- Decisão sobre publicação npm.
 
 ---
 

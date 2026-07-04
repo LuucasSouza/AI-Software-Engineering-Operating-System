@@ -3,12 +3,19 @@ import { print } from "../core/output.js";
 import { buildAssistedExecutionPackage } from "../core/assisted-execution-engine.js";
 import { writeAssistedExecutionDocs } from "../core/assisted-execution-docs.js";
 
-export function resolverCommand(root = process.cwd(), alias = "resolver") {
-  if (!hasStarted(root)) beginProject(root);
+export function resolverCommand(root= process.cwd(), alias= "resolver") {
+  if (!hasStarted(root)) {
+    beginProject(root);
+  }
+
   const state = readState(root);
   if (state.active === false) {
     const now = new Date().toISOString();
-    writeState(root, { ...state, lastCommand: "resolver", lastUpdatedAt: now });
+    writeState(root, {
+      ...state,
+      lastCommand: "resolver",
+      lastUpdatedAt: now
+    });
     print(`
 Resolve Aí está desligado.
 
@@ -19,10 +26,26 @@ Eu ainda não mexi no seu código e não gerei pacote de execução assistida.
 `);
     return;
   }
+
   const pack = buildAssistedExecutionPackage(root, state);
   const docs = writeAssistedExecutionDocs(root, pack);
   const now = new Date().toISOString();
-  writeState(root, { ...state, lastCommand: "resolver", ultimaExecucaoAssistida: { criadaEm: now, status: "pendente", tarefa: pack.taskTitle, risco: pack.risk, canAutoExecute: false, proximoPasso: pack.nextStep, docsGerados: docs.created }, lastUpdatedAt: now });
+
+  writeState(root, {
+    ...state,
+    lastCommand: "resolver",
+    ultimaExecucaoAssistida: {
+      criadaEm: now,
+      status: "pendente",
+      tarefa: pack.taskTitle,
+      risco: pack.risk,
+      canAutoExecute: false,
+      proximoPasso: pack.nextStep,
+      docsGerados: docs.created
+    },
+    lastUpdatedAt: now
+  });
+
   print(`
 Resolve Aí — execução assistida
 

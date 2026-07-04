@@ -137,3 +137,13 @@ source: "bootstrap-source/pt27_ARCHITECTURE_DECISION_PROTOCOL.md"
 | ADR-0153 | Adopt Validation Status Model | Accepted | 2026-07-04 | Medium | Phase 10 |
 | ADR-0154 | Extend Runtime State with ultimaValidacao | Accepted | 2026-07-04 | Medium | Phase 10 |
 | ADR-0155 | Defer Deep Semantic Validation | Accepted | 2026-07-04 | High | Phase 10 |
+| ADR-0156 | Adopt CLI Build Automation | Accepted | 2026-07-04 | Medium | Phase 11 |
+| ADR-0157 | Adopt Local CLI Linking Workflow | Accepted | 2026-07-04 | High | Phase 11 |
+| ADR-0158 | Adopt Smoke Tests for CLI Usability | Accepted | 2026-07-04 | High | Phase 11 |
+| ADR-0159 | Keep dist Versioned During Alpha | Accepted | 2026-07-04 | Medium | Phase 11 |
+| ADR-0160 | Adopt Portuguese-First CLI UX | Accepted | 2026-07-04 | High | Phase 11 |
+| ADR-0161 | Adopt Resolve-Ai Remote as Canonical Repository | Accepted | 2026-07-04 | High | Phase 11 |
+| ADR-0162 | Adopt Runtime State Policy | Accepted | 2026-07-04 | High | Phase 11 |
+| ADR-0163 | Adopt docs/resolve-ai as Human Project Memory | Accepted | 2026-07-04 | High | Phase 11 |
+| ADR-0164 | Defer npm Publication Until External Validation | Accepted | 2026-07-04 | High | Phase 11 |
+| ADR-0165 | Adopt Alpha Release Readiness Checklist | Accepted | 2026-07-04 | Medium | Phase 11 |

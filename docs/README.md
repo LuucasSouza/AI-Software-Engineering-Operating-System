@@ -128,3 +128,12 @@ Documentation Maintainers mantêm consistência, clareza, versionamento e relaç
 - `sprints/phase-9-handoff.md`: handoff da Phase 9.
 - `sprints/phase-9-validation-report.md`: validação da Phase 9.
 - `sprints/phase-9-retrospective.md`: retrospectiva da Phase 9.
+
+## Documentação adicionada na Phase 10
+
+- `getting-started/install-local-cli.md`: instalação local da CLI.
+- `release/v0.1.0-alpha-cli-readiness.md`: readiness da CLI alpha.
+- `runtime/project-adapter/runtime-state-and-config-policy.md`: política de estado e documentação local.
+- `sprints/phase-10-handoff.md`: handoff da Phase 10.
+- `sprints/phase-10-validation-report.md`: validação da Phase 10.
+- `sprints/phase-10-retrospective.md`: retrospectiva da Phase 10.

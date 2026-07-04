@@ -141,3 +141,7 @@ Template Maintainers mantêm consistência, clareza e versionamento dos modelos.
 ## Phase 9
 
 - `resolve-ai validar` materializa templates de validação pós-execução `25` a `29` em `docs/resolve-ai/`, preservando arquivos existentes por padrão.
+
+## Phase 10
+
+- A documentação de release define checklist e política de uso local para validar a CLI antes de publicação.

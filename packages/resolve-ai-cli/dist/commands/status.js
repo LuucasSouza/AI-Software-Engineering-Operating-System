@@ -3,7 +3,7 @@ import { hasStarted, readState } from "../core/local-state.js";
 import { print } from "../core/output.js";
 import { resolveAiPaths } from "../core/paths.js";
 
-export function statusCommand(root = process.cwd()) {
+export function statusCommand(root= process.cwd()) {
   if (!hasStarted(root)) {
     print(`
 Resolve Aí ainda não começou neste projeto.

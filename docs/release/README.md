@@ -12,6 +12,10 @@ Release documentation covers readiness, known limitations, release notes, reposi
 - `repository-hardening-checklist.md`
 - `public-alpha-readiness-gap-analysis.md`
 
+## Phase 10
+
+- `v0.1.0-alpha-cli-readiness.md`
+
 ## Current Recommendation
 
 AI-SEOS is a strong public alpha candidate with score 47/50. Proceed with `v0.1.0-alpha` only after maintainer review.

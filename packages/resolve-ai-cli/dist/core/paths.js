@@ -1,6 +1,6 @@
 import path from "node:path";
 
-export function resolveAiPaths(root = process.cwd()) {
+export function resolveAiPaths(root= process.cwd()) {
   const runtimeDir = path.join(root, ".resolve-ai");
   const docsDir = path.join(root, "docs", "resolve-ai");
   const legacyDocsDir = path.join(root, "docs", "ai-seos");

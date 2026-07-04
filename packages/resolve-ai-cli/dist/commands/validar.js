@@ -3,8 +3,11 @@ import { print } from "../core/output.js";
 import { buildValidationResult } from "../core/validation-engine.js";
 import { writeValidationDocs } from "../core/validation-docs.js";
 
-export function validarCommand(root = process.cwd(), alias = "validar") {
-  if (!hasStarted(root)) beginProject(root);
+export function validarCommand(root= process.cwd(), alias= "validar") {
+  if (!hasStarted(root)) {
+    beginProject(root);
+  }
+
   const state = readState(root);
   if (state.active === false) {
     print(`
@@ -17,10 +20,27 @@ Não gerei documentos de validação e não atualizei ultimaValidacao.
 `);
     return;
   }
+
   const result = buildValidationResult(root, state);
   const docs = writeValidationDocs(root, result);
   const now = new Date().toISOString();
-  writeState(root, { ...state, lastCommand: "validar", ultimaValidacao: { executadaEm: now, status: result.status, confianca: result.confianca, mudancasDetectadas: result.mudancasDetectadas, arquivosAlterados: result.arquivosAlterados, arquivosSensiveisDetectados: result.arquivosSensiveisDetectados, riscosRestantes: result.riscosRestantes, proximaAcao: result.proximaAcao }, lastUpdatedAt: now });
+
+  writeState(root, {
+    ...state,
+    lastCommand: "validar",
+    ultimaValidacao: {
+      executadaEm: now,
+      status: result.status,
+      confianca: result.confianca,
+      mudancasDetectadas: result.mudancasDetectadas,
+      arquivosAlterados: result.arquivosAlterados,
+      arquivosSensiveisDetectados: result.arquivosSensiveisDetectados,
+      riscosRestantes: result.riscosRestantes,
+      proximaAcao: result.proximaAcao
+    },
+    lastUpdatedAt: now
+  });
+
   print(`
 Resolve Aí — validação guiada
 

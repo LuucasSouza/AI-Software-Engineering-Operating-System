@@ -1,7 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
 
-export function detectProjectKind(root = process.cwd()) {
+
+export function detectProjectKind(root= process.cwd()) {
   const legacyDocs = path.join(root, "docs", "ai-seos");
   if (fs.existsSync(legacyDocs)) {
     return "legado";

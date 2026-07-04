@@ -10,7 +10,7 @@ function writeIfMissing(filePath, content) {
   return true;
 }
 
-export function ensureResolveAiDocs(root = process.cwd()) {
+export function ensureResolveAiDocs(root= process.cwd()) {
   const paths = resolveAiPaths(root);
   const created = [];
   const existing = [];

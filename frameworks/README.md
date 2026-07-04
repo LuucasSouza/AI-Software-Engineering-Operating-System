@@ -115,3 +115,7 @@ Framework Maintainers mantêm modularidade, aplicabilidade e alinhamento com eng
 ## Phase 9
 
 - A CLI passa a validar execução assistida por metadados locais, detectar mudanças e riscos pós-execução e preparar handoff antes de commit/deploy.
+
+## Phase 10
+
+- A CLI passa a ter build local, smoke test, readiness alpha e política de estado/documentação para uso real antes de release.

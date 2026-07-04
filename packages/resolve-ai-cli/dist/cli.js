@@ -10,7 +10,7 @@ import { statusCommand } from "./commands/status.js";
 import { validarCommand } from "./commands/validar.js";
 import { error } from "./core/output.js";
 
-export function run(argv = process.argv.slice(2), root = process.cwd()) {
+export function run(argv= process.argv.slice(2), root= process.cwd()) {
   const command = argv[0] ?? "ajuda";
 
   try {

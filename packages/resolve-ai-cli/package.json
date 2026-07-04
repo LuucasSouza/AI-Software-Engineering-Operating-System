@@ -1,14 +1,17 @@
 {
-  "name": "resolve-ai-cli",
+  "name": "resolve-ai",
   "version": "0.1.0-alpha.0",
-  "description": "CLI MVP do Resolve Ai para preparar e diagnosticar projetos com estado local e documentacao humana.",
+  "description": "CLI local do Resolve Ai para diagnosticar, planejar, preparar, orientar e validar projetos com documentacao humana.",
   "type": "module",
   "bin": {
     "resolve-ai": "dist/index.js"
   },
   "scripts": {
+    "build": "node scripts/build.js",
     "dev": "node dist/index.js",
-    "test": "node --test tests/*.test.ts"
+    "smoke": "node scripts/smoke-test.js",
+    "test": "node --test tests/*.test.ts",
+    "check": "npm run build && npm test && npm run smoke"
   },
   "keywords": [
     "resolve-ai",
@@ -17,6 +20,11 @@
     "ai"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LuucasSouza/Resolve-Ai.git",
+    "directory": "packages/resolve-ai-cli"
+  },
   "engines": {
     "node": ">=20"
   }

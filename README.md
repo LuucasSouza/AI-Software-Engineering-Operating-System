@@ -143,6 +143,7 @@ resolve-ai
 O CLI MVP já existe em `packages/resolve-ai-cli/` e pode ser executado localmente com Node.
 
 ```bash
+npm run build --prefix packages/resolve-ai-cli
 node packages/resolve-ai-cli/dist/index.js começar
 node packages/resolve-ai-cli/dist/index.js diagnosticar
 node packages/resolve-ai-cli/dist/index.js planejar
@@ -154,6 +155,15 @@ node packages/resolve-ai-cli/dist/index.js ligar
 node packages/resolve-ai-cli/dist/index.js desligar
 node packages/resolve-ai-cli/dist/index.js ajuda
 ```
+
+Para usar como comando local antes de publicação npm:
+
+```bash
+npm link --prefix packages/resolve-ai-cli
+resolve-ai ajuda
+```
+
+Guia completo: `docs/getting-started/install-local-cli.md`.
 
 ---
 
@@ -260,7 +270,7 @@ Ao terminar, valide os critérios de aceite e gere o relatório final da Sprint 
 
 ## Status do projeto
 
-Status atual: **Phase 9 concluída**
+Status atual: **Phase 10 concluída**
 
 Sprint 1 criou a primeira camada funcional do AI-SEOS:
 
@@ -454,7 +464,18 @@ Phase 9 implementou revisão e validação guiada:
 - ADRs 0146 a 0155;
 - relatório de validação em `docs/sprints/phase-9-validation-report.md`.
 
-Próxima etapa: **Phase 10 — Resolve Aí Release Hardening and Local CLI Usability**.
+Phase 10 endureceu a usabilidade local da CLI:
+
+- build local por `npm run build --prefix packages/resolve-ai-cli`;
+- smoke test por `npm run smoke --prefix packages/resolve-ai-cli`;
+- documentação de instalação local com `npm link`;
+- release readiness da CLI alpha;
+- política de `.resolve-ai/` e `docs/resolve-ai/`;
+- remote canônico `https://github.com/LuucasSouza/Resolve-Ai.git`;
+- ADRs 0156 a 0165;
+- relatório de validação em `docs/sprints/phase-10-validation-report.md`.
+
+Próxima etapa: **Phase 11 — External Alpha Validation**.
 
 ---
 

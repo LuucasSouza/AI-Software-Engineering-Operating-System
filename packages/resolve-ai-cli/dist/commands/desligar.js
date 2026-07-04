@@ -1,7 +1,7 @@
 import { deactivate, hasStarted } from "../core/local-state.js";
 import { print } from "../core/output.js";
 
-export function desligarCommand(root = process.cwd()) {
+export function desligarCommand(root= process.cwd()) {
   if (!hasStarted(root)) {
     print(`
 Resolve Aí ainda não começou neste projeto.

@@ -3,15 +3,29 @@ import { print } from "../core/output.js";
 import { buildPlanningInput, createPlanningOutput, readPlanningContext } from "../core/planning-engine.js";
 import { writePlanningDocs } from "../core/planning-docs.js";
 
-export function planejarCommand(root = process.cwd()) {
-  if (!hasStarted(root)) beginProject(root);
+export function planejarCommand(root= process.cwd()) {
+  if (!hasStarted(root)) {
+    beginProject(root);
+  }
+
   const state = readState(root);
   const input = buildPlanningInput(root, state);
   const docsText = readPlanningContext(root);
   const output = createPlanningOutput(input, docsText);
   const docs = writePlanningDocs(root, input, output);
   const now = new Date().toISOString();
-  writeState(root, { ...state, lastCommand: "planejar", lastPlanAt: now, lastPlanSummary: output.summary, planningDocuments: docs.created, nextRecommendedAction: output.nextRecommendedAction, planningConfidence: input.confidence, lastUpdatedAt: now });
+
+  writeState(root, {
+    ...state,
+    lastCommand: "planejar",
+    lastPlanAt: now,
+    lastPlanSummary: output.summary,
+    planningDocuments: docs.created,
+    nextRecommendedAction: output.nextRecommendedAction,
+    planningConfidence: input.confidence,
+    lastUpdatedAt: now
+  });
+
   print(`
 Resolve Aí — Plano criado
 

@@ -2,6 +2,14 @@
 .resolve-ai/state.json
 .resolve-ai/cache/
 .resolve-ai/session/
+.resolve-ai/tmp/
 
 # Node local dependencies
 node_modules/
+
+# Local logs and secrets
+*.log
+.DS_Store
+.env
+.env.*
+!.env.example

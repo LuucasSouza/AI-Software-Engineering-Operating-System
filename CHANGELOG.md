@@ -21,6 +21,16 @@ O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionament
 
 ## Added
 
+- Phase 10 executada.
+- Criado build local da CLI por `npm run build --prefix packages/resolve-ai-cli`.
+- Criado smoke test por `npm run smoke --prefix packages/resolve-ai-cli`.
+- Criado script `check` para build, testes e smoke.
+- Criada documentação de instalação local com `npm link`.
+- Criado release readiness da CLI `v0.1.0-alpha`.
+- Criada política de `.resolve-ai/` e `docs/resolve-ai/`.
+- Atualizado remote canônico para `Resolve-Ai`.
+- Criadas ADRs 0156 a 0165.
+- Criados Phase 10 handoff, validation report e retrospective.
 - Phase 9 executada.
 - Implementado comando `resolve-ai validar`.
 - Implementados aliases `valida` e `revisar`.

@@ -1,7 +1,7 @@
 import { beginProject } from "../core/local-state.js";
 import { print } from "../core/output.js";
 
-export function comecarCommand(root = process.cwd()) {
+export function comecarCommand(root= process.cwd()) {
   const result = beginProject(root);
   const hadExisting = result.existingPaths.length > 0;
 
