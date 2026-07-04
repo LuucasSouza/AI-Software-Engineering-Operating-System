@@ -148,6 +148,7 @@ node packages/resolve-ai-cli/dist/index.js diagnosticar
 node packages/resolve-ai-cli/dist/index.js planejar
 node packages/resolve-ai-cli/dist/index.js preparar
 node packages/resolve-ai-cli/dist/index.js resolver
+node packages/resolve-ai-cli/dist/index.js validar
 node packages/resolve-ai-cli/dist/index.js status
 node packages/resolve-ai-cli/dist/index.js ligar
 node packages/resolve-ai-cli/dist/index.js desligar
@@ -259,7 +260,7 @@ Ao terminar, valide os critérios de aceite e gere o relatório final da Sprint 
 
 ## Status do projeto
 
-Status atual: **Phase 8 concluída**
+Status atual: **Phase 9 concluída**
 
 Sprint 1 criou a primeira camada funcional do AI-SEOS:
 
@@ -440,7 +441,20 @@ Phase 8 implementou execução assistida guiada:
 - ADRs 0136 a 0145;
 - relatório de validação em `docs/sprints/phase-8-validation-report.md`.
 
-Próxima etapa: **Phase 9 — Resolve Aí Guided Review and Validation**.
+Phase 9 implementou revisão e validação guiada:
+
+- comando `resolve-ai validar`;
+- aliases `valida` e `revisar`;
+- detecção segura de mudanças locais via Git metadata quando disponível;
+- detecção de arquivos sensíveis por nome/caminho sem copiar conteúdo;
+- geração de documentos `docs/resolve-ai/25` a `29`;
+- `ultimaValidacao` registrada em `.resolve-ai/state.json`;
+- `status` mostra resumo da última validação;
+- testes automatizados cobrindo 51 cenários;
+- ADRs 0146 a 0155;
+- relatório de validação em `docs/sprints/phase-9-validation-report.md`.
+
+Próxima etapa: **Phase 10 — Resolve Aí Release Hardening and Local CLI Usability**.
 
 ---
 

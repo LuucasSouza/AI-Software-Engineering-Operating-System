@@ -61,6 +61,15 @@ Importante:
 Eu ainda não mexi no código.
 `
     : "";
+  const validationSummary = state.ultimaValidacao
+    ? `
+Última validação: ${state.ultimaValidacao.status}
+Mudanças detectadas: ${state.ultimaValidacao.mudancasDetectadas} arquivo(s)
+Confiança: ${state.ultimaValidacao.confianca}
+Arquivos sensíveis: ${state.ultimaValidacao.arquivosSensiveisDetectados.length}
+Próxima ação: ${state.ultimaValidacao.proximaAcao}
+`
+    : "";
   const disabledSummary = state.active === false ? "\nResolve Aí está desligado. Para preparar com contexto completo, rode: resolve-ai ligar\n" : "";
 
   if (state.active) {
@@ -74,6 +83,7 @@ ${diagnosticSummary}
 ${planningSummary}
 ${preparedSummary}
 ${assistedExecutionSummary}
+${validationSummary}
 `);
     return;
   }
@@ -88,6 +98,7 @@ ${diagnosticSummary}
 ${planningSummary}
 ${preparedSummary}
 ${assistedExecutionSummary}
+${validationSummary}
 ${disabledSummary}
 
 Para ligar:

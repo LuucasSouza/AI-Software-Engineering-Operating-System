@@ -112,3 +112,7 @@ Protocol Maintainers garantem consistência com `DEVELOPMENT_PROTOCOL.md`.
 ## Phase 8
 
 - `resolve-ai resolver` transforma a tarefa preparada em pacote de execução assistida, respeita Modo Liga/Desliga e mantém `canAutoExecute: false`.
+
+## Phase 9
+
+- `resolve-ai validar` revisa mudanças locais com Git metadata opcional, bloqueia sinais sensíveis e recomenda próximos passos antes de commit/deploy.

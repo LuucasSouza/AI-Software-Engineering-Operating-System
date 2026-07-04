@@ -45,6 +45,5 @@ fail 0
 
 ## Pendências
 
-- `resolve-ai validar` ainda não existe.
 - O registro de execução ainda depende de preenchimento humano após execução externa.
 - Aprovação humana é documental, não interativa.

@@ -21,6 +21,17 @@ O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionament
 
 ## Added
 
+- Phase 9 executada.
+- Implementado comando `resolve-ai validar`.
+- Implementados aliases `valida` e `revisar`.
+- Criada detecção segura de mudanças locais via Git metadata quando disponível.
+- Criada detecção de arquivos sensíveis por nome/caminho sem copiar conteúdo.
+- Criada geração dos documentos `docs/resolve-ai/25` a `29`.
+- Atualizado `.resolve-ai/state.json` com `ultimaValidacao`.
+- Atualizado `resolve-ai status` para mostrar resumo da última validação.
+- Criados testes automatizados para validação guiada.
+- Criadas ADRs 0146 a 0155.
+- Criados Phase 9 handoff, validation report e retrospective.
 - Phase 8 executada.
 - Implementado comando `resolve-ai resolver`.
 - Implementados aliases `resolva` e `fazer`.

@@ -14,6 +14,9 @@ Comandos disponíveis:
   resolve-ai resolver     Prepara execução assistida com aprovação humana
   resolve-ai resolva      Alias de resolver
   resolve-ai fazer        Alias de resolver
+  resolve-ai validar      Revisa mudanças locais e gera validação pós-execução
+  resolve-ai valida       Alias de validar
+  resolve-ai revisar      Alias de validar
   resolve-ai ligar        Liga o Resolve Aí neste projeto
   resolve-ai desligar     Desliga para economizar contexto e tokens
   resolve-ai status       Mostra como o Resolve Aí está neste projeto

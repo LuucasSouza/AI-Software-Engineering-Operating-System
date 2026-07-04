@@ -127,3 +127,13 @@ source: "bootstrap-source/pt27_ARCHITECTURE_DECISION_PROTOCOL.md"
 | ADR-0143 | Defer Automatic Code Execution | Accepted | 2026-07-04 | High | Phase 9 |
 | ADR-0144 | Adopt Post-Execution Checklist | Accepted | 2026-07-04 | Medium | Phase 9 |
 | ADR-0145 | Prepare Phase 9 Validation Command | Accepted | 2026-07-04 | Medium | Phase 9 |
+| ADR-0146 | Adopt Guided Validation Command | Accepted | 2026-07-04 | Medium | Phase 10 |
+| ADR-0147 | Keep Validation Read-Only for Product Code | Accepted | 2026-07-04 | High | Phase 10 |
+| ADR-0148 | Use Git Metadata as Optional Evidence | Accepted | 2026-07-04 | High | Phase 10 |
+| ADR-0149 | Generate Post-Execution Docs 25 to 29 | Accepted | 2026-07-04 | Medium | Phase 10 |
+| ADR-0150 | Avoid Automatic Test Execution in Phase 9 | Accepted | 2026-07-04 | High | Phase 10 |
+| ADR-0151 | Block Validation on Sensitive File Signals | Accepted | 2026-07-04 | High | Phase 10 |
+| ADR-0152 | Preserve Human Approval Before Commit | Accepted | 2026-07-04 | High | Phase 10 |
+| ADR-0153 | Adopt Validation Status Model | Accepted | 2026-07-04 | Medium | Phase 10 |
+| ADR-0154 | Extend Runtime State with ultimaValidacao | Accepted | 2026-07-04 | Medium | Phase 10 |
+| ADR-0155 | Defer Deep Semantic Validation | Accepted | 2026-07-04 | High | Phase 10 |

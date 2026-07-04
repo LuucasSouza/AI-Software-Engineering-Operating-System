@@ -7,6 +7,7 @@ import { planejarCommand } from "./commands/planejar.js";
 import { prepararCommand } from "./commands/preparar.js";
 import { resolverCommand } from "./commands/resolver.js";
 import { statusCommand } from "./commands/status.js";
+import { validarCommand } from "./commands/validar.js";
 import { error } from "./core/output.js";
 
 export function run(argv = process.argv.slice(2), root = process.cwd()) {
@@ -45,6 +46,11 @@ export function run(argv = process.argv.slice(2), root = process.cwd()) {
       case "resolva":
       case "fazer":
         resolverCommand(root, command);
+        return 0;
+      case "validar":
+      case "valida":
+      case "revisar":
+        validarCommand(root, command);
         return 0;
       case "desligar":
         desligarCommand(root);

@@ -111,3 +111,7 @@ Framework Maintainers mantêm modularidade, aplicabilidade e alinhamento com eng
 ## Phase 8
 
 - A CLI passa a transformar a tarefa preparada em execução assistida com aprovação humana, prompt final, checklist pós-execução e registro, sem executar código automaticamente.
+
+## Phase 9
+
+- A CLI passa a validar execução assistida por metadados locais, detectar mudanças e riscos pós-execução e preparar handoff antes de commit/deploy.

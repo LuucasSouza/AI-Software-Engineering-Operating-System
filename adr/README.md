@@ -174,7 +174,17 @@ Architecture Maintainers garantem numeração, consistência e referências entr
 - `0143-defer-automatic-code-execution.md`
 - `0144-adopt-post-execution-checklist.md`
 - `0145-prepare-phase-9-validation-command.md`
+- `0146-adopt-guided-validation-command.md`
+- `0147-keep-validation-read-only-for-product-code.md`
+- `0148-use-git-metadata-as-optional-evidence.md`
+- `0149-generate-post-execution-docs-25-to-29.md`
+- `0150-avoid-automatic-test-execution-in-phase-9.md`
+- `0151-block-validation-on-sensitive-file-signals.md`
+- `0152-preserve-human-approval-before-commit.md`
+- `0153-adopt-validation-status-model.md`
+- `0154-extend-runtime-state-with-ultima-validacao.md`
+- `0155-defer-deep-semantic-validation.md`
 
 ## Próximos passos
 
-- Iniciar Phase 9 — Resolve Aí Guided Review and Validation.
+- Iniciar Phase 10 — Resolve Aí Release Hardening and Local CLI Usability.

@@ -36,6 +36,7 @@ export interface ResolveAiState {
   planningConfidence?: "baixa" | "media" | "alta";
   ultimoPreparo?: PreparedTaskState;
   ultimaExecucaoAssistida?: AssistedExecutionState;
+  ultimaValidacao?: ValidationState;
 }
 
 export interface InitResult {
@@ -145,4 +146,28 @@ export interface AssistedExecutionPackage {
   risks: string[];
   stopCriteria: string[];
   nextStep: string;
+}
+
+export type ValidationStatus = "pendente" | "parcial" | "aprovada-com-ressalvas" | "bloqueada";
+export type ValidationConfidence = "baixa" | "media" | "alta" | "bloqueada";
+
+export interface ValidationState {
+  executadaEm: string;
+  status: ValidationStatus;
+  confianca: ValidationConfidence;
+  mudancasDetectadas: number;
+  arquivosAlterados: string[];
+  arquivosSensiveisDetectados: string[];
+  riscosRestantes: string[];
+  proximaAcao: string;
+}
+
+export interface ValidationResult extends ValidationState {
+  hasAssistedExecution: boolean;
+  gitAvailable: boolean;
+  changeCategories: Record<string, string[]>;
+  possibleOutOfScope: string[];
+  evidence: string[];
+  notValidated: string[];
+  docsReference: string[];
 }

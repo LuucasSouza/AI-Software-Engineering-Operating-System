@@ -21,6 +21,9 @@ Esta versão implementa apenas comandos locais e não destrutivos:
 - `resolve-ai resolver`
 - `resolve-ai resolva`
 - `resolve-ai fazer`
+- `resolve-ai validar`
+- `resolve-ai valida`
+- `resolve-ai revisar`
 - `resolve-ai ligar`
 - `resolve-ai desligar`
 - `resolve-ai status`
@@ -34,6 +37,7 @@ node packages/resolve-ai-cli/dist/index.js diagnosticar
 node packages/resolve-ai-cli/dist/index.js planejar
 node packages/resolve-ai-cli/dist/index.js preparar
 node packages/resolve-ai-cli/dist/index.js resolver
+node packages/resolve-ai-cli/dist/index.js validar
 node packages/resolve-ai-cli/dist/index.js status
 node packages/resolve-ai-cli/dist/index.js ligar
 node packages/resolve-ai-cli/dist/index.js desligar
@@ -121,6 +125,24 @@ docs/resolve-ai/24-registro-de-execucao.md
 Também atualiza `.resolve-ai/state.json` com `ultimaExecucaoAssistida`.
 
 `canAutoExecute` continua sempre `false`.
+
+## O Que o Comando `validar` Cria
+
+O comando revisa a execução assistida com inspeção segura de metadados locais. Ele não altera código, não executa testes automaticamente, não faz commit e não faz deploy.
+
+Com o Resolve Aí ligado, ele gera, sem sobrescrever arquivos existentes:
+
+```text
+docs/resolve-ai/25-relatorio-de-validacao.md
+docs/resolve-ai/26-mudancas-detectadas.md
+docs/resolve-ai/27-checklist-pos-execucao.md
+docs/resolve-ai/28-riscos-pos-execucao.md
+docs/resolve-ai/29-handoff-pos-validacao.md
+```
+
+Também atualiza `.resolve-ai/state.json` com `ultimaValidacao`.
+
+Arquivos sensíveis por nome/caminho bloqueiam a validação e não têm conteúdo copiado.
 
 ## Fora de Escopo
 

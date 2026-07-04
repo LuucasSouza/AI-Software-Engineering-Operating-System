@@ -513,7 +513,7 @@ Transformar a tarefa preparada em pacote de execução assistida, com aprovaçã
 
 # Phase 9 — Resolve Aí Guided Review and Validation
 
-Status: **Next**
+Status: **Complete**
 
 ## Objetivo
 
@@ -521,11 +521,33 @@ Validar uma tarefa executada fora da CLI, comparar resultado com pacote de execu
 
 ## Entregáveis previstos
 
-- Comando provável `resolve-ai validar`.
+- Comando `resolve-ai validar`.
+- Aliases `valida` e `revisar`.
 - Relatório de validação da tarefa.
-- Comparação com pacote de execução.
-- Atualização de estado.
+- Detecção de mudanças locais via Git metadata quando disponível.
+- Detecção de arquivos sensíveis por nome/caminho.
+- Documentos `docs/resolve-ai/25` a `29`.
+- Atualização de estado com `ultimaValidacao`.
 - Handoff pós-execução.
+
+---
+
+# Phase 10 — Resolve Aí Release Hardening and Local CLI Usability
+
+Status: **Next**
+
+## Objetivo
+
+Endurecer a usabilidade local da CLI, documentação de instalação, smoke tests, build automation e preparação para release operacional.
+
+## Entregáveis previstos
+
+- Instruções locais refinadas.
+- Smoke test script.
+- Política de build e `dist/`.
+- Checklist de publicação futura.
+- Revisão do remote movido para `Resolve-Ai`.
+- Possível comando de resumo ou entrega pós-validação.
 
 ---
 

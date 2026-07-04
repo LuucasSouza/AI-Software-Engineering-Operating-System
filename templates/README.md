@@ -137,3 +137,7 @@ Template Maintainers mantêm consistência, clareza e versionamento dos modelos.
 ## Phase 8
 
 - `resolve-ai resolver` materializa templates de execução assistida `20` a `24` em `docs/resolve-ai/`, preservando arquivos existentes por padrão.
+
+## Phase 9
+
+- `resolve-ai validar` materializa templates de validação pós-execução `25` a `29` em `docs/resolve-ai/`, preservando arquivos existentes por padrão.
