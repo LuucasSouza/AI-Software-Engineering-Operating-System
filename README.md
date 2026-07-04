@@ -205,7 +205,7 @@ Ao terminar, valide os critérios de aceite e gere o relatório final da Sprint 
 
 ## Status do projeto
 
-Status atual: **Sprint 5 concluída**
+Status atual: **Sprint 5.5 concluída**
 
 Sprint 1 criou a primeira camada funcional do AI-SEOS:
 
@@ -252,7 +252,17 @@ Sprint 5 consolidou a camada de frameworks:
 - ADRs 0037 a 0045;
 - relatório de validação em `docs/sprints/sprint-5-validation-report.md`.
 
-Próxima etapa: **Sprint 6 — Templates completos**.
+Sprint 5.5 adicionou a Entry Modes Layer antes da criação dos templates completos:
+
+- Non-Technical Builder, Vibe Coder e Professional Engineer;
+- Mode Router antes do Discovery Engine;
+- Builder Intake Protocol e Problem-to-Software Translation Framework;
+- templates iniciais de entrada e Discovery Intake Package;
+- exemplo da mesma ideia nos três modos;
+- ADRs 0046 a 0051;
+- relatório de validação em `docs/sprints/sprint-5-5-validation-report.md`.
+
+Próxima etapa: **Sprint 6 — Templates completos por modo de entrada**.
 
 ---
 

@@ -234,6 +234,29 @@ Consolidar frameworks reutilizáveis.
 
 ---
 
+# Sprint 5.5 — Entry Modes Layer
+
+Status: **Complete**
+
+## Objetivo
+
+Definir os modos oficiais de entrada antes da criação dos templates completos.
+
+## Entregáveis
+
+- Entry Modes Layer.
+- Non-Technical Builder Mode.
+- Vibe Coder Mode.
+- Professional Engineer Mode.
+- Mode Router.
+- Builder Intake Protocol.
+- Problem-to-Software Translation Framework.
+- Entry mode templates.
+- Same idea across three modes example.
+- ADRs 0046 a 0051.
+
+---
+
 # Sprint 6 — Templates completos
 
 Status: **Next**
@@ -254,6 +277,7 @@ Criar biblioteca completa de templates.
 - Implementation Plan Template.
 - Runbook Template.
 - Postmortem Template.
+- Mode-specific template packs for Non-Technical Builder, Vibe Coder and Professional Engineer.
 
 ---
 

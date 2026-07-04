@@ -21,6 +21,15 @@ O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionament
 
 ## Added
 
+- Sprint 5.5 executada.
+- Criada Entry Modes Layer antes do Discovery Engine.
+- Criados Non-Technical Builder Mode, Vibe Coder Mode e Professional Engineer Mode.
+- Criados Mode Router, Builder Intake Protocol e Problem-to-Software Translation Framework.
+- Criados templates iniciais de mode selection, discovery intake, builder interview, vibe coder build brief e technical intake.
+- Criados playbooks de Builder Intake por modo.
+- Criado exemplo comparando a mesma ideia nos três modos.
+- Criadas ADRs 0046 a 0051.
+- Criados Sprint 5.5 handoff, validation report e retrospective.
 - Sprint 5 executada.
 - Criados framework catalog, taxonomy, map, registry e evolution policy.
 - Criados AI-SEOS Meta-Framework, Discovery-to-Delivery Framework e operating paths.

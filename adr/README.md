@@ -74,6 +74,12 @@ Architecture Maintainers garantem numeração, consistência e referências entr
 - `0043-adopt-framework-governance-and-versioning.md`
 - `0044-adopt-framework-quality-assurance-model.md`
 - `0045-adopt-reference-implementation-playbook.md`
+- `0046-adopt-entry-modes-layer.md`
+- `0047-adopt-non-technical-builder-mode.md`
+- `0048-adopt-vibe-coder-mode.md`
+- `0049-adopt-professional-engineer-mode.md`
+- `0050-adopt-problem-to-software-translation-framework.md`
+- `0051-adopt-mode-router-before-discovery-engine.md`
 
 ## Próximos passos
 

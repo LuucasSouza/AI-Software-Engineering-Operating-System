@@ -35,3 +35,7 @@ Example Maintainers garantem qualidade, segurança e aderência aos protocolos.
 
 - `reference-project/`: estrutura para exemplos AI-SEOS end-to-end.
 - `reference-project/greenfield-saas/`: skeleton inicial de referência.
+
+## Sprint 5.5
+
+- `entry-modes/`: exemplo comparando a mesma ideia nos três modos de entrada.

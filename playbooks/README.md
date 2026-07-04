@@ -34,6 +34,7 @@ Playbook Maintainers mantêm aplicabilidade prática e alinhamento com templates
 - Sprint 3 criou playbook integrado de Decision, Risk and Optimization.
 - Sprint 4 criou playbooks de system review.
 - Sprint 5 criou playbooks de reference implementation.
+- Sprint 5.5 criou playbooks de Builder Intake.
 
 ## Playbooks disponíveis
 
@@ -50,3 +51,7 @@ Playbook Maintainers mantêm aplicabilidade prática e alinhamento com templates
 ## Sprint 5
 
 - `reference-implementation/`: playbook para exemplos end-to-end.
+
+## Sprint 5.5
+
+- `builder-intake/`: interview, guided build e technical intake por modo.

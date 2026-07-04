@@ -34,6 +34,7 @@ Template Maintainers mantêm consistência, clareza e versionamento dos modelos.
 - Sprint 3 criou templates de decisão, risco, ADR e otimização.
 - Sprint 4 criou templates de execução, backlog, documentação, handoff e reflexão.
 - Sprint 5 criou templates cross-engine, meta-framework, maturity, readiness, frameworks, quality e agent collaboration.
+- Sprint 5.5 criou templates iniciais de entry modes e intake.
 
 ## Templates disponíveis
 
@@ -70,3 +71,11 @@ Template Maintainers mantêm consistência, clareza e versionamento dos modelos.
 - `frameworks/`: proposal, spec, review e deprecation.
 - `quality/`: validation report e documentation quality checklist.
 - `agent-collaboration/`: operating contract, handoff map e review board.
+
+## Sprint 5.5
+
+- `entry-modes/`: mode selection.
+- `intake/`: Discovery Intake Package.
+- `intake/non-technical-builder/`: builder interview.
+- `intake/vibe-coder/`: vibe coder build brief.
+- `intake/professional-engineer/`: technical intake.

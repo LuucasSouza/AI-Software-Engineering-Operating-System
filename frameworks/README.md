@@ -34,6 +34,7 @@ Framework Maintainers mantêm modularidade, aplicabilidade e alinhamento com eng
 - Sprint 3 criou frameworks de decisão, risco e otimização.
 - Sprint 4 criou frameworks de execução, documentação, handoff e reflexão.
 - Sprint 5 consolidou frameworks cross-engine, maturidade, readiness, agentes, governança, QA e reference implementation.
+- Sprint 5.5 criou o Entry Modes Framework.
 
 ## Frameworks disponíveis
 
@@ -67,3 +68,7 @@ Framework Maintainers mantêm modularidade, aplicabilidade e alinhamento com eng
 - `governance-framework/`: framework governance and versioning.
 - `quality-assurance/`: framework quality model, scores e gates.
 - `reference-implementation/`: reference implementation framework.
+
+## Sprint 5.5
+
+- `entry-modes-framework/`: mode router, problem-to-software translation e mode selection matrix.

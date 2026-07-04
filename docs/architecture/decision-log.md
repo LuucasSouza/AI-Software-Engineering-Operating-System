@@ -46,3 +46,9 @@ source: "bootstrap-source/pt27_ARCHITECTURE_DECISION_PROTOCOL.md"
 | ADR-0043 | Adopt Framework Governance and Versioning | Accepted | 2026-07-03 | Medium | Sprint 6 |
 | ADR-0044 | Adopt Framework Quality Assurance Model | Accepted | 2026-07-03 | Medium | Sprint 6 |
 | ADR-0045 | Adopt Reference Implementation Playbook | Accepted | 2026-07-03 | High | Sprint 6 |
+| ADR-0046 | Adopt Entry Modes Layer | Accepted | 2026-07-03 | Medium | Sprint 6 |
+| ADR-0047 | Adopt Non-Technical Builder Mode | Accepted | 2026-07-03 | High | Sprint 6 |
+| ADR-0048 | Adopt Vibe Coder Mode | Accepted | 2026-07-03 | High | Sprint 6 |
+| ADR-0049 | Adopt Professional Engineer Mode | Accepted | 2026-07-03 | High | Sprint 6 |
+| ADR-0050 | Adopt Problem-to-Software Translation Framework | Accepted | 2026-07-03 | Medium | Sprint 6 |
+| ADR-0051 | Adopt Mode Router Before Discovery Engine | Accepted | 2026-07-03 | Medium | Sprint 6 |

@@ -42,3 +42,7 @@ Documentation Maintainers mantêm consistência, clareza, versionamento e relaç
 
 - `frameworks/`: catalog, taxonomy, map, registry e evolution policy.
 - `quality/`: framework validation standard.
+
+## Documentação adicionada na Sprint 5.5
+
+- `entry-modes/`: rationale, overview e modos oficiais de entrada.
