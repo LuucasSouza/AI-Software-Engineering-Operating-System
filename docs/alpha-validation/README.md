@@ -57,6 +57,22 @@ Maintainers devem executar ou revisar cenarios, registrar achados, classificar s
 - `real-users/phase-14-consolidated-findings.md`
 - `real-users/profile-score-summary.md`
 
+## Phase 15A
+
+- `private-alpha/participant-recruitment-plan.md`
+- `private-alpha/participant-screening-checklist.md`
+- `private-alpha/participant-consent-note.md`
+- `private-alpha/session-prep-checklist.md`
+- `private-alpha/private-alpha-onboarding-guide.md`
+- `private-alpha/privacy-and-consent-guidelines.md`
+- `private-alpha/safe-project-selection-guide.md`
+- `private-alpha/sensitive-data-handling-note.md`
+- `private-alpha/session-non-technical-builder-01.md`
+- `private-alpha/session-vibe-coder-01.md`
+- `private-alpha/session-professional-engineer-01.md`
+- `private-alpha/private-alpha-consolidated-results.md`
+- `private-alpha/private-alpha-profile-scorecard.md`
+
 ## Proximos passos
 
-Executar Phase 15A com usuarios reais nos tres perfis e atualizar o scorecard de release com evidencia humana.
+Executar Phase 15B com usuarios reais nos tres perfis e atualizar o scorecard de release com evidencia humana.

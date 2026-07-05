@@ -234,7 +234,17 @@ Architecture Maintainers garantem numeração, consistência e referências entr
 - `0203-use-human-feedback-to-recalibrate-readiness-score.md`
 - `0204-keep-npm-publication-manual-after-validation.md`
 - `0205-define-phase-15-branching-based-on-release-decision.md`
+- `0206-adopt-private-alpha-expansion-before-public-release.md`
+- `0207-require-real-user-evidence-for-go-decision.md`
+- `0208-use-one-participant-per-profile-as-minimum-public-alpha-gate.md`
+- `0209-keep-validation-feedback-anonymized.md`
+- `0210-allow-small-ux-and-documentation-fixes-during-private-alpha.md`
+- `0211-keep-resolver-safety-copy-explicit.md`
+- `0212-maintain-no-telemetry-policy-during-alpha-validation.md`
+- `0213-treat-sensitive-data-exposure-during-validation-as-release-blocker.md`
+- `0214-use-evidence-based-readiness-scoring.md`
+- `0215-define-phase-16-15b-15c-branch-after-private-alpha.md`
 
 ## Próximos passos
 
-- Iniciar Phase 15A - Private Alpha Expansion and Fixes.
+- Iniciar Phase 15B - Private Alpha Fixes and Second Validation Round.

@@ -635,18 +635,38 @@ Executar validação real com usuários dos três perfis antes de qualquer publi
 
 # Phase 15A — Private Alpha Expansion and Fixes
 
-Status: **Next**
+Status: **Complete**
 
 ## Objetivo
 
 Expandir private alpha com participantes reais dos três perfis, corrigir P1/P2 observados e repetir o gate antes de public npm.
 
+## Entregáveis
+
+- Sessões reais registradas como pendentes por indisponibilidade de participantes.
+- Guias de onboarding, consentimento, privacidade e seleção segura criados.
+- Backlog e triagem de feedback privado criados.
+- Nenhuma correção de CLI aplicada sem evidência real.
+- Score recalibrado: 77/100, LIMITED GO.
+- ADRs 0206 a 0215.
+
+---
+
+# Phase 15B — Private Alpha Fixes and Second Validation Round
+
+Status: **Next**
+
+## Objetivo
+
+Executar a primeira rodada real de alpha privado com participantes dos três perfis e aplicar correções pequenas baseadas em evidência.
+
 ## Entregáveis previstos
 
-- Uma sessão real por perfil, no mínimo.
-- Feedback anonimizado.
-- Revisão de copy do `resolver` baseada em evidência.
-- Score recalibrado com feedback humano.
+- Sessão `PA-NTB-01` executada ou reagendada com registro explícito.
+- Sessão `PA-VC-01` executada ou reagendada com registro explícito.
+- Sessão `PA-PE-01` executada ou reagendada com registro explícito.
+- Feedback anonimizado e triado.
+- Correções P1/P2 pequenas, se houver evidência.
 - Nova decisão GO / LIMITED GO / NO-GO.
 
 ---

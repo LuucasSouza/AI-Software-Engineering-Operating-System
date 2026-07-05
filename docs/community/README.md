@@ -30,6 +30,13 @@ Community docs explain how to contribute protocols, templates, frameworks, playb
 - `real-alpha-feedback-triage.md`
 - Validação real continuou pendente e bloqueia GO público.
 
+## Phase 15A
+
+- `private-alpha-feedback-triage.md`
+- `private-alpha-fix-backlog.md`
+- `private-alpha-fixes-applied.md`
+- Alpha privado preparado, mas sem participantes reais nesta execução.
+
 ## Feedback
 
 Feedback should be classified by type, severity, affected profile and owner before becoming an improvement item or ADR.

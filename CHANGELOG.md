@@ -21,6 +21,15 @@ O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionament
 
 ## Added
 
+- Phase 15A executada como expansão preparada de alpha privado.
+- Criados guias de recrutamento, triagem, consentimento, onboarding, privacidade, seleção segura de projeto e tratamento de dados sensíveis em `docs/alpha-validation/private-alpha/`.
+- Criados relatórios pendentes `PA-NTB-01`, `PA-VC-01` e `PA-PE-01`.
+- Criados resultados consolidados e scorecard por perfil de private alpha.
+- Criados triagem, backlog e registro de correções aplicadas para private alpha em `docs/community/`.
+- Criados scorecard, decisão, blockers, package review, recomendação e security review da Phase 15A em `docs/release/`.
+- Criadas ADRs 0206 a 0215.
+- Criados Phase 15A handoff, validation report e retrospective.
+- Preservados `pt231` a `pt240` em `bootstrap-source/`.
 - Phase 14 executada como gate de validação real e decisão de release.
 - Criados plano, matriz, relatórios pendentes por perfil, achados consolidados e resumo de score em `docs/alpha-validation/real-users/`.
 - Criados templates de feedback, relatório de sessão, script de moderação e folha de observação para real alpha.
@@ -277,6 +286,7 @@ O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionament
 
 ## Changed
 
+- Readiness score recalibrado de 78/100 para 77/100, mantendo LIMITED GO por ausência de validação real.
 - Readiness score recalibrado de 79/100 para 78/100, mantendo LIMITED GO por ausência de validação real completa.
 - Melhorada detecção/exibição de stack provável da CLI para Node.js, TypeScript, Vite, React, Firebase, Supabase, Python e monorepo simples.
 - `resolve-ai status` agora mostra stack provável após diagnóstico.

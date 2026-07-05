@@ -152,3 +152,8 @@ Template Maintainers mantêm consistência, clareza e versionamento dos modelos.
 - `validation/real-alpha-session-report-template.md`: relatório de sessão real alpha.
 - `validation/real-alpha-moderator-script.md`: script de moderação.
 - `validation/real-alpha-observation-sheet.md`: folha de observação.
+
+## Phase 15A
+
+- Os templates da Phase 14 continuam sendo a base para o alpha privado.
+- A Phase 15A adicionou guias operacionais em `docs/alpha-validation/private-alpha/` sem criar novos templates globais.

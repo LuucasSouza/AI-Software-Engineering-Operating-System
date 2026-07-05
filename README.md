@@ -270,7 +270,7 @@ Ao terminar, valide os critérios de aceite e gere o relatório final da Sprint 
 
 ## Status do projeto
 
-Status atual: **Phase 14 concluída — LIMITED GO**
+Status atual: **Phase 15A concluída — LIMITED GO**
 
 Sprint 1 criou a primeira camada funcional do AI-SEOS:
 
@@ -521,7 +521,17 @@ Phase 14 executou novo gate de validação real e decisão de release:
 - ADRs 0196 a 0205;
 - relatório de validação em `docs/sprints/phase-14-validation-report.md`.
 
-Próxima etapa: **Phase 15A — Private Alpha Expansion and Fixes**.
+Phase 15A preparou a expansão de alpha privado:
+
+- guias de recrutamento, triagem, consentimento, onboarding, privacidade e seleção segura de projetos criados em `docs/alpha-validation/private-alpha/`;
+- relatórios de sessão `PA-NTB-01`, `PA-VC-01` e `PA-PE-01` criados como pendentes, sem inventar feedback real;
+- triagem, backlog e registro de correções aplicadas criados em `docs/community/`;
+- scorecard, decisão, blockers, package review, recomendação e security review de release criados;
+- readiness score recalibrado: 77/100, LIMITED GO;
+- ADRs 0206 a 0215;
+- relatório de validação em `docs/sprints/phase-15a-validation-report.md`.
+
+Próxima etapa: **Phase 15B — Private Alpha Fixes and Second Validation Round**.
 
 ---
 
