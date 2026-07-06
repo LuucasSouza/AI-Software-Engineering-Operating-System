@@ -133,12 +133,15 @@ export function buildValidationResult(root: string, state: ResolveAiState): Vali
   const riscosRestantes = [
     ...previousRisks,
     ...(sensitiveFiles.length > 0 ? ["Arquivo sensível detectado por nome/caminho. Não commitar antes de revisão de segurança."] : []),
+    ...(!gitAvailable ? ["Não encontrei um repositório Git aqui, então não consigo comparar mudanças com precisão."] : []),
     ...(changedFiles.length > 0 ? ["Rodar testes e validações manualmente antes de commit."] : ["Não há evidência de mudança local para validar."])
   ];
   const proximaAcao = status === "bloqueada"
     ? "Pare antes de commitar. Revise os arquivos sensíveis e remova ou proteja o que não deve ir para o repositório."
-    : status === "pendente"
-      ? "Execute a tarefa assistida ou revise o prompt antes de tentar validar novamente."
+    : !gitAvailable
+      ? "Para habilitar detecção de mudanças, rode git init ou execute dentro de um repositório Git."
+      : status === "pendente"
+        ? "Execute a tarefa assistida ou revise o prompt antes de tentar validar novamente."
       : "Revise o checklist, rode os testes recomendados manualmente e confira o diff antes de commitar.";
 
   return {
@@ -156,6 +159,7 @@ export function buildValidationResult(root: string, state: ResolveAiState): Vali
     possibleOutOfScope,
     evidence: [
       gitAvailable ? "Git metadata disponível via git status --porcelain." : "Git metadata indisponível.",
+      gitAvailable ? "Comparação de mudanças baseada em Git." : "Não encontrei um repositório Git aqui, então não consigo comparar mudanças com precisão.",
       hasAssistedExecution ? "Execução assistida anterior encontrada no state." : "Nenhuma execução assistida anterior encontrada.",
       `${changedFiles.length} arquivo(s) alterado(s) detectado(s).`
     ],

@@ -21,6 +21,15 @@ O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionament
 
 ## Added
 
+- Phase 15B executada como segunda rodada de alpha privado com validação real parcial.
+- Registrado feedback real anonimizado do projeto CS2 Clips em `feedback/real-alpha-claude-fable-2026-07-05.md`.
+- Criados plano, tracker, runbook, relatórios de sessão, evidence register, consolidação e scorecard da Phase 15B.
+- Criados triagem, backlog e registro de fixes aplicados da Phase 15B.
+- Criados templates de feedback, relatório, script e observação para segunda rodada de private alpha.
+- Criados scorecard, decisão, blockers, package review e recomendação de release da Phase 15B.
+- Criadas ADRs 0216 a 0225.
+- Criados Phase 15B handoff, validation report e retrospective.
+- Preservados `pt241` a `pt250` em `bootstrap-source/`.
 - Phase 15A executada como expansão preparada de alpha privado.
 - Criados guias de recrutamento, triagem, consentimento, onboarding, privacidade, seleção segura de projeto e tratamento de dados sensíveis em `docs/alpha-validation/private-alpha/`.
 - Criados relatórios pendentes `PA-NTB-01`, `PA-VC-01` e `PA-PE-01`.
@@ -286,6 +295,13 @@ O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionament
 
 ## Changed
 
+- Readiness score recalibrado de 77/100 para 81/100, mantendo LIMITED GO por cobertura incompleta dos perfis.
+- Corrigida documentação de instalação local no Windows para recomendar `cd packages/resolve-ai-cli` seguido de `npm link`.
+- `resolve-ai validar` agora explica quando não há repositório Git e sugere `git init` ou executar dentro de um repositório Git.
+- `resolve-ai status` agora exibe uma única próxima ação prioritária, preferindo a etapa mais recente.
+- `resolve-ai preparar` agora usa docs 00, 02 e 03 preenchidos para propor uma tarefa mais concreta.
+- Harmonizada a regra de risco entre `preparar` e `resolver`.
+- Removidas linhas em branco iniciais das saídas principais de `preparar` e `resolver`.
 - Readiness score recalibrado de 78/100 para 77/100, mantendo LIMITED GO por ausência de validação real.
 - Readiness score recalibrado de 79/100 para 78/100, mantendo LIMITED GO por ausência de validação real completa.
 - Melhorada detecção/exibição de stack provável da CLI para Node.js, TypeScript, Vite, React, Firebase, Supabase, Python e monorepo simples.

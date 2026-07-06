@@ -3,10 +3,18 @@ import { hasStarted, readState } from "../core/local-state.js";
 import { print } from "../core/output.js";
 import { resolveAiPaths } from "../core/paths.js";
 
+function nextPriorityAction(state) {
+  if (state.ultimaValidacao?.proximaAcao) return state.ultimaValidacao.proximaAcao;
+  if (state.ultimaExecucaoAssistida?.proximoPasso) return state.ultimaExecucaoAssistida.proximoPasso;
+  if (state.ultimoPreparo) return "Leia docs/resolve-ai/16-prompt-de-implementacao.md.";
+  if (state.nextRecommendedAction) return state.nextRecommendedAction;
+  if (state.proximaAcao) return state.proximaAcao;
+  return "revisar docs/resolve-ai/09-handoff.md";
+}
+
 export function statusCommand(root= process.cwd()) {
   if (!hasStarted(root)) {
-    print(`
-Resolve Aí ainda não começou neste projeto.
+    print(`Resolve Aí ainda não começou neste projeto.
 
 Rode:
   resolve-ai começar
@@ -23,7 +31,7 @@ Rode:
 Tipo de projeto: ${state.tipoProjeto ?? "não informado"}
 Modo recomendado: ${state.modoRecomendado ?? "não informado"}
 Stack provável: ${state.stackDetectada?.length ? state.stackDetectada.join(", ") : "não identificada"}
-Próxima ação: ${state.proximaAcao ?? "revisar docs/resolve-ai/09-handoff.md"}
+Próxima ação do diagnóstico: ${state.proximaAcao ?? "revisar docs/resolve-ai/09-handoff.md"}
 `
     : "";
   const planningSummary = state.lastPlanAt
@@ -72,14 +80,15 @@ Próxima ação: ${state.ultimaValidacao.proximaAcao}
 `
     : "";
   const disabledSummary = state.active === false ? "\nResolve Aí está desligado. Para preparar com contexto completo, rode: resolve-ai ligar\n" : "";
+  const nextAction = nextPriorityAction(state);
 
   if (state.active) {
-    print(`
-Resolve Aí está ligado neste projeto.
+    print(`Resolve Aí está ligado neste projeto.
 Modo atual: Projeto em Andamento — Diagnóstico e Continuação
 Docs: ${docsExists ? "docs/resolve-ai/" : "não encontrado"}
 Estado: .resolve-ai/state.json
 Última atualização: ${state.lastUpdatedAt}
+Próxima ação prioritária: ${nextAction}
 ${diagnosticSummary}
 ${planningSummary}
 ${preparedSummary}
@@ -89,12 +98,12 @@ ${validationSummary}
     return;
   }
 
-  print(`
-Resolve Aí está preparado, mas desligado.
+  print(`Resolve Aí está preparado, mas desligado.
 
 Docs: ${docsExists ? "docs/resolve-ai/" : "não encontrado"}
 Estado: .resolve-ai/state.json
 Última atualização: ${state.lastUpdatedAt}
+Próxima ação prioritária: ${nextAction}
 ${diagnosticSummary}
 ${planningSummary}
 ${preparedSummary}

@@ -202,3 +202,14 @@ Documentation Maintainers mantêm consistência, clareza, versionamento e relaç
 - `sprints/phase-15a-handoff.md`: handoff da Phase 15A.
 - `sprints/phase-15a-validation-report.md`: validação da Phase 15A.
 - `sprints/phase-15a-retrospective.md`: retrospectiva da Phase 15A.
+
+## Documentação adicionada na Phase 15B
+
+- `alpha-validation/private-alpha/phase-15b/`: plano, tracker, runbook, relatórios, evidence register, consolidação e scorecard.
+- `community/private-alpha-phase-15b-feedback-triage.md`: triagem de feedback.
+- `community/private-alpha-phase-15b-fix-backlog.md`: backlog de fixes.
+- `community/private-alpha-phase-15b-fixes-applied.md`: fixes aplicados.
+- `release/v0.1.0-alpha-phase-15b-*.md`: scorecard, decisão, blockers, package review e recomendação.
+- `sprints/phase-15b-handoff.md`: handoff da Phase 15B.
+- `sprints/phase-15b-validation-report.md`: validação da Phase 15B.
+- `sprints/phase-15b-retrospective.md`: retrospectiva da Phase 15B.

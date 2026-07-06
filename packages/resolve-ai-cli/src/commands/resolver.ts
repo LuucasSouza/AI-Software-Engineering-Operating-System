@@ -16,8 +16,7 @@ export function resolverCommand(root: string = process.cwd(), alias: string = "r
       lastCommand: "resolver",
       lastUpdatedAt: now
     });
-    print(`
-Resolve Aí está desligado.
+    print(`Resolve Aí está desligado.
 
 Para preparar uma execução assistida, ligue primeiro:
 resolve-ai ligar
@@ -46,12 +45,12 @@ Eu ainda não mexi no seu código e não gerei pacote de execução assistida.
     lastUpdatedAt: now
   });
 
-  print(`
-Resolve Aí — execução assistida
+  const notices = [
+    alias !== "resolver" ? `Alias usado: ${alias}` : "",
+    !pack.hasPreparedTask ? "Ainda não encontrei uma tarefa preparada. Rode primeiro: resolve-ai preparar. O pacote foi gerado como baixa confiança e não deve ser usado para alterar código." : ""
+  ].filter(Boolean);
 
-${alias !== "resolver" ? `Alias usado: ${alias}` : ""}
-${!pack.hasPreparedTask ? "Ainda não encontrei uma tarefa preparada. Rode primeiro: resolve-ai preparar. O pacote foi gerado como baixa confiança e não deve ser usado para alterar código." : ""}
-
+  print(`Resolve Aí — execução assistida${notices.length ? `\n\n${notices.join("\n")}` : ""}
 Pronto. Preparei a execução assistida.
 
 Eu ainda não mexi no seu código.
@@ -63,6 +62,7 @@ ${pack.taskTitle}
 Risco: ${pack.risk}
 Aprovação humana: necessária
 Autoexecução: não
+Regra de risco: green/baixo, yellow/médio, orange ou red/alto. Risco crítico ou sensível pode bloquear a execução.
 
 Arquivos gerados:
 - docs/resolve-ai/20-execucao-assistida.md

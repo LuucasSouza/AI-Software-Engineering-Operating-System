@@ -37,6 +37,13 @@ Community docs explain how to contribute protocols, templates, frameworks, playb
 - `private-alpha-fixes-applied.md`
 - Alpha privado preparado, mas sem participantes reais nesta execução.
 
+## Phase 15B
+
+- `private-alpha-phase-15b-feedback-triage.md`
+- `private-alpha-phase-15b-fix-backlog.md`
+- `private-alpha-phase-15b-fixes-applied.md`
+- Validação real parcial registrada e fixes pequenos aplicados.
+
 ## Feedback
 
 Feedback should be classified by type, severity, affected profile and owner before becoming an improvement item or ADR.

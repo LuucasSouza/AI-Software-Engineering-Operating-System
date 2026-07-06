@@ -244,7 +244,17 @@ Architecture Maintainers garantem numeração, consistência e referências entr
 - `0213-treat-sensitive-data-exposure-during-validation-as-release-blocker.md`
 - `0214-use-evidence-based-readiness-scoring.md`
 - `0215-define-phase-16-15b-15c-branch-after-private-alpha.md`
+- `0216-adopt-validation-blocked-state-for-private-alpha.md`
+- `0217-require-real-participants-before-public-npm-go.md`
+- `0218-preserve-alpha-honesty-over-release-velocity.md`
+- `0219-treat-resolver-executar-perception-as-p1-validation-item.md`
+- `0220-separate-technical-package-readiness-from-product-readiness.md`
+- `0221-use-anonymized-participant-ids-for-alpha-validation.md`
+- `0222-restrict-evidence-capture-to-sanitized-artifacts.md`
+- `0223-allow-only-small-evidence-based-fixes-during-private-alpha.md`
+- `0224-avoid-infinite-documentation-only-validation-loops.md`
+- `0225-define-next-path-branching-after-phase-15b.md`
 
 ## Próximos passos
 
-- Iniciar Phase 15B - Private Alpha Fixes and Second Validation Round.
+- Manual Action - Recruit remaining private alpha participants.

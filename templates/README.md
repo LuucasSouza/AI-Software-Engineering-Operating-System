@@ -157,3 +157,10 @@ Template Maintainers mantêm consistência, clareza e versionamento dos modelos.
 
 - Os templates da Phase 14 continuam sendo a base para o alpha privado.
 - A Phase 15A adicionou guias operacionais em `docs/alpha-validation/private-alpha/` sem criar novos templates globais.
+
+## Phase 15B
+
+- `feedback/private-alpha-second-round-feedback.md`: feedback da segunda rodada.
+- `validation/private-alpha-second-round-session-report.md`: relatório de sessão.
+- `validation/private-alpha-second-round-moderator-script.md`: script de moderação.
+- `validation/private-alpha-second-round-observation-sheet.md`: folha de observação.

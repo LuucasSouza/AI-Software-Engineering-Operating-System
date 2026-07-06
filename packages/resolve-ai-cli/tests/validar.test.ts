@@ -90,6 +90,23 @@ test("validar detecta mudancas Git", () => {
   assert.equal(state.ultimaValidacao.arquivosAlterados.includes("src/app.ts"), true);
 });
 
+test("validar sem Git explica limite de comparacao", () => {
+  const root = tempProject("resolve-ai-validar-no-git-");
+  preparedResolvedProject(root);
+
+  const output = run(["validar"], root);
+  const report = fs.readFileSync(path.join(root, "docs", "resolve-ai", "25-relatorio-de-validacao.md"), "utf8");
+  const changes = fs.readFileSync(path.join(root, "docs", "resolve-ai", "26-mudancas-detectadas.md"), "utf8");
+  const state = readState(root);
+
+  assert.match(output, /Não encontrei um repositório Git aqui/);
+  assert.match(output, /rode git init ou execute dentro de um repositório Git/);
+  assert.doesNotMatch(output, /^Resolve Aí — validação guiada\n\n\n/);
+  assert.match(report, /Não encontrei um repositório Git aqui/);
+  assert.match(changes, /Git metadata indisponível/);
+  assert.equal(state.ultimaValidacao.confianca, "baixa");
+});
+
 test("validar bloqueia arquivo sensivel por nome sem copiar conteudo", () => {
   const root = tempProject("resolve-ai-validar-sensitive-");
   preparedResolvedProject(root);

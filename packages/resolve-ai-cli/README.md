@@ -60,8 +60,16 @@ node packages/resolve-ai-cli/dist/index.js desligar
 Link local antes de publicação npm:
 
 ```bash
-npm link --prefix packages/resolve-ai-cli
+cd packages/resolve-ai-cli
+npm link
+cd ../..
 resolve-ai ajuda
+```
+
+Alternativa sem link global:
+
+```bash
+node packages/resolve-ai-cli/dist/index.js ajuda
 ```
 
 ## Scripts
@@ -222,3 +230,5 @@ Na Phase 13, o pacote foi revisado com `npm pack --dry-run` e o `package.json` p
 Na Phase 14, a validação real continuou pendente por indisponibilidade de participantes. A decisão permaneceu LIMITED GO com score 78/100. Publicação npm, tag Git e GitHub release continuam fora de escopo até validação real e aprovação manual.
 
 Na Phase 15A, o alpha privado foi preparado com guias de recrutamento, consentimento, privacidade e sessões pendentes. Nenhuma alteração de comportamento da CLI foi aplicada sem feedback real. A decisão permaneceu LIMITED GO com score 77/100.
+
+Na Phase 15B, houve validação real parcial em projeto CS2 Clips. Foram aplicadas correções pequenas de instalação Windows, validação sem Git, próxima ação prioritária no status, seleção de tarefa com docs preenchidos, harmonização de risco e remoção de linhas em branco iniciais. A decisão permaneceu LIMITED GO com score 81/100.

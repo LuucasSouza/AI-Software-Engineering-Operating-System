@@ -18,7 +18,7 @@ function readSmall(filePath) {
 }
 
 function hasCriticalRisk(state, preparedContext) {
-  const text = `${state.riscosDetectados?.join(" ") ?? ""} ${state.ultimoPreparo?.riskLevel ?? ""} ${preparedContext}`.toLowerCase();
+  const text = `${state.riscosDetectados?.join(" ") ?? ""} ${state.ultimoPreparo?.riskLevel ?? ""}`.toLowerCase();
   return ["red", "crítico", "critico", "senha", "segredo", "sensível", "sensivel", "secret", "token", "dados pessoais", "lgpd", ".env", "credencial"].some((word) => text.includes(word));
 }
 
@@ -92,6 +92,7 @@ export function buildAssistedExecutionPackage(root, state) {
       "Não faça deploy.",
       "Não remova dados.",
       "Não exponha segredos ou dados sensíveis.",
+      `Risco herdado do preparo: ${state.ultimoPreparo.riskLevel}. Regra: green/baixo, yellow/medio, orange ou red/alto; risco critico ou sensivel pode bloquear.`,
       highRisk ? "Se o risco não estiver mitigado, pare antes de alterar código." : "Se aparecer risco crítico, pare e peça nova aprovação."
     ],
     validation: [

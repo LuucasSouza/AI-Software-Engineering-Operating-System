@@ -65,6 +65,31 @@ test("preparar com diagnostico e planejamento seleciona tarefa", () => {
   assertPrepDocs(root);
 });
 
+test("preparar usa intake preenchido para propor tarefa concreta", () => {
+  const root = tempProject("resolve-ai-prep-filled-intake-");
+  run(["começar"], root);
+  const statePath = path.join(root, ".resolve-ai", "state.json");
+  const state = JSON.parse(fs.readFileSync(statePath, "utf8"));
+  const docsDir = path.join(root, "docs", "resolve-ai");
+  fs.writeFileSync(path.join(docsDir, "00-project-intake.md"), "# Intake\n\nProjeto: biblioteca de clipes de granadas de CS2.\n", "utf8");
+  fs.writeFileSync(path.join(docsDir, "02-discovery.md"), "# Discovery\n\nUsuários querem encontrar dicas e granadas por mapa.\n", "utf8");
+  fs.writeFileSync(path.join(docsDir, "03-product-definition.md"), "# Produto\n\nMVP: cadastrar, listar e filtrar clipes por mapa.\n", "utf8");
+  fs.writeFileSync(statePath, JSON.stringify({
+    ...state,
+    active: true,
+    ultimoDiagnosticoEm: new Date().toISOString(),
+    tipoProjeto: "em-andamento",
+    riscosDetectados: []
+  }, null, 2), "utf8");
+
+  const output = run(["preparar"], root);
+  const updated = JSON.parse(fs.readFileSync(statePath, "utf8"));
+
+  assert.match(output, /escopo preenchido|fatia pequena/i);
+  assert.match(updated.ultimoPreparo.tarefa, /fatia pequena do escopo preenchido/);
+  assert.notEqual(updated.ultimoPreparo.tarefa, "Definir escopo mínimo antes de implementar");
+});
+
 test("projeto novo sem testes nao vira risco critico por motivo isolado", () => {
   const root = tempProject("resolve-ai-prep-new-no-tests-");
   run(["diagnosticar"], root);
@@ -142,6 +167,15 @@ test("aliases tarefa e executar funcionam e status mostra preparo", () => {
   const status = run(["status"], root);
   assert.match(status, /Tarefa preparada:/);
   assert.match(status, /Autoexecução: não/);
+});
+
+test("preparar nao inicia output com linha em branco", () => {
+  const root = tempProject("resolve-ai-prep-output-");
+  const output = run(["preparar"], root);
+
+  assert.equal(output.startsWith("\n"), false);
+  assert.match(output, /^Resolve Aí — preparação de tarefa/);
+  assert.doesNotMatch(output, /^Resolve Aí — preparação de tarefa\n\n\n/);
 });
 
 test("preparar nao altera codigo do produto analisado", () => {

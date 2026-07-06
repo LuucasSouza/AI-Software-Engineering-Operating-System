@@ -16,8 +16,16 @@ Ele nao publica, nao faz deploy, nao comita, nao chama APIs externas, nao coleta
 
 ```bash
 npm run build --prefix packages/resolve-ai-cli
-npm link --prefix packages/resolve-ai-cli
+cd packages/resolve-ai-cli
+npm link
+cd ../..
 resolve-ai ajuda
+```
+
+Alternativa sem link global:
+
+```bash
+node packages/resolve-ai-cli/dist/index.js ajuda
 ```
 
 ## 5. Primeiro uso

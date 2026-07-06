@@ -71,6 +71,16 @@ test("resolver com preparo existente cria docs 20 a 24 e atualiza state", () => 
   assertResolverDocs(root);
 });
 
+test("resolver harmoniza risco yellow do preparo como medio", () => {
+  const root = tempProject("resolve-ai-resolver-risk-yellow-");
+  activatePreparedProject(root);
+
+  run(["resolver"], root);
+  const state = readState(root);
+
+  assert.equal(state.ultimaExecucaoAssistida.risco, "medio");
+});
+
 test("resolver informa que validar ja existe", () => {
   const root = tempProject("resolve-ai-resolver-copy-");
   activatePreparedProject(root);
@@ -145,6 +155,16 @@ test("aliases resolva e fazer funcionam", () => {
 
   assert.match(run(["resolva"], root), /Alias usado: resolva/);
   assert.match(run(["fazer"], root), /Alias usado: fazer/);
+});
+
+test("resolver nao inicia output com linha em branco", () => {
+  const root = tempProject("resolve-ai-resolver-output-");
+  activatePreparedProject(root);
+  const output = run(["resolver"], root);
+
+  assert.equal(output.startsWith("\n"), false);
+  assert.match(output, /^Resolve Aí — execução assistida/);
+  assert.doesNotMatch(output, /^Resolve Aí — execução assistida\n\n\n/);
 });
 
 test("status apos resolver mostra execucao assistida pendente", () => {

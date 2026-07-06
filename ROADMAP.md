@@ -654,20 +654,38 @@ Expandir private alpha com participantes reais dos três perfis, corrigir P1/P2 
 
 # Phase 15B — Private Alpha Fixes and Second Validation Round
 
-Status: **Next**
+Status: **Complete**
 
 ## Objetivo
 
 Executar a primeira rodada real de alpha privado com participantes dos três perfis e aplicar correções pequenas baseadas em evidência.
 
+## Entregáveis
+
+- Sessão real de Vibe Coder executada em projeto CS2 Clips.
+- Cobertura Professional Engineer registrada como parcial/leve.
+- Non-Technical Builder permanece pendente.
+- Feedback anonimizado e triado.
+- Correções P1/P2 pequenas aplicadas com testes.
+- Decisão: 81/100, LIMITED GO.
+- ADRs 0216 a 0225.
+
+---
+
+# Manual Action — Recruit Remaining Private Alpha Participants
+
+Status: **Next**
+
+## Objetivo
+
+Recrutar e agendar os perfis restantes antes de qualquer public npm.
+
 ## Entregáveis previstos
 
-- Sessão `PA-NTB-01` executada ou reagendada com registro explícito.
-- Sessão `PA-VC-01` executada ou reagendada com registro explícito.
-- Sessão `PA-PE-01` executada ou reagendada com registro explícito.
-- Feedback anonimizado e triado.
-- Correções P1/P2 pequenas, se houver evidência.
-- Nova decisão GO / LIMITED GO / NO-GO.
+- Um participante Non-Technical Builder.
+- Um Professional Engineer dedicado.
+- Revalidação da instalação Windows.
+- Nova rodada curta apenas depois de participantes confirmados.
 
 ---
 

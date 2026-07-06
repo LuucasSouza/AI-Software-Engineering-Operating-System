@@ -13,6 +13,9 @@ function readSmall(filePath: string): string {
 export function readExecutionContext(root: string): string {
   const paths = resolveAiPaths(root);
   return [
+    "00-project-intake.md",
+    "02-discovery.md",
+    "03-product-definition.md",
     "05-risk-register.md",
     "07-execution-plan.md",
     "08-backlog.md",
@@ -24,13 +27,46 @@ export function readExecutionContext(root: string): string {
   ].map((file) => readSmall(path.join(paths.docsDir, file))).join("\n\n");
 }
 
+function readProductContext(root: string): string {
+  const paths = resolveAiPaths(root);
+  return [
+    "00-project-intake.md",
+    "02-discovery.md",
+    "03-product-definition.md"
+  ].map((file) => readSmall(path.join(paths.docsDir, file))).join("\n\n");
+}
+
 function hasCriticalRisk(state: ResolveAiState | null, context: string): boolean {
   const text = `${state?.riscosDetectados?.join(" ") ?? ""}`.toLowerCase();
   return ["senha", "segredo", "sensível", "sensivel", "secret", "token", "dados pessoais", "lgpd", "backup", ".env", "credencial", "dump"].some((word) => text.includes(word));
 }
 
+function hasFilledProductScope(context: string): boolean {
+  const text = context.toLowerCase();
+  const hasUsefulSection = [
+    "mvp",
+    "escopo",
+    "funcionalidade",
+    "usuário",
+    "usuario",
+    "granada",
+    "clipe",
+    "biblioteca",
+    "produto",
+    "visão",
+    "visao"
+  ].some((word) => text.includes(word));
+  const isOnlyFallback = [
+    "não identificado no diagnóstico automático",
+    "inferido por heurística. validar com o usuário",
+    "não identificado com segurança"
+  ].every((phrase) => text.includes(phrase));
+  return hasUsefulSection && !isOnlyFallback;
+}
+
 export function selectPreparedTask(root: string, state: ResolveAiState | null): PreparedTask {
   const context = readExecutionContext(root);
+  const productContext = readProductContext(root);
   const hasDiagnosis = Boolean(state?.ultimoDiagnosticoEm);
   const hasPlanning = Boolean(state?.lastPlanAt);
   const critical = hasCriticalRisk(state, context);
@@ -52,6 +88,25 @@ export function selectPreparedTask(root: string, state: ResolveAiState | null): 
       risks: ["Dados sensíveis ou credenciais podem estar presentes", "Implementar feature antes de hardening pode ampliar dano"],
       stopConditions: ["Encontrar segredo real", "Precisar alterar auth/dados reais", "Precisar fazer deploy"],
       reason: "Existe risco crítico relacionado a dados sensíveis, credenciais, backup ou segurança."
+    };
+  }
+
+  if (hasFilledProductScope(productContext) && hasDiagnosis) {
+    return {
+      id: "PREP-001",
+      title: "Implementar a próxima fatia pequena do escopo preenchido",
+      source: hasPlanning ? "plan" : "documentation",
+      priority: "high",
+      confidence: hasPlanning ? "high" : "medium",
+      category: "feature",
+      riskLevel: "yellow",
+      scope: ["Reler docs 00, 02 e 03", "Escolher uma fatia pequena do MVP descrito", "Implementar apenas essa fatia com validação manual"],
+      outOfScope: ["Reescrever o produto inteiro", "Criar funcionalidades fora do escopo preenchido", "Fazer deploy", "Alterar dados reais"],
+      likelyFiles: ["docs/resolve-ai/00-project-intake.md", "docs/resolve-ai/02-discovery.md", "docs/resolve-ai/03-product-definition.md", "docs/resolve-ai/11-backlog-priorizado.md"],
+      validation: ["Fatia implementada corresponde ao escopo documentado", "Critérios de aceite revisados", "Nenhuma alteração fora do escopo"],
+      risks: ["Escopo preenchido pode estar incompleto", "A próxima fatia pode crescer se não for limitada"],
+      stopConditions: ["Escopo ficar ambíguo", "Precisar tocar dados reais", "A tarefa exigir deploy ou credenciais"],
+      reason: "Encontrei contexto preenchido nos docs 00, 02 ou 03; a próxima tarefa deve partir desse escopo em vez de repetir o fallback genérico."
     };
   }
 

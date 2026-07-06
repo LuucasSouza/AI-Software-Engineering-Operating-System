@@ -30,13 +30,14 @@ export function prepararCommand(root= process.cwd(), alias= "preparar") {
     lastUpdatedAt: now
   });
 
-  print(`
-Resolve Aí — preparação de tarefa
+  const notices = [
+    alias === "executar" ? "Nesta fase eu apenas preparo a execução. Não vou executar a tarefa." : "",
+    state.active === false ? "O Resolve Aí está desligado. Posso preparar um pacote básico, mas para usar contexto completo, rode `resolve-ai ligar`." : "",
+    !state.ultimoDiagnosticoEm ? "Não encontrei diagnóstico anterior. Rode primeiro: resolve-ai diagnosticar. A confiança será baixa." : "",
+    !state.lastPlanAt ? "Não encontrei planejamento anterior. Rode primeiro: resolve-ai planejar. Vou preparar uma tarefa básica com baixa confiança." : ""
+  ].filter(Boolean);
 
-${alias === "executar" ? "Nesta fase eu apenas preparo a execução. Não vou executar a tarefa." : ""}
-${state.active === false ? "O Resolve Aí está desligado. Posso preparar um pacote básico, mas para usar contexto completo, rode `resolve-ai ligar`." : ""}
-${!state.ultimoDiagnosticoEm ? "Não encontrei diagnóstico anterior. Rode primeiro: resolve-ai diagnosticar. A confiança será baixa." : ""}
-${!state.lastPlanAt ? "Não encontrei planejamento anterior. Rode primeiro: resolve-ai planejar. Vou preparar uma tarefa básica com baixa confiança." : ""}
+  print(`Resolve Aí — preparação de tarefa${notices.length ? `\n\n${notices.join("\n")}` : ""}
 
 Tarefa preparada:
 ${task.title}
@@ -47,6 +48,7 @@ ${task.reason}
 Risco: ${task.riskLevel}
 Aprovação humana: necessária
 Autoexecução: não
+Regra de risco: green/baixo, yellow/médio, orange ou red/alto no pacote de execução assistida.
 
 Arquivos gerados:
 - docs/resolve-ai/15-tarefa-preparada.md

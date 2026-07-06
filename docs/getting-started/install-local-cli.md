@@ -40,6 +40,16 @@ npm run smoke --prefix packages/resolve-ai-cli
 
 ## Linkar localmente
 
+No Windows, o caminho mais confiável é entrar no pacote e rodar `npm link` de dentro dele:
+
+```bash
+cd packages/resolve-ai-cli
+npm link
+cd ../..
+```
+
+Em macOS/Linux, ou se o seu npm resolver o prefix corretamente, este comando também pode funcionar a partir da raiz:
+
 ```bash
 npm link --prefix packages/resolve-ai-cli
 ```
@@ -74,7 +84,13 @@ npm unlink -g resolve-ai
 
 ### `resolve-ai` não encontrado
 
-Rode `npm link --prefix packages/resolve-ai-cli` novamente e confira se o diretório global do npm está no `PATH`.
+No Windows, entre em `packages/resolve-ai-cli` e rode `npm link`. Depois confira se o diretório global do npm está no `PATH`.
+
+Alternativa sem link global:
+
+```bash
+node packages/resolve-ai-cli/dist/index.js ajuda
+```
 
 ### `dist/index.js` não encontrado
 

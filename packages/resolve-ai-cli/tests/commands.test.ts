@@ -18,6 +18,14 @@ function run(command, cwd) {
   });
 }
 
+function readState(root) {
+  return JSON.parse(fs.readFileSync(path.join(root, ".resolve-ai", "state.json"), "utf8"));
+}
+
+function writeState(root, state) {
+  fs.writeFileSync(path.join(root, ".resolve-ai", "state.json"), JSON.stringify(state, null, 2), "utf8");
+}
+
 test("ajuda mostra comandos principais", () => {
   const output = execFileSync(process.execPath, [cli, "ajuda"], {
     cwd: path.resolve("."),
@@ -27,6 +35,62 @@ test("ajuda mostra comandos principais", () => {
   assert.match(output, /Resolve Aí/);
   assert.match(output, /resolve-ai começar/);
   assert.match(output, /resolve-ai ligar/);
+});
+
+test("documentacao recomenda npm link no Windows dentro do pacote", () => {
+  const install = fs.readFileSync(path.resolve("..", "..", "docs", "getting-started", "install-local-cli.md"), "utf8");
+  const quickstart = fs.readFileSync(path.resolve("..", "..", "docs", "getting-started", "quickstart-alpha.md"), "utf8");
+
+  assert.match(install, /cd packages\/resolve-ai-cli[\s\S]*npm link/);
+  assert.match(install, /node packages\/resolve-ai-cli\/dist\/index\.js ajuda/);
+  assert.match(quickstart, /cd packages\/resolve-ai-cli[\s\S]*npm link/);
+});
+
+test("status mostra uma proxima acao prioritaria pela etapa mais recente", () => {
+  const root = tempProject("resolve-ai-status-priority-");
+  run("começar", root);
+  const state = readState(root);
+  writeState(root, {
+    ...state,
+    active: true,
+    proximaAcao: "acao antiga do diagnostico",
+    nextRecommendedAction: "acao do plano",
+    ultimoPreparo: {
+      executadoEm: new Date().toISOString(),
+      tarefa: "Tarefa preparada",
+      categoria: "feature",
+      prioridade: "high",
+      confianca: "high",
+      riskLevel: "yellow",
+      approvalRequired: true,
+      canAutoExecute: false,
+      documentosGerados: []
+    },
+    ultimaExecucaoAssistida: {
+      criadaEm: new Date().toISOString(),
+      status: "pendente",
+      tarefa: "Tarefa preparada",
+      risco: "medio",
+      canAutoExecute: false,
+      proximoPasso: "acao da execucao assistida",
+      docsGerados: []
+    },
+    ultimaValidacao: {
+      executadaEm: new Date().toISOString(),
+      status: "pendente",
+      confianca: "baixa",
+      mudancasDetectadas: 0,
+      arquivosAlterados: [],
+      arquivosSensiveisDetectados: [],
+      riscosRestantes: [],
+      proximaAcao: "acao da validacao"
+    }
+  });
+
+  const output = run("status", root);
+
+  assert.match(output, /Próxima ação prioritária: acao da validacao/);
+  assert.doesNotMatch(output, /Próxima ação prioritária: acao antiga do diagnostico/);
 });
 
 test("status antes e depois de começar", () => {

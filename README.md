@@ -270,7 +270,7 @@ Ao terminar, valide os critérios de aceite e gere o relatório final da Sprint 
 
 ## Status do projeto
 
-Status atual: **Phase 15A concluída — LIMITED GO**
+Status atual: **Phase 15B concluída — LIMITED GO**
 
 Sprint 1 criou a primeira camada funcional do AI-SEOS:
 
@@ -531,7 +531,18 @@ Phase 15A preparou a expansão de alpha privado:
 - ADRs 0206 a 0215;
 - relatório de validação em `docs/sprints/phase-15a-validation-report.md`.
 
-Próxima etapa: **Phase 15B — Private Alpha Fixes and Second Validation Round**.
+Phase 15B executou a segunda rodada de alpha privado com validação real parcial:
+
+- feedback real do projeto CS2 Clips registrado de forma anonimizada;
+- Vibe Coder validado e Professional Engineer coberto parcialmente;
+- Non-Technical Builder ainda pendente;
+- correções pequenas aplicadas em instalação Windows, `validar` sem Git, próxima ação do `status`, seleção de tarefa do `preparar`, regra de risco e linhas iniciais das saídas;
+- templates da segunda rodada criados;
+- readiness score recalibrado: 81/100, LIMITED GO;
+- ADRs 0216 a 0225;
+- relatório de validação em `docs/sprints/phase-15b-validation-report.md`.
+
+Próxima ação: **Manual Action — Recruit remaining private alpha participants**.
 
 ---
 
