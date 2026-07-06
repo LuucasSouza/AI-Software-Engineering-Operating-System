@@ -21,6 +21,10 @@ O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionament
 
 ## Added
 
+- Phase 16 executada com criacao da pasta simples `teste/` para alpha feedback manual.
+- Criados `teste/README.md`, `teste/COMECE_AQUI.md`, `teste/PROMPT_PARA_IA.md`, `teste/feedback.md`, `teste/SEGURANCA.md`, `teste/COMANDOS.md`, `teste/EXEMPLO_FEEDBACK_PREENCHIDO.md` e `teste/RESUMO_PARA_ENVIAR_AO_AMIGO.md`.
+- Criados Phase 16 handoff, validation report e retrospective.
+- Criadas ADRs 0226 a 0230.
 - Phase 15B executada como segunda rodada de alpha privado com validação real parcial.
 - Registrado feedback real anonimizado do projeto CS2 Clips em `feedback/real-alpha-claude-fable-2026-07-05.md`.
 - Criados plano, tracker, runbook, relatórios de sessão, evidence register, consolidação e scorecard da Phase 15B.
@@ -295,6 +299,7 @@ O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionament
 
 ## Changed
 
+- Documentado fluxo manual de feedback via `teste/feedback.md`, sem GitHub Actions, workflows, telemetria ou envio automatico.
 - Readiness score recalibrado de 77/100 para 81/100, mantendo LIMITED GO por cobertura incompleta dos perfis.
 - Corrigida documentação de instalação local no Windows para recomendar `cd packages/resolve-ai-cli` seguido de `npm link`.
 - `resolve-ai validar` agora explica quando não há repositório Git e sugere `git init` ou executar dentro de um repositório Git.

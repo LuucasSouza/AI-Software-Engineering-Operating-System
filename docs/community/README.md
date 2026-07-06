@@ -44,6 +44,12 @@ Community docs explain how to contribute protocols, templates, frameworks, playb
 - `private-alpha-phase-15b-fixes-applied.md`
 - Validação real parcial registrada e fixes pequenos aplicados.
 
+## Phase 16
+
+- Feedback manual por `teste/feedback.md`.
+- Participantes devem revisar e enviar o arquivo manualmente ao Lucas.
+- Nenhum envio automatico, workflow, GitHub Action ou telemetria foi criado.
+
 ## Feedback
 
 Feedback should be classified by type, severity, affected profile and owner before becoming an improvement item or ADR.

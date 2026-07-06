@@ -270,7 +270,7 @@ Ao terminar, valide os critérios de aceite e gere o relatório final da Sprint 
 
 ## Status do projeto
 
-Status atual: **Phase 15B concluída — LIMITED GO**
+Status atual: **Phase 16 concluída — LIMITED GO operacional**
 
 Sprint 1 criou a primeira camada funcional do AI-SEOS:
 
@@ -542,7 +542,20 @@ Phase 15B executou a segunda rodada de alpha privado com validação real parcia
 - ADRs 0216 a 0225;
 - relatório de validação em `docs/sprints/phase-15b-validation-report.md`.
 
-Próxima ação: **Manual Action — Recruit remaining private alpha participants**.
+## Testando com amigos usando a pasta teste/
+
+Phase 16 criou uma pasta simples `teste/` para enviar a amigos e participantes de alpha privado.
+
+Essa pasta pode ser copiada para dentro de outro projeto e inclui:
+
+- `COMECE_AQUI.md`, com o passo a passo;
+- `PROMPT_PARA_IA.md`, com um prompt pronto para colar na IA usada no projeto;
+- `feedback.md`, que deve ser preenchido durante o teste e enviado manualmente ao Lucas;
+- guias de seguranca, comandos e exemplo ficticio de feedback preenchido.
+
+A pasta `teste/` nao envia nada automaticamente, nao cria GitHub Actions, nao adiciona telemetria e nao altera o comportamento da CLI.
+
+Próxima ação: **enviar `teste/` para participantes reais e coletar `teste/feedback.md` manualmente**.
 
 ---
 

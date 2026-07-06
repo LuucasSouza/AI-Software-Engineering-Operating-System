@@ -254,7 +254,12 @@ Architecture Maintainers garantem numeração, consistência e referências entr
 - `0223-allow-only-small-evidence-based-fixes-during-private-alpha.md`
 - `0224-avoid-infinite-documentation-only-validation-loops.md`
 - `0225-define-next-path-branching-after-phase-15b.md`
+- `0226-adopt-simple-test-folder-for-real-alpha-validation.md`
+- `0227-use-manual-feedback-md-instead-of-automatic-telemetry.md`
+- `0228-require-participant-controlled-feedback-sharing.md`
+- `0229-keep-test-folder-separate-from-runtime-cli.md`
+- `0230-defer-github-feedback-automation.md`
 
 ## Próximos passos
 
-- Manual Action - Recruit remaining private alpha participants.
+- Send `teste/` to real participants and collect `teste/feedback.md` manually.

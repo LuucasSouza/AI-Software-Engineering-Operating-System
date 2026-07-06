@@ -85,6 +85,12 @@ Maintainers devem executar ou revisar cenarios, registrar achados, classificar s
 - `private-alpha/phase-15b/second-round-consolidated-results.md`
 - `private-alpha/phase-15b/profile-scorecard.md`
 
+## Phase 16
+
+- `../../teste/`: kit simples e copiavel para validacao alpha manual em projetos reais.
+- `../../teste/PROMPT_PARA_IA.md`: prompt pronto para a IA acompanhar o teste.
+- `../../teste/feedback.md`: formulario vivo preenchido durante o teste e enviado manualmente pelo participante.
+
 ## Proximos passos
 
-Recrutar manualmente os perfis restantes antes de nova fase de release.
+Enviar a pasta `teste/` para participantes reais, coletar `teste/feedback.md` manualmente e priorizar Non-Technical Builder e Professional Engineer dedicado.

@@ -167,3 +167,8 @@ source: "bootstrap-source/pt27_ARCHITECTURE_DECISION_PROTOCOL.md"
 | ADR-0193 | Separate Controlled Alpha From Public npm | Accepted | 2026-07-04 | High | Phase 14 |
 | ADR-0194 | Require Maintainer Release Approval | Accepted | 2026-07-04 | High | Phase 14 |
 | ADR-0195 | Prepare Phase 14 for Real User Validation Execution | Accepted | 2026-07-04 | Medium | Phase 14 |
+| ADR-0226 | Adopt Simple Test Folder for Real Alpha Validation | Accepted | 2026-07-05 | High | Phase 16 |
+| ADR-0227 | Use Manual feedback.md Instead of Automatic Telemetry | Accepted | 2026-07-05 | High | Phase 16 |
+| ADR-0228 | Require Participant-Controlled Feedback Sharing | Accepted | 2026-07-05 | Medium | Phase 16 |
+| ADR-0229 | Keep Test Folder Separate From Runtime CLI | Accepted | 2026-07-05 | High | Phase 16 |
+| ADR-0230 | Defer GitHub Feedback Automation | Accepted | 2026-07-05 | High | Phase 16 |
