@@ -710,6 +710,29 @@ Implementar entrevista guiada para projeto do zero e corrigir problemas de valid
 
 ---
 
+# Phase 17B — Non-Technical Builder State Consistency and UX Refinement
+
+Status: **Complete**
+
+## Objetivo
+
+Corrigir as inconsistências de estado e UX encontradas no teste limpo pós-Phase 17 com Non-Technical Builder simulado, tornando a jornada pós-entrevista coerente.
+
+## Entregas
+
+- Camada central de contexto derivado (`runtime-context.ts`) e motor de próxima ação prioritária única.
+- `diagnosticar` reconhece entrevista feita e apresenta projeto novo como ponto de partida.
+- `status` mostra Projeto do Zero / Non-Technical Builder e uma única próxima ação no topo.
+- `planejar` personalizado pela entrevista (nome, MVP, restrições, fora de escopo), sem riscos críticos inventados.
+- `preparar` gera tarefa concreta do MVP; `resolver` mantém a mesma tarefa.
+- Risco público em português (baixo, médio, alto, crítico) via formatador central.
+- `Confiança: baixa` explicada; Git como dica, não como bloqueio.
+- Kit `teste/` atualizado com `entrevistar` e regra de pasta correta.
+- Score recalculado: 88/100, LIMITED GO muito forte.
+- ADRs 0246 a 0255.
+
+---
+
 # Manual Action — Recruit Remaining Private Alpha Participants
 
 Status: **Next**

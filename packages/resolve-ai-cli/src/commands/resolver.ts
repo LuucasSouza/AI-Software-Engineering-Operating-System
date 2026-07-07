@@ -2,6 +2,7 @@ import { beginProject, hasStarted, readState, writeState } from "../core/local-s
 import { print } from "../core/output.js";
 import { buildAssistedExecutionPackage } from "../core/assisted-execution-engine.js";
 import { writeAssistedExecutionDocs } from "../core/assisted-execution-docs.js";
+import { explainRiskForUser, formatRiskForUser, riskScaleLine } from "../core/risk-language.js";
 
 export function resolverCommand(root: string = process.cwd(), alias: string = "resolver"): void {
   if (!hasStarted(root)) {
@@ -59,10 +60,11 @@ Criei um prompt seguro em docs/resolve-ai/22-prompt-final-para-agente.md.
 Tarefa:
 ${pack.taskTitle}
 
-Risco: ${pack.risk}
+Risco: ${formatRiskForUser(pack.risk)}
+Por quê: ${explainRiskForUser(pack.risk)}
 Aprovação humana: necessária
 Autoexecução: não
-Regra de risco: green/baixo, yellow/médio, orange ou red/alto. Risco crítico ou sensível pode bloquear a execução.
+${riskScaleLine()}
 
 Arquivos gerados:
 - docs/resolve-ai/20-execucao-assistida.md

@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { resolveAiPaths } from "./paths.js";
-import { nextActions, explainRecommendation } from "./recommendation-engine.js";
+import { describeAttentionPoints, nextActions, explainRecommendation } from "./recommendation-engine.js";
 import type { ProjectDetection } from "../types/runtime.js";
 
 const files = [
@@ -40,26 +40,29 @@ function stackTable(detection: ProjectDetection): string {
   ].join("\n");
 }
 
-function content(file: string, detection: ProjectDetection, root: string): string {
-  const actions = nextActions(detection);
+function content(file: string, detection: ProjectDetection, root: string, hasInterview: boolean): string {
+  const actions = nextActions(detection, hasInterview);
   const stack = stackSummary(detection);
+  const attentionPoints = describeAttentionPoints(detection);
   const risks = detection.risks.length ? detection.risks : ["Nenhum risco sensível detectado por nome no diagnóstico automático."];
   const intro = "Este diagnóstico é heurístico e local. Use como contexto inicial, não como verdade absoluta.";
   const zeroProjectNotice = detection.projectType === "novo"
-    ? "\n\n## Projeto do zero\n\nEsse projeto parece estar começando do zero. Em vez de tentar adivinhar, recomendo rodar:\n\n```bash\nresolve-ai entrevistar\n```\n\nDiagnóstico por arquivos tem baixa confiança quando ainda não há estrutura. Ausência de testes, CI ou Git não é problema crítico por si só nesse estágio.\n"
+    ? hasInterview
+      ? "\n\n## Projeto do zero\n\nEste projeto está começando do zero e a entrevista guiada já foi registrada. O próximo passo é criar o plano do MVP com `resolve-ai planejar`. Ausência de testes, CI ou Git não é problema crítico por si só nesse estágio.\n"
+      : "\n\n## Projeto do zero\n\nEsse projeto parece estar começando do zero. Em vez de tentar adivinhar, recomendo rodar:\n\n```bash\nresolve-ai entrevistar\n```\n\nDiagnóstico por arquivos tem baixa confiança quando ainda não há estrutura. Ausência de testes, CI ou Git não é problema crítico por si só nesse estágio.\n"
     : "";
 
   switch (file) {
     case "00-project-intake.md":
-      return frontMatter("00 — Project Intake", detection.generatedAt) + `# 00 — Project Intake\n\n${intro}\n\n## Nome do projeto\n\n${path.basename(root)}\n\n## Caminho analisado\n\n${root}\n\n## Tipo de projeto detectado\n\n${detection.projectType}\n\n## Modo recomendado\n\n${detection.recommendedMode}\n\n## Fluxo recomendado\n\n${detection.recommendedFlow}\n\n## Objetivo aparente\n\nInferido por heurística. Não identificado com segurança no diagnóstico automático.\n\n## Incertezas\n\n${list(detection.attentionPoints)}\n\n## Recomendação\n\n${explainRecommendation(detection)}\n`;
+      return frontMatter("00 — Project Intake", detection.generatedAt) + `# 00 — Project Intake\n\n${intro}\n\n## Nome do projeto\n\n${path.basename(root)}\n\n## Caminho analisado\n\n${root}\n\n## Tipo de projeto detectado\n\n${detection.projectType}\n\n## Modo recomendado\n\n${detection.recommendedMode}\n\n## Fluxo recomendado\n\n${detection.recommendedFlow}\n\n## Objetivo aparente\n\nInferido por heurística. Não identificado com segurança no diagnóstico automático.\n\n## Incertezas\n\n${list(attentionPoints)}\n\n## Recomendação\n\n${explainRecommendation(detection)}\n`;
     case "01-current-state-assessment.md":
-      return frontMatter("01 — Current State Assessment", detection.generatedAt) + `# 01 — Current State Assessment\n\n## Stack provável\n\n${stackTable(detection)}\n\n## Sinais encontrados\n\n${list(detection.signals)}\n\n## Pontos fortes\n\n${list(detection.strengths)}\n\n## Pontos frágeis\n\n${list(detection.attentionPoints)}${zeroProjectNotice}\n\n## Confiança\n\n${detection.confidence}\n\n## Maturidade\n\n${detection.maturity}/5\n`;
+      return frontMatter("01 — Current State Assessment", detection.generatedAt) + `# 01 — Current State Assessment\n\n## Stack provável\n\n${stackTable(detection)}\n\n## Sinais encontrados\n\n${list(detection.signals)}\n\n## Pontos fortes\n\n${list(detection.strengths)}\n\n## Pontos frágeis\n\n${list(attentionPoints)}${zeroProjectNotice}\n\n## Confiança\n\n${detection.confidence}\n\n## Maturidade\n\n${detection.maturity}/5\n`;
     case "02-discovery.md":
       return frontMatter("02 — Discovery", detection.generatedAt) + `# 02 — Discovery\n\n## Problema de negócio inferido\n\nNão identificado no diagnóstico automático.\n\n## Usuários prováveis\n\nInferido por heurística. Validar com o usuário antes de implementar.\n\n## Hipóteses\n\n- O projeto precisa de diagnóstico humano/IA mais profundo antes de novas mudanças.\n- O próximo passo deve reduzir ambiguidade.\n\n## Métricas de sucesso sugeridas\n\n- Clareza de objetivo.\n- Backlog priorizado.\n- Riscos críticos tratados.\n`;
     case "03-product-definition.md":
       return frontMatter("03 — Product Definition", detection.generatedAt) + `# 03 — Product Definition\n\n## Visão do produto inferida\n\nNão identificado no diagnóstico automático.\n\n## Funcionalidades existentes aparentes\n\nInferido por heurística a partir da estrutura do projeto.\n\n## Próximos incrementos recomendados\n\n${list(actions)}\n\n## O que não fazer agora\n\n- Não alterar código antes de revisar riscos e decisões.\n- Não assumir intenção de produto sem validação.\n`;
     case "04-architecture-review.md":
-      return frontMatter("04 — Architecture Review", detection.generatedAt) + `# 04 — Architecture Review\n\n## Arquitetura inferida\n\nInferido por heurística.\n\n## Stack provável\n\n${stackTable(detection)}\n\n## Riscos arquiteturais\n\n${list(detection.attentionPoints)}\n\n## Recomendações\n\n- Confirmar fronteiras de frontend, backend, dados e deploy.\n- Registrar decisões relevantes como ADR quando necessário.\n`;
+      return frontMatter("04 — Architecture Review", detection.generatedAt) + `# 04 — Architecture Review\n\n## Arquitetura inferida\n\nInferido por heurística.\n\n## Stack provável\n\n${stackTable(detection)}\n\n## Riscos arquiteturais\n\n${list(attentionPoints)}\n\n## Recomendações\n\n- Confirmar fronteiras de frontend, backend, dados e deploy.\n- Registrar decisões relevantes como ADR quando necessário.\n`;
     case "05-risk-register.md":
       return frontMatter("05 — Risk Register", detection.generatedAt) + `# 05 — Risk Register\n\n| Risco | Categoria | Probabilidade | Impacto | Mitigação |\n| --- | --- | --- | --- | --- |\n${risks.map((risk) => `| ${risk} | Segurança/Manutenção | Média | Alto | Revisar sem copiar conteúdo sensível. |`).join("\n")}\n`;
     case "06-decision-log.md":
@@ -73,7 +76,7 @@ function content(file: string, detection: ProjectDetection, root: string): strin
   }
 }
 
-export function writeDiagnosticDocs(root: string, detection: ProjectDetection): { created: string[]; preserved: string[] } {
+export function writeDiagnosticDocs(root: string, detection: ProjectDetection, hasInterview: boolean = false): { created: string[]; preserved: string[] } {
   const paths = resolveAiPaths(root);
   const created: string[] = [];
   const preserved: string[] = [];
@@ -87,7 +90,7 @@ export function writeDiagnosticDocs(root: string, detection: ProjectDetection): 
       preserved.push(label);
       continue;
     }
-    fs.writeFileSync(target, content(file, detection, root), "utf8");
+    fs.writeFileSync(target, content(file, detection, root, hasInterview), "utf8");
     created.push(label);
   }
 

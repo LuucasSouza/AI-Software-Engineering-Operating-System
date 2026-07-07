@@ -21,6 +21,28 @@ O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionament
 
 ## Added
 
+- Phase 17B executada com foco em consistência de estado e UX para Non-Technical Builder.
+- Criada camada central de contexto derivado (`runtime-context.ts`) com motor de próxima ação prioritária única.
+- Criado formatador central de risco público em português (`risk-language.ts`): baixo, médio, alto, crítico.
+- Criado extrator de escopo da entrevista (`interview-scope.ts`) com detecção de negação para dados sensíveis.
+- `preparar` passa a gerar tarefa concreta do MVP a partir da entrevista (ex.: Criar a primeira tela de "Controle Simples de Gastos") e `resolver` mantém a mesma tarefa.
+- Criados docs de planejamento simplificados para iniciante (Fazer primeiro / Fazer depois / Não fazer agora) quando há entrevista e modo Non-Technical Builder.
+- Criados Phase 17B handoff, validation report e retrospective em `docs/sprints/`.
+- Criados scorecard e decisão GO/NO-GO da Phase 17B em `docs/release/`.
+- Criadas ADRs 0246 a 0255.
+- Criado teste de cenário `tests/phase-17b-consistency.test.ts` com o fluxo completo Controle Simples de Gastos.
+
+## Changed (Phase 17B)
+
+- `diagnosticar` reconhece entrevista feita, não recomenda `resolve-ai entrevistar` de novo e apresenta projeto novo como ponto de partida, não como projeto quebrado.
+- `status` mostra fluxo correto (Projeto do Zero — Entrevista e Planejamento), perfil recomendado e uma única próxima ação prioritária no topo, com explicação.
+- `planejar` usa nome, ideia, MVP, restrições e fora de escopo da entrevista; deixou de recomendar riscos críticos inexistentes (negação de dados sensíveis corrigida).
+- Saída pública de risco padronizada em português; `yellow`, `green`, `orange` e `red` removidos da saída principal da CLI.
+- `Confiança: baixa` agora vem com explicação simples (projeto novo; validação sem Git).
+- `validar` sem Git não sequestra a próxima ação antes da execução real; `git init` virou dica.
+- Kit `teste/` atualizado: seção `resolve-ai entrevistar` no feedback, aviso de pasta kit vs execução, atalho `$ra` e perguntas para iniciante.
+- Readiness score recalculado: 88/100, LIMITED GO muito forte (baseline pós-teste limpo: 86/100).
+
 - Phase 17 executada com `resolve-ai entrevistar`, aliases `entrevista` e `ideia`.
 - Criada entrevista guiada local para projetos do zero, preenchendo docs 00, 02 e 03 sem sobrescrever por padrão.
 - Criados docs runtime `guided-discovery-interview.md`, `project-zero-detection.md` e `validation-change-classification.md`.

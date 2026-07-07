@@ -269,7 +269,17 @@ Architecture Maintainers garantem numeração, consistência e referências entr
 - `0243-require-strong-evidence-before-detecting-next-js.md`
 - `0244-document-windows-path-and-node-fallback-more-clearly.md`
 - `0245-keep-guided-interview-local-and-non-telemetric.md`
+- `0246-adopt-state-consistency-layer-for-runtime-commands.md`
+- `0247-prioritize-single-public-next-action-in-status.md`
+- `0248-treat-new-projects-as-starting-points-not-broken-projects.md`
+- `0249-personalize-planning-from-interview-scope.md`
+- `0250-generate-concrete-mvp-slice-for-non-technical-builder.md`
+- `0251-use-portuguese-risk-labels-in-public-cli-output.md`
+- `0252-explain-low-confidence-instead-of-only-displaying-it.md`
+- `0253-update-test-kit-to-include-interview-flow.md`
+- `0254-keep-git-initialization-as-guidance-not-blocking-step.md`
+- `0255-preserve-professional-mode-while-simplifying-beginner-ux.md`
 
 ## Próximos passos
 
-- Run real Non-Technical Builder validation using `resolve-ai entrevistar`.
+- Run real Non-Technical Builder validation using the Controle Simples de Gastos flow and the updated `teste/` kit.

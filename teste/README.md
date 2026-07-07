@@ -25,6 +25,10 @@ Ela nao e o Resolve Aí completo. Ela serve como guia para a pessoa que vai test
 
 ## Importante
 
+A pasta `teste/` e apenas o kit de instruções. Não rode os comandos dentro de `teste/`; rode na raiz do projeto que voce quer testar.
+
+Para ideia nova ou pasta vazia, o fluxo comeca com `resolve-ai entrevistar` (depois de `começar` e `ligar`).
+
 Nao use um projeto com senha, token, `.env` real, backup de banco, dados de cliente ou informacao privada.
 
 Se o projeto tiver dados sensiveis, use uma copia limpa ou uma pasta de teste.

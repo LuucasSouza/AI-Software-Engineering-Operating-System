@@ -31,6 +31,7 @@ Não gerei documentos de validação e não atualizei ultimaValidacao.
       executadaEm: now,
       status: result.status,
       confianca: result.confianca,
+      gitDisponivel: result.gitDisponivel,
       mudancasDetectadas: result.mudancasDetectadas,
       arquivosAlterados: result.arquivosAlterados,
       arquivosSensiveisDetectados: result.arquivosSensiveisDetectados,
@@ -48,13 +49,18 @@ Não gerei documentos de validação e não atualizei ultimaValidacao.
     !result.hasAssistedExecution ? "Não encontrei uma execução assistida anterior. Vou fazer uma validação limitada do estado atual." : ""
   ].filter(Boolean);
   const gitNotice = !result.gitAvailable
-    ? "\n\nNão encontrei um repositório Git aqui, então não consigo comparar mudanças com precisão.\nPara habilitar detecção de mudanças, rode git init ou execute dentro de um repositório Git."
+    ? "\n\nNão encontrei um repositório Git aqui, então não consigo comparar mudanças com precisão.\nIsso não é um erro: é só uma limitação desta validação.\nPara habilitar detecção de mudanças, rode git init ou execute dentro de um repositório Git."
+    : "";
+  const confidenceNote = result.confianca === "baixa"
+    ? !result.gitAvailable
+      ? "\nPor que a confiança está baixa: este projeto ainda não usa Git, então não consigo comparar mudanças com precisão. Isso é esperado em projeto novo."
+      : "\nPor que a confiança está baixa: ainda há pouca evidência de execução para comparar. Isso é esperado antes de executar a tarefa."
     : "";
 
   print(`Resolve Aí — validação guiada${notices.length ? `\n\n${notices.join("\n")}` : ""}
 Validação concluída.
 Status: ${result.status}
-Confiança: ${result.confianca}
+Confiança: ${result.confianca}${confidenceNote}
 Arquivos alterados detectados: ${result.mudancasDetectadas}
 Arquivos gerados pelo Resolve Aí: ${result.artefatosResolveAi ?? 0}
 Arquivos reais do projeto: ${result.arquivosProjeto ?? 0}

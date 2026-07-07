@@ -56,6 +56,12 @@ Community docs explain how to contribute protocols, templates, frameworks, playb
 - Triagem deve separar bugs de entrevista, diagnóstico, validação e instalação Windows.
 - Feedback continua manual, sem telemetria ou envio automático.
 
+## Phase 17B
+
+- `teste/feedback.md` agora inclui seção `resolve-ai entrevistar` e perguntas específicas para usuário iniciante.
+- Triagem deve observar consistência entre comandos (entrevista reconhecida, próxima ação única, risco em português).
+- Feedback continua manual e controlado pelo participante.
+
 ## Feedback
 
 Feedback should be classified by type, severity, affected profile and owner before becoming an improvement item or ADR.

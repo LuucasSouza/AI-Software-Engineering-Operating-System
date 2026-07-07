@@ -20,6 +20,7 @@ export function entrevistarCommand(root= process.cwd(), alias= "entrevistar") {
     fluxoRecomendado: previous.fluxoRecomendado ?? "Projeto do Zero",
     ultimaEntrevista: result.state,
     nextRecommendedAction: "resolve-ai planejar",
+    proximaAcao: "Criar o plano do MVP com base na entrevista: resolve-ai planejar",
     lastUpdatedAt: now
   });
 

@@ -182,3 +182,13 @@ source: "bootstrap-source/pt27_ARCHITECTURE_DECISION_PROTOCOL.md"
 | ADR-0243 | Require Strong Evidence Before Detecting Next.js | Accepted | 2026-07-06 | Medium | Phase 17 |
 | ADR-0244 | Document Windows PATH and Node Fallback More Clearly | Accepted | 2026-07-06 | High | Phase 17 |
 | ADR-0245 | Keep Guided Interview Local and Non-Telemetric | Accepted | 2026-07-06 | High | Phase 17 |
+| ADR-0246 | Adopt State Consistency Layer for Runtime Commands | Accepted | 2026-07-07 | High | Phase 17B |
+| ADR-0247 | Prioritize Single Public Next Action in Status | Accepted | 2026-07-07 | High | Phase 17B |
+| ADR-0248 | Treat New Projects as Starting Points, Not Broken Projects | Accepted | 2026-07-07 | High | Phase 17B |
+| ADR-0249 | Personalize Planning From Interview Scope | Accepted | 2026-07-07 | High | Phase 17B |
+| ADR-0250 | Generate Concrete MVP Slice for Non-Technical Builder | Accepted | 2026-07-07 | High | Phase 17B |
+| ADR-0251 | Use Portuguese Risk Labels in Public CLI Output | Accepted | 2026-07-07 | Medium | Phase 17B |
+| ADR-0252 | Explain Low Confidence Instead of Only Displaying It | Accepted | 2026-07-07 | Medium | Phase 17B |
+| ADR-0253 | Update Test Kit to Include Interview Flow | Accepted | 2026-07-07 | Medium | Phase 17B |
+| ADR-0254 | Keep Git Initialization as Guidance, Not Blocking Step | Accepted | 2026-07-07 | High | Phase 17B |
+| ADR-0255 | Preserve Professional Mode While Simplifying Beginner UX | Accepted | 2026-07-07 | High | Phase 17B |

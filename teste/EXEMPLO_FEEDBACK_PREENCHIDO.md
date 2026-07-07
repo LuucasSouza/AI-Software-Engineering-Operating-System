@@ -70,6 +70,18 @@ Observacoes: Ficou claro que o Resolve Aí estava ligado no projeto.
 
 ---
 
+### resolve-ai entrevistar
+
+Executou? Nao (o projeto ja existia, entao pulei a entrevista).
+
+Funcionou? Nao se aplica.
+
+A entrevista ajudou a transformar a ideia em projeto? Nao se aplica neste teste. Em um segundo teste com uma pasta vazia ("Controle Simples de Gastos"), a entrevista registrou a ideia, o plano falou do projeto pelo nome e a tarefa preparada foi "Criar a primeira tela". Foi o ponto mais util para quem nao programa.
+
+Observacoes: O diagnostico depois da entrevista reconheceu que ela ja tinha sido feita e nao pediu para repetir.
+
+---
+
 ### resolve-ai diagnosticar
 
 Executou? Sim.

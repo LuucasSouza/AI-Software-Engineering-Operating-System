@@ -90,3 +90,6 @@ Registrar handoffs, relatórios de validação e status das sprints do AI-SEOS.
 - `phase-17-guided-discovery-interview-handoff.md`
 - `phase-17-guided-discovery-interview-validation-report.md`
 - `phase-17-guided-discovery-interview-retrospective.md`
+- `phase-17b-non-technical-builder-ux-handoff.md`
+- `phase-17b-non-technical-builder-ux-validation-report.md`
+- `phase-17b-non-technical-builder-ux-retrospective.md`

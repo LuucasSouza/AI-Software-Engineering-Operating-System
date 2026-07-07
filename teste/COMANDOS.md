@@ -1,5 +1,25 @@
 # Comandos do Resolve Aí
 
+Importante: rode todos os comandos na RAIZ do projeto testado, nunca dentro da pasta `teste/`. A pasta `teste/` e apenas o kit de instruções.
+
+Fluxo recomendado do teste:
+
+```powershell
+$ra = "C:\Users\SEU_USUARIO\OneDrive\PROGRAMAÇÃO\Resolve-Ai\packages\resolve-ai-cli\dist\index.js"
+node $ra ajuda
+node $ra começar
+node $ra ligar
+node $ra entrevistar
+node $ra diagnosticar
+node $ra planejar
+node $ra preparar
+node $ra resolver
+node $ra validar
+node $ra status
+```
+
+Para projeto que ja existe, voce pode pular `entrevistar` e ir direto para `diagnosticar`.
+
 ## resolve-ai ajuda
 
 O que faz:
@@ -26,6 +46,24 @@ O que nao altera:
 
 O que faz:
 - Liga o acompanhamento do Resolve Aí neste projeto.
+
+## resolve-ai entrevistar
+
+O que faz:
+- Faz uma entrevista guiada para transformar uma ideia em escopo inicial.
+- Ideal para projeto do zero ou pasta vazia.
+- Aliases: `entrevista` e `ideia`.
+
+Quais docs pode gerar ou atualizar:
+- `docs/resolve-ai/00-project-intake.md`
+- `docs/resolve-ai/02-discovery.md`
+- `docs/resolve-ai/03-product-definition.md`
+
+O que nao faz:
+- Nao altera codigo.
+- Nao pede senha, token, `.env` ou dado sensivel.
+
+Depois da entrevista, o proximo passo e `resolve-ai planejar`. O diagnostico e o status reconhecem a entrevista feita e nao pedem para repetir.
 
 ## resolve-ai diagnosticar
 

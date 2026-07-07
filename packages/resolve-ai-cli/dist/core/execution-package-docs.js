@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { resolveAiPaths } from "./paths.js";
+import { explainRiskForUser, formatRiskForUser } from "./risk-language.js";
 
 const executionDocs = [
   "15-tarefa-preparada.md",
@@ -29,7 +30,7 @@ function content(file, task) {
     return front("17 — Plano de Validação da Tarefa") + `# Plano de Validação da Tarefa — Resolve Aí\n\n## Validação automática\n\n${list(task.validation)}\n\n## Validação manual\n\n- Revisar escopo executado.\n- Conferir se nenhum item fora do escopo foi alterado.\n\n## Evidências esperadas\n\n- Saída de testes ou checklist.\n- Relatório final.\n\n## Critérios de aceite\n\n${list(task.validation)}\n\n## Rollback\n\n- Reverter apenas alterações da tarefa, se houver.\n\n## Sinais de parada\n\n${list(task.stopConditions)}\n`;
   }
   if (file === "18-riscos-da-execucao.md") {
-    return front("18 — Riscos da Execução") + `# Riscos da Execução — Resolve Aí\n\n## Nível de risco\n\n${task.riskLevel}\n\n## Riscos técnicos e de segurança\n\n${list(task.risks)}\n\n## Mitigação\n\n- Aprovação humana antes de implementar.\n- Escopo pequeno.\n- Validar antes de continuar.\n\n## Quando parar\n\n${list(task.stopConditions)}\n`;
+    return front("18 — Riscos da Execução") + `# Riscos da Execução — Resolve Aí\n\n## Nível de risco\n\nRisco: ${formatRiskForUser(task.riskLevel)}\n\nPor quê: ${explainRiskForUser(task.riskLevel)}\n\n## Riscos técnicos e de segurança\n\n${list(task.risks)}\n\n## Mitigação\n\n- Aprovação humana antes de implementar.\n- Escopo pequeno.\n- Validar antes de continuar.\n\n## Quando parar\n\n${list(task.stopConditions)}\n`;
   }
   return front("19 — Handoff de Execução") + `# Handoff de Execução — Resolve Aí\n\n## Contexto essencial\n\nPacote de execução preparado. Esta fase não executa a tarefa.\n\n## Tarefa preparada\n\n${task.title}\n\n## Restrições\n\n${list(task.outOfScope)}\n\n## Arquivos importantes\n\n${list(task.likelyFiles)}\n\n## Pendências\n\n- Aprovação humana.\n- Execução por humano ou agente em fase/comando futuro.\n\n## Próxima ação recomendada\n\nRevise docs/resolve-ai/16-prompt-de-implementacao.md.\n`;
 }

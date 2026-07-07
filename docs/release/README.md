@@ -65,6 +65,11 @@ Release documentation covers readiness, known limitations, release notes, reposi
 - `v0.1.0-alpha-phase-17-readiness-scorecard.md`
 - `v0.1.0-alpha-phase-17-go-no-go-decision.md`
 
+## Phase 17B
+
+- `v0.1.0-alpha-phase-17b-readiness-scorecard.md`
+- `v0.1.0-alpha-phase-17b-go-no-go-decision.md`
+
 ## Current Recommendation
 
-Resolve Ai remains a LIMITED GO alpha candidate with score 84/100 after Phase 17. Do not publish to npm until Non-Technical Builder and dedicated Professional Engineer validation are complete and maintainer approval is recorded.
+Resolve Ai remains a LIMITED GO alpha candidate with score 88/100 (muito forte) after Phase 17B. Do not publish to npm until Non-Technical Builder and dedicated Professional Engineer validation are complete and maintainer approval is recorded. Without additional real human validation, do not declare stable.

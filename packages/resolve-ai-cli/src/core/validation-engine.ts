@@ -147,8 +147,11 @@ export function buildValidationResult(root: string, state: ResolveAiState): Vali
     ...(!gitAvailable ? ["Não encontrei um repositório Git aqui, então não consigo comparar mudanças com precisão."] : []),
     ...(changedFiles.length > 0 ? ["Rodar testes e validações manualmente antes de commit."] : ["Não há evidência de mudança local para validar."])
   ];
+  const executionStillPending = hasAssistedExecution && projectFiles.length === 0 && sensitiveFiles.length === 0;
   const proximaAcao = status === "bloqueada"
     ? "Pare antes de commitar. Revise os arquivos sensíveis e remova ou proteja o que não deve ir para o repositório."
+    : executionStillPending
+      ? "Use o prompt final em docs/resolve-ai/22-prompt-final-para-agente.md no seu agente de IA. Depois que a tarefa for executada, rode resolve-ai validar de novo."
     : !gitAvailable
       ? "Para habilitar detecção de mudanças, rode git init ou execute dentro de um repositório Git."
       : status === "pendente"
@@ -159,6 +162,7 @@ export function buildValidationResult(root: string, state: ResolveAiState): Vali
     executadaEm: new Date().toISOString(),
     status,
     confianca: confidence,
+    gitDisponivel: gitAvailable,
     mudancasDetectadas: changedFiles.length,
     arquivosAlterados: changedFiles,
     arquivosSensiveisDetectados: sensitiveFiles,

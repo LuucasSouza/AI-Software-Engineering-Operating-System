@@ -97,6 +97,13 @@ Maintainers devem executar ou revisar cenarios, registrar achados, classificar s
 - Validação agora deve observar se `validar` separa artefatos Resolve Aí de mudanças reais do produto.
 - Próximos testes precisam confirmar redução de falsos positivos em design tokens, Next.js e pastas auxiliares.
 
+## Phase 17B
+
+- Fluxo pós-entrevista agora é coerente: diagnóstico reconhece entrevista feita, status mostra Projeto do Zero e uma única próxima ação prioritária.
+- Próximos testes devem usar o cenário Controle Simples de Gastos e verificar tarefa concreta do MVP em `preparar`/`resolver`.
+- Risco público aparece em português (baixo, médio, alto, crítico) e `Confiança: baixa` vem com explicação.
+- Relatório: `../sprints/phase-17b-non-technical-builder-ux-validation-report.md`.
+
 ## Proximos passos
 
 Enviar a pasta `teste/` para participantes reais, coletar `teste/feedback.md` manualmente e priorizar Non-Technical Builder usando `resolve-ai entrevistar` e Professional Engineer dedicado.

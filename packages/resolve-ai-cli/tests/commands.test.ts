@@ -93,8 +93,34 @@ test("status mostra uma proxima acao prioritaria pela etapa mais recente", () =>
 
   const output = run("status", root);
 
-  assert.match(output, /Próxima ação prioritária: acao da validacao/);
+  assert.match(output, /Próxima ação prioritária:/);
+  assert.match(output, /Use o prompt final no seu agente de IA/);
   assert.doesNotMatch(output, /Próxima ação prioritária: acao antiga do diagnostico/);
+  assert.doesNotMatch(output, /Próxima ação prioritária:\nacao antiga do diagnostico/);
+});
+
+test("status com validacao bloqueada prioriza revisar arquivos sensiveis", () => {
+  const root = tempProject("resolve-ai-status-blocked-");
+  run("começar", root);
+  const state = readState(root);
+  writeState(root, {
+    ...state,
+    active: true,
+    ultimaValidacao: {
+      executadaEm: new Date().toISOString(),
+      status: "bloqueada",
+      confianca: "bloqueada",
+      mudancasDetectadas: 1,
+      arquivosAlterados: [".env"],
+      arquivosSensiveisDetectados: [".env"],
+      riscosRestantes: [],
+      proximaAcao: "Pare antes de commitar."
+    }
+  });
+
+  const output = run("status", root);
+
+  assert.match(output, /Pare e revise os arquivos sensíveis detectados/);
 });
 
 test("status antes e depois de começar", () => {

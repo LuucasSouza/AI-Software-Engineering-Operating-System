@@ -59,7 +59,12 @@ test("entrevistar em diretorio vazio cria docs e atualiza state", () => {
   assert.match(discovery, /Famílias pequenas/);
   assert.match(product, /Cadastrar despesas e ver total do mês/);
   assert.match(status, /Entrevista: feita/);
-  assert.match(status, /Próxima ação prioritária: resolve-ai planejar/);
+  assert.match(status, /Próxima ação prioritária:/);
+  assert.match(status, /Crie o plano do MVP com base na entrevista/);
+  assert.match(status, /resolve-ai planejar/);
+  assert.match(status, /Fluxo atual: Projeto do Zero — Entrevista e Planejamento/);
+  assert.doesNotMatch(status, /Projeto em Andamento — Diagnóstico e Continuação/);
+  assert.doesNotMatch(status, /Rodar resolve-ai entrevistar/);
 });
 
 test("aliases entrevista e ideia funcionam", () => {
@@ -122,5 +127,6 @@ test("planejar apos entrevista nao trata negacao de dados sensiveis como risco c
   const output = run(["planejar"], root);
 
   assert.doesNotMatch(output, /Resolver riscos críticos antes de implementar qualquer feature nova/);
-  assert.match(output, /Transformar a primeira versão útil em backlog pequeno e validável/);
+  assert.match(output, /Preparar a primeira tarefa do MVP/);
+  assert.match(output, /Um app simples de tarefas/);
 });

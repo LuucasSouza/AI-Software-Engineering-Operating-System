@@ -166,6 +166,7 @@
 
   status: ValidationStatus;
   confianca: ValidationConfidence;
+  gitDisponivel?: boolean;
   mudancasDetectadas: number;
   arquivosAlterados: string[];
   arquivosSensiveisDetectados: string[];
@@ -174,6 +175,40 @@
   arquivosDesconhecidos?: number;
   riscosRestantes: string[];
   proximaAcao: string;
+}
+
+  idea?: string;
+  targetUser?: string;
+  problem?: string;
+  productType?: string;
+  mvpFeatures: string[];
+  constraints: string[];
+  outOfScope: string[];
+  preferredStack?: string;
+  successCriteria?: string;
+  hasSensitiveData: boolean;
+  sufficient: boolean;
+}
+
+  command?: string;
+  explanation: string;
+}
+
+  hasInterview: boolean;
+  interviewSummary?: string;
+  projectKind: string;
+  recommendedProfile: string;
+  flowName: string;
+  hasDiagnostic: boolean;
+  hasPlanning: boolean;
+  hasPreparedTask: boolean;
+  hasAssistedExecution: boolean;
+  hasValidation: boolean;
+  validationBlocked: boolean;
+  realExecutionValidated: boolean;
+  hasGit: boolean;
+  hasCriticalRisk: boolean;
+  primaryNextAction: NextAction;
 }
 
   gitAvailable: boolean;

@@ -46,3 +46,14 @@ Existing documents are not overwritten by default. If a document exists, the int
 
 If the terminal does not provide answers through stdin, the command does not crash. It creates safe placeholder content and prints the questions so the user can fill the documents manually.
 
+
+## After the Interview (Phase 17B)
+
+Once `ultimaEntrevista` exists in `.resolve-ai/state.json`, all commands read the same derived context (`src/core/runtime-context.ts`):
+
+- `diagnosticar` reports "Entrevista: feita" with the registered idea and stops recommending `resolve-ai entrevistar`.
+- `planejar` extracts the project scope from the interview (name, MVP features, constraints, out-of-scope) and personalizes the plan and beginner backlog.
+- `preparar` selects a concrete first MVP slice (for example, "Criar a primeira tela de \"Controle Simples de Gastos\"") and `resolver` keeps the same task title.
+- `status` shows the flow "Projeto do Zero — Entrevista e Planejamento", the recommended profile, and a single primary next action.
+
+Negated sensitive-data answers (such as "Não usar dados reais, senhas, tokens...") are not treated like critical risks. Public risk labels are always Portuguese: baixo, médio, alto, crítico.

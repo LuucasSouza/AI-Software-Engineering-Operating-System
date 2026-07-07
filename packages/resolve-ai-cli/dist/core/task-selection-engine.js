@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { resolveAiPaths } from "./paths.js";
+import { extractProjectScopeFromInterview } from "./interview-scope.js";
 
 function readSmall(filePath) {
   if (!fs.existsSync(filePath)) return "";
@@ -63,6 +64,43 @@ function hasFilledProductScope(context) {
   return hasUsefulSection && !isOnlyFallback;
 }
 
+function sliceTitle(scope) {
+  const name = scope.projectName ?? "sua ideia";
+  const kind = `${scope.productType ?? ""} ${scope.idea ?? ""}`.toLowerCase();
+  if (/site|página|pagina|landing|portf/.test(kind)) return `Criar a primeira página de "${name}"`;
+  return `Criar a primeira tela de "${name}"`;
+}
+
+export function selectFirstMvpSlice(scope, state) {
+  const hasPlanning = Boolean(state?.lastPlanAt);
+  const features = scope.mvpFeatures.length ? scope.mvpFeatures : ["usar a primeira versão descrita na entrevista"];
+  const avoid = [...new Set([...scope.outOfScope, "Dados reais", "Deploy"])];
+  return {
+    id: "PREP-001",
+    title: sliceTitle(scope),
+    source: hasPlanning ? "plan" : "documentation",
+    priority: "high",
+    confidence: hasPlanning ? "high" : "medium",
+    category: "feature",
+    riskLevel: "yellow",
+    scope: [
+      "Criar uma primeira tela ou página simples",
+      ...features.slice(0, 4).map((item) => `Permitir ${item}`),
+      "Manter os dados apenas no navegador ou em memória"
+    ],
+    outOfScope: avoid,
+    likelyFiles: ["docs/resolve-ai/10-plano-de-continuacao.md", "docs/resolve-ai/11-backlog-priorizado.md", "docs/resolve-ai/13-prompts-de-execucao.md"],
+    validation: [
+      "A tela ou página abre e funciona localmente",
+      ...features.slice(0, 3).map((item) => `Consigo ${item}`),
+      "Nada fora do escopo foi criado"
+    ],
+    risks: ["A primeira versão pode crescer além do combinado se o escopo não for respeitado"],
+    stopConditions: ["Precisar de login, banco de dados, internet ou dados reais", "A tarefa deixar de caber em uma frase", "Surgir dado sensível"],
+    reason: `A entrevista registrou a ideia "${scope.projectName ?? scope.idea}". Essa tarefa é pequena, dá para validar rápido e cobre o começo do MVP sem login, banco de dados ou internet.`
+  };
+}
+
 export function selectPreparedTask(root, state) {
   const context = readExecutionContext(root);
   const productContext = readProductContext(root);
@@ -70,6 +108,7 @@ export function selectPreparedTask(root, state) {
   const hasPlanning = Boolean(state?.lastPlanAt);
   const critical = hasCriticalRisk(state, context);
   const isNew = state?.tipoProjeto === "novo";
+  const interviewScope = extractProjectScopeFromInterview(state);
 
   if (critical) {
     return {
@@ -87,6 +126,29 @@ export function selectPreparedTask(root, state) {
       risks: ["Dados sensíveis ou credenciais podem estar presentes", "Implementar feature antes de hardening pode ampliar dano"],
       stopConditions: ["Encontrar segredo real", "Precisar alterar auth/dados reais", "Precisar fazer deploy"],
       reason: "Existe risco crítico relacionado a dados sensíveis, credenciais, backup ou segurança."
+    };
+  }
+
+  if (interviewScope && interviewScope.sufficient && !interviewScope.hasSensitiveData) {
+    return selectFirstMvpSlice(interviewScope, state);
+  }
+
+  if (interviewScope && interviewScope.sufficient && interviewScope.hasSensitiveData) {
+    return {
+      id: "PREP-001",
+      title: `Definir uma versão de teste sem dados reais para "${interviewScope.projectName ?? interviewScope.idea}"`,
+      source: "risk",
+      priority: "high",
+      confidence: "medium",
+      category: "security",
+      riskLevel: "orange",
+      scope: ["Listar quais dados podem ser substituídos por dados fictícios", "Descrever a primeira versão usando apenas dados de exemplo", "Registrar o que nunca deve entrar no projeto"],
+      outOfScope: ["Usar dados reais, senhas, tokens ou credenciais", "Implementar features antes dessa definição", "Deploy"],
+      likelyFiles: ["docs/resolve-ai/00-project-intake.md", "docs/resolve-ai/05-risk-register.md"],
+      validation: ["Versão de teste descrita sem nenhum dado real", "Riscos registrados em linguagem simples"],
+      risks: ["A entrevista mencionou dados sensíveis; usar dado real cedo demais pode expor informação"],
+      stopConditions: ["Precisar tocar dado real", "Precisar de credencial"],
+      reason: "A entrevista mencionou dados sensíveis. Antes de criar telas, é mais seguro definir uma versão de teste sem dados reais."
     };
   }
 

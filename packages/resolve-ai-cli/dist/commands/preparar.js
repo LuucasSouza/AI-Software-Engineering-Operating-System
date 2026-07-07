@@ -2,6 +2,7 @@ import { beginProject, hasStarted, readState, writeState } from "../core/local-s
 import { print } from "../core/output.js";
 import { selectPreparedTask } from "../core/task-selection-engine.js";
 import { writeExecutionPackageDocs } from "../core/execution-package-docs.js";
+import { explainRiskForUser, formatRiskForUser, riskScaleLine } from "../core/risk-language.js";
 
 export function prepararCommand(root= process.cwd(), alias= "preparar") {
   if (!hasStarted(root)) {
@@ -45,10 +46,11 @@ ${task.title}
 Por que essa tarefa?
 ${task.reason}
 
-Risco: ${task.riskLevel}
+Risco: ${formatRiskForUser(task.riskLevel)}
+Por quê: ${explainRiskForUser(task.riskLevel)}
 Aprovação humana: necessária
 Autoexecução: não
-Regra de risco: green/baixo, yellow/médio, orange ou red/alto no pacote de execução assistida.
+${riskScaleLine()}
 
 Arquivos gerados:
 - docs/resolve-ai/15-tarefa-preparada.md

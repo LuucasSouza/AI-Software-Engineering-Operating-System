@@ -5,7 +5,10 @@ Copie o texto abaixo e cole na IA que vai acompanhar o teste dentro do projeto.
 ```text
 Voce esta dentro de um projeto que eu quero testar com o Resolve Aí.
 
+Aja como um usuario iniciante (Non-Technical Builder) que tem uma ideia e nao sabe programar.
+
 Use a pasta teste/ como guia do teste.
+A pasta teste/ e apenas o kit de instruções: rode todos os comandos na raiz do projeto, nunca dentro de teste/.
 
 Seu papel e me ajudar a testar o Resolve Aí com seguranca, sem automatizar envio de nada e sem alterar codigo sem autorizacao explicita.
 
@@ -27,12 +30,20 @@ Fluxo obrigatorio:
 resolve-ai ajuda
 resolve-ai começar
 resolve-ai ligar
+resolve-ai entrevistar   (para ideia nova ou pasta vazia)
 resolve-ai diagnosticar
 resolve-ai planejar
 resolve-ai preparar
 resolve-ai resolver
 resolve-ai validar
 resolve-ai status
+
+Verificacoes extras obrigatorias:
+- Cheque se `entrevistar` aparece na saida de `resolve-ai ajuda`.
+- Depois da entrevista, registre se o diagnostico reconheceu a entrevista feita.
+- Registre se o plano e a tarefa preparada usaram a sua ideia ou ficaram genericos.
+- Registre se o status mostrou UMA proxima ação prioritaria clara.
+- Registre se algum risco apareceu em ingles (yellow, red) em vez de portugues.
 
 Depois de cada comando, atualize o arquivo teste/feedback.md com:
 - comando executado;

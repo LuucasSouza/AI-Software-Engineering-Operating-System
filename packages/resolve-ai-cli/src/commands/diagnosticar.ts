@@ -4,18 +4,20 @@ import { print } from "../core/output.js";
 import { resolveAiPaths } from "../core/paths.js";
 import { writeDiagnosticDocs } from "../core/diagnostic-docs.js";
 import { inspectProject } from "../core/project-inspector.js";
-import { nextActions } from "../core/recommendation-engine.js";
+import { describeAttentionPoints, nextActions } from "../core/recommendation-engine.js";
 
 export function diagnosticarCommand(root: string = process.cwd()): void {
   print("Resolve Aí — Diagnóstico do projeto\n\nVou diagnosticar este projeto sem alterar código, instalar dependências ou fazer commits.");
 
   const detection = inspectProject(root);
   beginProject(root);
-  const docs = writeDiagnosticDocs(root, detection);
   const paths = resolveAiPaths(root);
   const legacyDocsFound = fs.existsSync(paths.legacyDocsDir);
-  const actions = nextActions(detection);
   const state = readState(root);
+  const hasInterview = Boolean(state.ultimaEntrevista);
+  const docs = writeDiagnosticDocs(root, detection, hasInterview);
+  const actions = nextActions(detection, hasInterview);
+  const isNew = detection.projectType === "novo";
 
   writeState(root, {
     ...state,
@@ -34,20 +36,32 @@ export function diagnosticarCommand(root: string = process.cwd()): void {
     lastUpdatedAt: detection.generatedAt
   });
 
+  const interviewSummary = hasInterview
+    ? `\nEntrevista: feita\nIdeia registrada: ${state.ultimaEntrevista?.resumoCurto}\nA entrevista já está registrada; não precisa repetir esse passo.\n`
+    : "";
+  const confidenceNote = detection.confidence === "baixa" && isNew
+    ? "\nPor que a confiança está baixa: em projeto novo ainda há poucos arquivos para analisar. Isso é normal e não é um problema."
+    : "";
+  const attentionPoints = describeAttentionPoints(detection);
+  const attentionTitle = isNew ? "Ponto de partida" : "Pontos de atenção";
+  const attentionIntro = isNew
+    ? "- Este projeto está no começo. Isso não é um problema, é o ponto de partida.\n"
+    : "";
+
   print(`
 Diagnóstico concluído.
 
 Tipo de projeto: ${detection.projectType}
 Fluxo recomendado: ${detection.recommendedFlow}
 Modo recomendado: ${detection.recommendedMode}
-Confiança: ${detection.confidence}
+Confiança: ${detection.confidence}${confidenceNote}
 Maturidade: ${detection.maturity}/5
-
+${interviewSummary}
 Stack provável encontrada:
 ${detection.stackDetails.length ? detection.stackDetails.map((item) => `- ${item.name}: confiança ${item.confidence}`).join("\n") : "- Não identificada"}
 
-Pontos de atenção:
-${detection.attentionPoints.length ? detection.attentionPoints.map((item) => `- ${item}`).join("\n") : "- Nenhum ponto crítico detectado por heurística"}
+${attentionTitle}:
+${attentionIntro}${attentionPoints.length ? attentionPoints.map((item) => `- ${item}`).join("\n") : "- Nenhum ponto crítico detectado por heurística"}
 
 Documentos criados: ${docs.created.length}
 Documentos preservados: ${docs.preserved.length}

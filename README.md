@@ -575,7 +575,21 @@ Phase 17 implementou entrevista guiada e correções de validação:
 - ADRs 0236 a 0245;
 - relatório de validação em `docs/sprints/phase-17-guided-discovery-interview-validation-report.md`.
 
-Próxima ação: **executar teste real com Non-Technical Builder usando `resolve-ai entrevistar`**.
+Phase 17B refinou consistência de estado e UX para Non-Technical Builder:
+
+- camada central de contexto derivado do estado com próxima ação prioritária única;
+- `diagnosticar` reconhece entrevista feita e apresenta projeto novo como ponto de partida;
+- `status` mostra Projeto do Zero / Non-Technical Builder e uma única próxima ação no topo;
+- `planejar` usa nome, MVP, restrições e fora de escopo da entrevista, sem inventar riscos críticos;
+- `preparar` gera tarefa concreta do MVP e `resolver` mantém a mesma tarefa;
+- risco público padronizado em português: baixo, médio, alto, crítico;
+- `Confiança: baixa` explicada em linguagem simples;
+- kit `teste/` atualizado com `entrevistar` e aviso de pasta correta;
+- readiness score recalculado: 88/100, LIMITED GO muito forte;
+- ADRs 0246 a 0255;
+- relatório de validação em `docs/sprints/phase-17b-non-technical-builder-ux-validation-report.md`.
+
+Próxima ação: **executar teste real com Non-Technical Builder usando o fluxo Controle Simples de Gastos e o kit `teste/` atualizado**.
 
 ---
 

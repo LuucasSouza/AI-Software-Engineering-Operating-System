@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { resolveAiPaths } from "./paths.js";
+import { isNegatedStatement } from "./interview-scope.js";
 
 const diagnosticDocs = [
   "00-project-intake.md",
@@ -26,7 +27,9 @@ function hasCriticalRisk(input, docsText) {
   const relevantDocLines = docsText
     .split(/\r?\n/)
     .filter((line) => /possível arquivo sensível|possivel arquivo sensivel|\.env|backup|credencial|secret|password|senha|dump/i.test(line))
-    .filter((line) => !/^#+\s*dados sensíveis envolvidos|^#+\s*dados sensiveis envolvidos|descrever apenas em alto nível|descrever apenas em alto nivel|não registrar|nao registrar|não usar dados sensíveis|nao usar dados sensiveis|não informado|nao informado|não há|nao ha|sem dados sensíveis|sem dados sensiveis/i.test(line.trim()))
+    .filter((line) => !line.trim().startsWith("#"))
+    .filter((line) => !/descrever apenas em alto nível|descrever apenas em alto nivel|não registrar|nao registrar|não informado|nao informado/i.test(line.trim()))
+    .filter((line) => !isNegatedStatement(line.replace(/^[-*\s]+/, "").replace(/^[^:]{0,40}:\s*/, "")))
     .join(" ");
   const text = `${input.risks.join(" ")} ${relevantDocLines}`.toLowerCase();
   const sensitiveSignals = ["senha", "segredo", "sensível", "sensivel", "secret", "token", "dados pessoais", "lgpd", "backup", ".env", "credencial", "dump"];
@@ -63,24 +66,33 @@ export function readPlanningContext(root) {
     .join("\n\n");
 }
 
-export function createPlanningOutput(input, docsText) {
+export function createPlanningOutput(input, docsText, scope= null) {
   const critical = hasCriticalRisk(input, docsText);
   const isNew = input.projectType === "novo";
+  const scopeName = scope?.projectName;
   const summary = input.hasInterview
-    ? `Plano baseado na entrevista guiada. Ideia resumida: ${input.interviewSummary}.`
+    ? scopeName
+      ? `Plano criado para "${scopeName}" com base na entrevista guiada.`
+      : `Plano baseado na entrevista guiada. Ideia resumida: ${input.interviewSummary}.`
     : input.hasDiagnosis
     ? `Plano baseado no diagnóstico local existente. Modo recomendado: ${input.recommendedMode}.`
     : "Plano básico de baixa confiança. Ainda não encontrei um diagnóstico anterior; rode `resolve-ai diagnosticar` para melhorar este plano.";
 
   const nextRecommendedAction = critical
     ? "Resolver riscos críticos antes de implementar qualquer feature nova."
+    : input.hasInterview && scope?.hasSensitiveData
+      ? "Definir uma versão de teste sem dados reais antes de implementar."
+    : input.hasInterview && scopeName
+      ? `Preparar a primeira tarefa do MVP: criar a primeira tela de "${scopeName}". Rode resolve-ai preparar.`
     : input.hasInterview
       ? "Transformar a primeira versão útil em backlog pequeno e validável."
     : isNew
       ? "Definir escopo e MVP antes de criar código."
       : "Executar a Sprint A com foco em estabilização e validação.";
 
-  const milestones = isNew
+  const milestones = input.hasInterview && scope?.sufficient
+    ? ["Primeira tela ou página do MVP", "Funções principais da primeira versão", "Validação simples no uso real", "Melhorias pequenas"]
+    : isNew
     ? ["Discovery e escopo", "Fundação técnica", "MVP mínimo", "Validação"]
     : critical
       ? ["Hardening e segurança", "Testes mínimos", "Verificação funcional", "Continuação controlada"]

@@ -204,6 +204,7 @@ export interface ValidationState {
   executadaEm: string;
   status: ValidationStatus;
   confianca: ValidationConfidence;
+  gitDisponivel?: boolean;
   mudancasDetectadas: number;
   arquivosAlterados: string[];
   arquivosSensiveisDetectados: string[];
@@ -212,6 +213,46 @@ export interface ValidationState {
   arquivosDesconhecidos?: number;
   riscosRestantes: string[];
   proximaAcao: string;
+}
+
+export interface ProjectScope {
+  projectName?: string;
+  idea?: string;
+  targetUser?: string;
+  problem?: string;
+  productType?: string;
+  mvpFeatures: string[];
+  constraints: string[];
+  outOfScope: string[];
+  preferredStack?: string;
+  successCriteria?: string;
+  hasSensitiveData: boolean;
+  sufficient: boolean;
+}
+
+export interface NextAction {
+  title: string;
+  command?: string;
+  explanation: string;
+}
+
+export interface RuntimeContext {
+  isActive: boolean;
+  hasInterview: boolean;
+  interviewSummary?: string;
+  projectKind: string;
+  recommendedProfile: string;
+  flowName: string;
+  hasDiagnostic: boolean;
+  hasPlanning: boolean;
+  hasPreparedTask: boolean;
+  hasAssistedExecution: boolean;
+  hasValidation: boolean;
+  validationBlocked: boolean;
+  realExecutionValidated: boolean;
+  hasGit: boolean;
+  hasCriticalRisk: boolean;
+  primaryNextAction: NextAction;
 }
 
 export interface ValidationResult extends ValidationState {

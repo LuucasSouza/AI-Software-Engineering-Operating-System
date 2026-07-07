@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { resolveAiPaths } from "./paths.js";
+import { formatRiskForUser } from "./risk-language.js";
 import type { AssistedExecutionPackage, AssistedExecutionRisk, ResolveAiState } from "../types/runtime.js";
 
 const preparedDocs = [
@@ -93,7 +94,7 @@ export function buildAssistedExecutionPackage(root: string, state: ResolveAiStat
       "Não faça deploy.",
       "Não remova dados.",
       "Não exponha segredos ou dados sensíveis.",
-      `Risco herdado do preparo: ${state.ultimoPreparo.riskLevel}. Regra: green/baixo, yellow/medio, orange ou red/alto; risco critico ou sensivel pode bloquear.`,
+      `Risco herdado do preparo: ${formatRiskForUser(state.ultimoPreparo.riskLevel)}. Escala: baixo, médio, alto ou crítico; risco crítico ou sensível pode bloquear.`,
       highRisk ? "Se o risco não estiver mitigado, pare antes de alterar código." : "Se aparecer risco crítico, pare e peça nova aprovação."
     ],
     validation: [

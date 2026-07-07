@@ -85,6 +85,23 @@ Observacoes:
 
 ---
 
+### resolve-ai entrevistar
+
+Executou?
+- [ ] Sim
+- [ ] Nao
+
+Funcionou?
+- [ ] Sim
+- [ ] Nao
+- [ ] Parcial
+
+A entrevista ajudou a transformar a ideia em projeto?
+
+Observacoes:
+
+---
+
 ### resolve-ai diagnosticar
 
 Executou?
@@ -97,6 +114,11 @@ Funcionou?
 - [ ] Parcial
 
 O diagnostico fez sentido?
+
+O diagnostico reconheceu a entrevista feita (se voce entrevistou antes)?
+- [ ] Sim
+- [ ] Nao
+- [ ] Nao se aplica
 
 Observacoes:
 
@@ -194,6 +216,18 @@ O status ficou claro?
 Observacoes:
 
 ---
+
+## Para usuario iniciante
+
+1. Voce entendeu o que fazer depois da entrevista?
+
+2. O plano falou da sua ideia ou ficou generico?
+
+3. A tarefa preparada era concreta?
+
+4. O status mostrou um proximo passo claro?
+
+5. Algum termo pareceu tecnico demais?
 
 ## 3. Notas finais
 
