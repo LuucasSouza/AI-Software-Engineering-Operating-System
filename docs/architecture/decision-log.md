@@ -202,3 +202,13 @@ source: "bootstrap-source/pt27_ARCHITECTURE_DECISION_PROTOCOL.md"
 | ADR-0263 | Keep Human Validation Gap Visible in Release Docs | Accepted | 2026-07-07 | High | Phase 18 |
 | ADR-0264 | Require Package Dry-Run Audit Before Publication | Accepted | 2026-07-07 | High | Phase 18 |
 | ADR-0265 | Classify Phase 18 as Release Candidate, Not Stable | Accepted | 2026-07-07 | High | Phase 18 |
+| ADR-0266 | Publish v0.1.0-alpha After Maintainer Approval | Accepted | 2026-07-08 | High | Phase 19 |
+| ADR-0267 | Use npm Alpha Dist-Tag | Accepted | 2026-07-08 | High | Phase 19 |
+| ADR-0268 | Create Git Tag Only After npm Success | Accepted | 2026-07-08 | High | Phase 19 |
+| ADR-0269 | Mark GitHub Release as Pre-release | Accepted | 2026-07-08 | High | Phase 19 |
+| ADR-0270 | Keep Known Limitations Visible After Publication | Accepted | 2026-07-08 | High | Phase 19 |
+| ADR-0271 | Manual Feedback Remains Default After Publication | Accepted | 2026-07-08 | High | Phase 19 |
+| ADR-0272 | Stop Publication on Package Name Conflict | Accepted | 2026-07-08 | High | Phase 19 |
+| ADR-0273 | Do Not Publish From GitHub Actions Yet | Accepted | 2026-07-08 | Medium | Phase 19 |
+| ADR-0274 | Do Not Declare Stable Without Human Validation | Accepted | 2026-07-08 | High | Phase 19 |
+| ADR-0275 | Prefer Patch Alpha Over Unpublish | Accepted | 2026-07-08 | High | Phase 19 |

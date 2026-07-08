@@ -15,7 +15,20 @@ recommended_repository_location: "/README.md"
 
 **Resolve Aí** é um framework open source para transformar problemas, ideias e projetos existentes em planos claros de software usando IA.
 
-> **Status: Alpha — Release Candidate.** Esta versão não é stable, não é production ready e ainda busca feedback real de usuários iniciantes. O Resolve Aí não executa código automaticamente: o comando `resolver` prepara um pacote de execução assistida e você continua no controle. Limitações conhecidas: `docs/release/v0.1.0-alpha-rc/known-limitations.md`.
+> **Status: Public Alpha (v0.1.0-alpha) — não é stable.** Publicado no npm com dist-tag `alpha` e ainda em validação pública com usuários reais. O Resolve Aí não executa código automaticamente: o comando `resolver` prepara um pacote de execução assistida e você continua no controle. Limitações conhecidas: `docs/release/v0.1.0-alpha-rc/known-limitations.md`.
+
+## Instalação (public alpha)
+
+```bash
+npm install -g resolve-ai@alpha
+resolve-ai ajuda
+```
+
+Ou sem instalação global:
+
+```bash
+npx resolve-ai@alpha ajuda
+```
 
 Ele ajuda pessoas não técnicas, vibe coders e engenheiros profissionais a sair da confusão antes de pedir para a IA escrever código.
 
@@ -281,9 +294,9 @@ Ao terminar, valide os critérios de aceite e gere o relatório final da Sprint 
 
 ## Status do projeto
 
-Status atual: **Phase 18 concluída — RELEASE CANDIDATE READY (90/100), aguardando aprovação do mantenedor**
+Status atual: **Phase 19 concluída — PUBLIC ALPHA PUBLISHED (92/100), not stable**
 
-Esta versão continua **alpha**: não está publicada no npm, não tem tag de release e não foi validada por usuários iniciantes reais em escala suficiente. Nenhuma publicação acontece sem o gate `docs/release/v0.1.0-alpha-rc/maintainer-approval-gate.md`.
+O `resolve-ai@0.1.0-alpha.0` está publicado no npm com dist-tag `alpha` (https://www.npmjs.com/package/resolve-ai), com tag Git `v0.1.0-alpha` e GitHub pre-release. A versão continua **alpha**: não é stable, não é production-ready e a validação humana real com usuários iniciantes segue em andamento — o alpha público existe exatamente para coletar esse feedback.
 
 Sprint 1 criou a primeira camada funcional do AI-SEOS:
 
@@ -605,7 +618,18 @@ Phase 18 preparou o release candidate do alpha público:
 - ADRs 0256 a 0265;
 - relatório de validação em `docs/sprints/phase-18-public-alpha-rc-validation-report.md`.
 
-Próxima ação: **mantenedor revisar `docs/release/v0.1.0-alpha-rc/maintainer-approval-gate.md` e, em paralelo, executar teste real com Non-Technical Builder usando o fluxo Controle Simples de Gastos e o kit `teste/`**.
+Phase 19 executou a publicação do alpha público:
+
+- mantenedor aprovou o gate ("Quero apertar o botão") em 2026-07-08;
+- `npm publish --tag alpha` executado: `resolve-ai@0.1.0-alpha.0` em https://www.npmjs.com/package/resolve-ai;
+- install tests aprovados: `npm install -g resolve-ai@alpha`, `resolve-ai ajuda`, `npx resolve-ai@alpha ajuda` e mini-fluxo em pasta limpa;
+- tag `v0.1.0-alpha` criada após sucesso do npm e enviada ao GitHub;
+- GitHub Release criado como pre-release: https://github.com/LuucasSouza/Resolve-Ai/releases/tag/v0.1.0-alpha;
+- documentação pós-publicação atualizada; relatório completo em `docs/release/v0.1.0-alpha-rc/publication-execution-report.md`;
+- readiness score: 92/100, PUBLIC ALPHA PUBLISHED, not stable (teto sem validação humana real);
+- ADRs 0266 a 0275.
+
+Próxima ação: **coletar o primeiro feedback real do alpha público (GitHub Issues e `teste/feedback.md`), priorizando Non-Technical Builder com o fluxo Controle Simples de Gastos**.
 
 ---
 

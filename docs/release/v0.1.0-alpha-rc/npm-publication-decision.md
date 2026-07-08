@@ -10,28 +10,38 @@ last_updated: "2026-07-07"
 # npm Publication Decision — v0.1.0-alpha.0
 
 ```text
-Decisão atual: NÃO PUBLICADO
-Estado: pronto para aprovação
-Motivo: todos os gates técnicos passaram (build, 87/87 testes, smoke, dry-run
-        auditado, git diff --check), mas a publicação exige aprovação explícita
-        do mantenedor e a validação humana real (Non-Technical Builder e
-        Professional Engineer dedicado) permanece pendente.
-Aprovação do mantenedor: PENDENTE — ver maintainer-approval-gate.md
+Decisão atual: PUBLICADO COMO PUBLIC ALPHA
+Estado: publicado com dist-tag alpha em 2026-07-08
+Motivo: todos os gates técnicos passaram e o mantenedor aprovou explicitamente
+        no maintainer-approval-gate.md ("Quero apertar o botão").
+Aprovação do mantenedor: APROVADA — 2026-07-08, Lucas Souza
+Pacote: https://www.npmjs.com/package/resolve-ai
+Comando: npm publish ./packages/resolve-ai-cli --tag alpha
+Dist-tags: alpha: 0.1.0-alpha.0 (latest aponta para a mesma versão por
+           mecânica do npm no primeiro publish — ver ressalva no
+           publication-execution-report.md)
 ```
 
-## O que "pronto para aprovação" significa
+## Classificação
 
-- O pacote `resolve-ai@0.1.0-alpha.0` está tecnicamente auditado e limpo (`npm-package-audit.md`).
-- A publicação futura, se aprovada, deve usar `npm publish --tag alpha`.
-- Nada acontece automaticamente. `npm publish` não foi executado na Phase 18.
+Public alpha. **Não é stable. Não é production-ready.** A validação humana real continua pendente e visível nas known limitations (ADR-0274).
 
-## O que ainda bloqueia a publicação
+## Instalação pública
 
-1. Checkboxes de `maintainer-approval-gate.md` desmarcados.
-2. Ausência de validação humana real ampla (registrada, não escondida).
+```bash
+npm install -g resolve-ai@alpha
+resolve-ai ajuda
+```
+
+ou
+
+```bash
+npx resolve-ai@alpha ajuda
+```
 
 ## Registro
 
 | Data | Evento |
 |---|---|
 | 2026-07-07 | Phase 18 concluída. Dry-run auditado e aprovado. Publicação NÃO executada. Estado: aguardando aprovação do mantenedor. |
+| 2026-07-08 | Mantenedor aprovou o gate. Phase 19 executada: `npm publish --tag alpha` bem-sucedido, install tests OK, tag `v0.1.0-alpha` enviada, GitHub pre-release criado. Estado: PUBLICADO COMO PUBLIC ALPHA. |

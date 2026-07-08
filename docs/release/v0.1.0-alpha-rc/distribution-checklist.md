@@ -11,9 +11,28 @@ last_updated: "2026-07-07"
 
 Como o Resolve Aí é distribuído hoje e como será distribuído se a publicação alpha for aprovada. Não afirmar publicação enquanto ela não aconteceu.
 
-## Estado atual (2026-07-07)
+## Estado atual (2026-07-08)
 
-**O pacote NÃO está publicado no npm.** A única distribuição suportada é local, via repositório GitHub.
+**O pacote ESTÁ publicado no npm como public alpha** (`resolve-ai@0.1.0-alpha.0`, dist-tag `alpha`): https://www.npmjs.com/package/resolve-ai
+
+Instalação pública recomendada:
+
+```bash
+npm install -g resolve-ai@alpha
+resolve-ai ajuda
+```
+
+ou sem instalação global:
+
+```bash
+npx resolve-ai@alpha ajuda
+```
+
+A distribuição local via repositório GitHub continua válida para desenvolvimento.
+
+## Estado anterior (2026-07-07, histórico)
+
+O pacote não estava publicado; a única distribuição suportada era local, via repositório GitHub.
 
 ## Distribuição atual (fallback local)
 
@@ -28,20 +47,14 @@ node caminho/para/Resolve-Ai/packages/resolve-ai-cli/dist/index.js ajuda
 - [x] Kit `teste/` disponível para participantes de alpha manual;
 - [x] Aliases sem acento documentados para Windows.
 
-## Distribuição futura (somente após o gate do mantenedor)
+## Distribuição executada na Phase 19 (após aprovação do mantenedor)
 
-- [ ] `npm publish --tag alpha` executado manualmente (ver `npm-publication-checklist.md`);
-- [ ] Instalação documentada como:
-
-```bash
-npm install -g resolve-ai@alpha
-resolve-ai ajuda
-```
-
-- [ ] Tag `v0.1.0-alpha.0` criada (ver `git-tag-checklist.md`);
-- [ ] GitHub Release publicado como pre-release (ver `github-release-draft.md`);
-- [ ] README atualizado para refletir a publicação real (sem prometer stable);
-- [ ] Release notes divulgadas com known limitations visíveis.
+- [x] `npm publish --tag alpha` executado manualmente pelo mantenedor (2026-07-08);
+- [x] Instalação documentada como `npm install -g resolve-ai@alpha` / `npx resolve-ai@alpha`;
+- [x] Tag `v0.1.0-alpha` criada e enviada (após sucesso do npm, ADR-0268);
+- [x] GitHub Release publicado como pre-release (`--prerelease --latest=false`): https://github.com/LuucasSouza/Resolve-Ai/releases/tag/v0.1.0-alpha
+- [x] README atualizado para refletir a publicação real (sem prometer stable);
+- [x] Release notes publicadas na release com known limitations visíveis.
 
 ## Canais proibidos nesta fase
 

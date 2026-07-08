@@ -13,9 +13,9 @@ Este diretório reúne todos os artefatos do release candidate do alpha público
 
 ## Status
 
-**RELEASE CANDIDATE READY — aguardando aprovação explícita do mantenedor.**
+**PUBLIC ALPHA PUBLISHED (Phase 19, 2026-07-08) — not stable.**
 
-Nada foi publicado. Nenhuma tag foi criada. Nenhum GitHub Release foi criado. Esta versão **não é stable** e **não foi validada por usuários iniciantes reais em escala suficiente**.
+O mantenedor aprovou o gate e a publicação foi executada: `resolve-ai@0.1.0-alpha.0` no npm (dist-tag `alpha`), tag Git `v0.1.0-alpha` e GitHub pre-release. Esta versão continua **não stable** e **não foi validada por usuários iniciantes reais em escala suficiente** — o alpha público existe para coletar essa validação. Detalhes completos: `publication-execution-report.md`.
 
 ## Classificação pública permitida
 

@@ -3,7 +3,7 @@ title: "AI-SEOS — Changelog"
 version: "0.1.0-alpha.0"
 status: "Draft"
 owner: "AI-SEOS Maintainers"
-last_updated: "2026-07-07"
+last_updated: "2026-07-08"
 document_type: "Changelog"
 canonical_filename: "CHANGELOG.md"
 recommended_repository_location: "/CHANGELOG.md"
@@ -16,6 +16,22 @@ Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
 O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionamento semântico.
 
 ---
+
+# [0.1.0-alpha.0] — 2026-07-08
+
+## Published
+
+- Phase 19 executada: Publication Execution Gate.
+- `resolve-ai@0.1.0-alpha.0` publicado no npm com dist-tag `alpha`: https://www.npmjs.com/package/resolve-ai
+- Instalação pública: `npm install -g resolve-ai@alpha` ou `npx resolve-ai@alpha ajuda`.
+- Tag Git `v0.1.0-alpha` criada após sucesso do npm publish e enviada ao origin.
+- GitHub Release criado como pre-release: https://github.com/LuucasSouza/Resolve-Ai/releases/tag/v0.1.0-alpha
+- Install tests aprovados: instalação global, `resolve-ai ajuda`, `npx resolve-ai@alpha ajuda` e mini-fluxo `comecar`/`ligar`/`status` em pasta limpa.
+- Maintainer approval gate aprovado em 2026-07-08 por Lucas Souza ("Quero apertar o botão"); classificação pública: public alpha, not stable.
+- Criado `docs/release/v0.1.0-alpha-rc/publication-execution-report.md` com o log completo da execução.
+- Criadas ADRs 0266 a 0275.
+- Ressalva conhecida: o npm exige dist-tag `latest` e no primeiro publish ele aponta para a única versão; documentação instrui sempre `@alpha`.
+- Readiness score: 92/100 — PUBLIC ALPHA PUBLISHED, not stable (teto sem validação humana real, ADR-0274).
 
 # [Unreleased]
 

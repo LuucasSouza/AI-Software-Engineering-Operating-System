@@ -89,6 +89,13 @@ Release documentation covers readiness, known limitations, release notes, reposi
   - `post-release-feedback-plan.md`
   - `maintainer-approval-gate.md`
 
+## Phase 19
+
+- `v0.1.0-alpha-phase-19-readiness-scorecard.md`
+- `v0.1.0-alpha-phase-19-go-no-go-decision.md`
+- `v0.1.0-alpha-rc/publication-execution-report.md` — log completo da publicação
+- `v0.1.0-alpha-rc/maintainer-approval-gate.md` — APPROVED (2026-07-08)
+
 ## Current Recommendation
 
-Resolve Aí is at 90/100 — RELEASE CANDIDATE READY after Phase 18, the maximum score allowed without additional real human validation. Nothing has been published: no npm publish, no Git tag, no GitHub release. Publication requires every checkbox in `v0.1.0-alpha-rc/maintainer-approval-gate.md` to be marked by the maintainer. Without additional real human validation (Non-Technical Builder and dedicated Professional Engineer), do not declare stable. For release documents, `v0.1.0-alpha-rc/` supersedes the drafts from Phases 12–15B.
+Resolve Aí is at 92/100 — PUBLIC ALPHA PUBLISHED after Phase 19. `resolve-ai@0.1.0-alpha.0` is live on npm under the `alpha` dist-tag, with Git tag `v0.1.0-alpha` and a GitHub pre-release. It is still **not stable** and must not be declared stable or production-ready without real human validation (ADR-0274); 92/100 is the ceiling until Non-Technical Builder and dedicated Professional Engineer sessions are recorded. For release documents, `v0.1.0-alpha-rc/` supersedes the drafts from Phases 12–15B.

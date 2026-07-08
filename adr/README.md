@@ -289,6 +289,16 @@ Architecture Maintainers garantem numeração, consistência e referências entr
 - `0263-keep-human-validation-gap-visible-in-release-docs.md`
 - `0264-require-package-dry-run-audit-before-publication.md`
 - `0265-classify-phase-18-as-release-candidate-not-stable.md`
+- `0266-publish-v0-1-0-alpha-after-maintainer-approval.md`
+- `0267-use-npm-alpha-dist-tag.md`
+- `0268-create-git-tag-only-after-npm-success.md`
+- `0269-mark-github-release-as-pre-release.md`
+- `0270-keep-known-limitations-visible-after-publication.md`
+- `0271-manual-feedback-remains-default.md`
+- `0272-stop-publication-on-package-name-conflict.md`
+- `0273-do-not-publish-from-github-actions-yet.md`
+- `0274-do-not-declare-stable-without-human-validation.md`
+- `0275-prefer-patch-alpha-over-unpublish.md`
 
 ## Próximos passos
 

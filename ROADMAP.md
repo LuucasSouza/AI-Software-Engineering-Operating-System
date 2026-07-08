@@ -753,14 +753,39 @@ Preparar o Resolve Aí para uma decisão final de publicação alpha pública, c
 
 ## Próximo passo
 
-- Mantenedor aprova o gate → **Phase 19 — Public Alpha Publication Execution**.
-- Problemas na revisão → **Phase 18B — Release Candidate Fixes**.
+- Mantenedor aprova o gate → **Phase 19 — Public Alpha Publication Execution**. ✅ Aprovado em 2026-07-08.
+
+---
+
+# Phase 19 — Publication Execution Gate
+
+Status: **Complete**
+
+## Objetivo
+
+Executar a publicação real do alpha público após aprovação explícita do mantenedor, mantendo classificação alpha, nunca stable.
+
+## Entregas
+
+- Maintainer approval gate aprovado (2026-07-08, "Quero apertar o botão").
+- `resolve-ai@0.1.0-alpha.0` publicado no npm com dist-tag `alpha`.
+- Install tests aprovados (global, npx e mini-fluxo em pasta limpa).
+- Tag `v0.1.0-alpha` criada após sucesso do npm e enviada.
+- GitHub Release criado como pre-release (`--latest=false`).
+- `publication-execution-report.md` com log completo, incluindo bloqueios de autenticação respeitados (execução parou duas vezes até login/2FA do mantenedor).
+- Docs pós-publicação atualizadas (README, CHANGELOG, decision, distribution, RC README).
+- Score: 92/100 — PUBLIC ALPHA PUBLISHED, not stable.
+- ADRs 0266 a 0275.
+
+## Próximo passo
+
+- **Phase 20 — Public Alpha Feedback Loop**: coletar e triar o primeiro feedback público real.
 
 ---
 
 # Manual Action — Recruit Remaining Private Alpha Participants
 
-Status: **Next (em paralelo com a decisão do mantenedor)**
+Status: **Next (agora como parte do feedback do alpha público)**
 
 ## Objetivo
 
