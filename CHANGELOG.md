@@ -21,6 +21,7 @@ O formato segue a ideia do Keep a Changelog e o projeto deve adotar versionament
 
 ## Added
 
+- Phase 18.1: Added gitignore protections for Resolve Aí runtime artifacts (`/.resolve-ai/`, `/docs/resolve-ai/`), private alpha feedback (`/feedback/`) and local test workspaces.
 - Phase 18 executada: Public Alpha Release Candidate & Maintainer Approval Gate.
 - Criado diretório canônico de release `docs/release/v0.1.0-alpha-rc/` com 13 artefatos: README, release-candidate-checklist, npm-publication-checklist, npm-package-audit, npm-publication-decision, github-release-draft, git-tag-checklist, release-notes, known-limitations, rollback-plan, post-release-feedback-plan, distribution-checklist e maintainer-approval-gate.
 - Auditoria do `npm pack --dry-run` registrada: 37 arquivos, 38.5 kB (147.1 kB descompactado), somente `dist/`, `README.md` e `package.json`; sem `.resolve-ai/`, `docs/resolve-ai/`, `.env` ou feedbacks privados. Decisão: aprovado.
